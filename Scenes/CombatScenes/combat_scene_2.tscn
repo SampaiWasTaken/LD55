@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmyosp3yql6tx"]
+
+[ext_resource type="PackedScene" uid="uid://40pvj01vaun1" path="res://Scenes/CombatScenes/combatScene.tscn" id="1_hv7md"]
+[ext_resource type="Script" path="res://Scripts/Combat/Path2D.gd" id="2_o0lmy"]
+[ext_resource type="PackedScene" uid="uid://b75a3u87d3x1p" path="res://Scenes/CombatScenes/tutorial_enemy.tscn" id="3_d72xd"]
+
+[sub_resource type="Curve2D" id="Curve2D_mctoj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 198, 256, 0, 0, 0, 0, 939, 256)
+}
+point_count = 2
+
+[node name="Node2D" instance=ExtResource("1_hv7md")]
+
+[node name="MoveTimer" parent="." index="4"]
+wait_time = 0.25
+
+[node name="Path2D" type="Path2D" parent="." index="7"]
+curve = SubResource("Curve2D_mctoj")
+script = ExtResource("2_o0lmy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" index="0"]
+position = Vector2(198, 256)
+
+[node name="miniEnemy" parent="Path2D/PathFollow2D" index="0" instance=ExtResource("3_d72xd")]
+scale = Vector2(0.4, 0.4)
