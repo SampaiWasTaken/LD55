@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7sa32nvdk4si"]
+[gd_scene load_steps=3 format=3 uid="uid://c7sa32nvdk4si"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
+[ext_resource type="PackedScene" uid="uid://mwfqt770q3dv" path="res://Scenes/Interactables/interaction_test.tscn" id="2_m31k7"]
 
 [node name="Main Scene" type="Node2D"]
 
@@ -9,3 +10,10 @@ format = 2
 
 [node name="MainChar" parent="." instance=ExtResource("1_4beut")]
 position = Vector2(100, 91)
+
+[node name="InteractionTest" parent="." instance=ExtResource("2_m31k7")]
+position = Vector2(577, 107)
+interact_label = "test"
+interact_type = "only_Dialog"
+interaction_value = "testing all this stuff"
+dialog_file = "res://DialogText/testDialog.json"

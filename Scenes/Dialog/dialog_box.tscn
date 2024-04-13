@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7856uknhdgf0"]
+
+[ext_resource type="Texture2D" uid="uid://cjgkuwst0o8ld" path="res://icon.svg" id="1_63rna"]
+[ext_resource type="Script" path="res://Scenes/Dialog/dialog_box.gd" id="1_g0vab"]
+
+[node name="DialogBox" type="CanvasLayer"]
+script = ExtResource("1_g0vab")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 163.0
+texture = ExtResource("1_63rna")
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 11.0
+offset_right = 174.0
+offset_bottom = 51.0
+text = "Name"
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 43.0
+offset_right = 1109.0
+offset_bottom = 149.0
+text = "awdawdad"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
