@@ -12,4 +12,6 @@ func _process(delta):
 
 
 func _on_timer_timeout():
-	$PathFollow2D.progress_ratio = randf()
+	var pr = $PathFollow2D.progress_ratio
+	pr += randf_range(-0.25, 0.25)
+	$PathFollow2D.progress_ratio = pr

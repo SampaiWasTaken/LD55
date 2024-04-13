@@ -11,6 +11,4 @@ script = ExtResource("1_7k262")
 
 [node name="ShootTimer" type="Timer" parent="." groups=["Enemy"]]
 
-[node name="Marker2D" type="Marker2D" parent="."]
-
 [connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cjgkuwst0o8ld" path="res://icon.svg" id="1_eh42v"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7y86n"]
-radius = 12.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dxc1"]
+size = Vector2(121.154, 128)
 
 [node name="player" type="CharacterBody2D"]
 
@@ -13,4 +13,9 @@ texture = ExtResource("1_eh42v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
-shape = SubResource("CapsuleShape2D_7y86n")
+scale = Vector2(1.04, 1)
+shape = SubResource("RectangleShape2D_1dxc1")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -64)
+scale = Vector2(-6.0343, 40.2664)

@@ -2,12 +2,19 @@ class_name Bullet
 
 extends Area2D
 
-@export var speed = 20
+var velocity: Vector2 = Vector2()
 @export var oppositionString = ""
+@export var duration = 5
 var direction = Vector2.ZERO
 
-func _physics_process(delta):
-	position += direction*speed
+func _ready():
+	connect("body_entered",  _on_body_entered)
+
+func _process(delta):
+	position += velocity * delta
+	duration -= delta
+	if duration <= 0:
+		queue_free()
 
 func _on_body_entered(body:Node2D):
 	if body.is_in_group(oppositionString):
