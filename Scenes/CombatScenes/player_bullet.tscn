@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ebcyw5g2y1ko"]
+
+[ext_resource type="PackedScene" uid="uid://dvfiiqefdcoep" path="res://Scenes/CombatScenes/bullet.tscn" id="1_viy5t"]
+[ext_resource type="Script" path="res://Scripts/Combat/player_bullet.gd" id="2_b20vt"]
+
+[node name="Node2D" instance=ExtResource("1_viy5t")]
+script = ExtResource("2_b20vt")
+oppositionString = "Enemy"
