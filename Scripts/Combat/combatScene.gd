@@ -4,6 +4,6 @@ extends Node2D
 
 func _process(_delta):
 	$UI/HPBar.value = Player.health
-
+	
 
 

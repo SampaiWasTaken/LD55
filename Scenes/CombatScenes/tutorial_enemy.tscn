@@ -9,6 +9,7 @@ size = Vector2(131, 128)
 
 [node name="miniEnemy" instance=ExtResource("1_t27a4")]
 script = ExtResource("2_73xos")
+speed = 600
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_po7w7")
