@@ -9,7 +9,7 @@ var obj_bullet = preload("res://Scenes/CombatScenes/enemy_bullet.tscn")
 func _ready():
 	$ShootTimer.start()
 
-func _process(delta):
+func _process(_delta):
 	pass
 
 func shoot(direction: float, speed: float):

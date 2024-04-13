@@ -37,6 +37,19 @@ func interact():
 	if stored_interactions_areas:
 		var newest_interaction = stored_interactions_areas[0].get_parent()
 		match newest_interaction.interact_type:
+			#prints the interaction_value
 			"print_text" : print(newest_interaction.interaction_value)
-			"only_Dialog" : Globals.currently_interacting = true; newest_interaction.showDialog();
-		#print(stored_interactions_areas[0].interact_label)
+			#Only Shows Dialog, Dialog needed
+			"Only_Dialog" : 
+				Globals.currently_interacting = true
+				newest_interaction.showDialog()
+			#Chages the after dialog
+			"Dialog_With_Szene_Change" : 
+					Globals.currently_interacting = true
+					newest_interaction.showDialogSceneChange()
+			#Pickup Item with a Dialog
+			"Item_With_Dialog" : 
+				Globals.currently_interacting = true
+				Globals.player_items.append(newest_interaction.interaction_value)
+				newest_interaction.showDialog()
+				print(Globals.player_items)

@@ -6,6 +6,8 @@ var dialog = []#stores the dialog after reading the file
 var dialog_counter: int = -1 #stores current dialog index
 var dialog_active: bool = false
 
+var nextScene: PackedScene
+
 
 func _ready():
 	$NinePatchRect.visible = false
@@ -50,4 +52,6 @@ func next_dialog_text():
 func _on_timer_timeout():
 	dialog_active = false
 	Globals.currently_interacting = false
+	if nextScene:
+		get_tree().change_scene_to_packed(nextScene)
 	pass # Replace with function body.
