@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://1arx704cmiwb"]
 
 [ext_resource type="PackedScene" uid="uid://40pvj01vaun1" path="res://Scenes/CombatScenes/combatScene.tscn" id="1_a0gxs"]
-[ext_resource type="Script" path="res://Scenes/CombatScenes/Path2D_Tutorial.gd" id="2_2g6x8"]
+[ext_resource type="Script" path="res://Scripts/Combat/Path2D_Tutorial.gd" id="2_2g6x8"]
 [ext_resource type="PackedScene" uid="uid://b75a3u87d3x1p" path="res://Scenes/CombatScenes/tutorial_enemy.tscn" id="3_k1k6u"]
 
 [sub_resource type="Curve2D" id="Curve2D_136nt"]
