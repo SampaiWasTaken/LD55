@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvnh656bbcyon"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/mini_enemy.gd" id="1_7k262"]
+
+[node name="miniEnemy" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_7k262")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="ShootTimer" type="Timer" parent="." groups=["Enemy"]]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

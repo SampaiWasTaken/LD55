@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://ebcyw5g2y1ko"]
+
+[ext_resource type="PackedScene" uid="uid://dvfiiqefdcoep" path="res://Scenes/CombatScenes/bullet.tscn" id="1_viy5t"]
+[ext_resource type="Script" path="res://Scripts/Combat/player_bullet.gd" id="2_b20vt"]
+[ext_resource type="Texture2D" uid="uid://bwfb16y5r3knl" path="res://Assets/laserRed01.png" id="3_m7jel"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yw31c"]
+size = Vector2(54, 10)
+
+[node name="Node2D" instance=ExtResource("1_viy5t")]
+script = ExtResource("2_b20vt")
+oppositionString = "Enemy"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_m7jel")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_yw31c")

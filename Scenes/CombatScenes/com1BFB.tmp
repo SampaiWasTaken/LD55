@@ -1,0 +1,190 @@
+[gd_scene load_steps=11 format=3 uid="uid://40pvj01vaun1"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/combatScene.gd" id="1_2evti"]
+[ext_resource type="PackedScene" uid="uid://bhwmn8uw5scwn" path="res://Scenes/CombatScenes/miniplayer.tscn" id="2_rkvdr"]
+[ext_resource type="Script" path="res://Scripts/Combat/miniplayer.gd" id="3_sdnaq"]
+[ext_resource type="Script" path="res://Scripts/Combat/Path2D.gd" id="4_lvltd"]
+[ext_resource type="PackedScene" uid="uid://b75a3u87d3x1p" path="res://Scenes/CombatScenes/tutorial_enemy.tscn" id="5_tg25d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxa3q"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmk8o"]
+size = Vector2(38, 478)
+
+[sub_resource type="Curve2D" id="Curve2D_68fa6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 198, 250, 0, 0, 0, 0, 959, 250)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyxbb"]
+bg_color = Color(0, 1, 0.8, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boqq8"]
+bg_color = Color(0, 1, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("Player")]
+script = ExtResource("1_2evti")
+Player = NodePath("player")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 650.0
+metadata/_edit_lock_ = true
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 160.0
+offset_top = 210.0
+offset_right = 981.0
+offset_bottom = 612.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxa3q")
+
+[node name="player" parent="." groups=["MiniPlayer"] instance=ExtResource("2_rkvdr")]
+position = Vector2(567, 566)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_sdnaq")
+
+[node name="Walls" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls" groups=["Walls"]]
+position = Vector2(150, 410)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D" groups=["Walls"]]
+position = Vector2(-10, 0)
+shape = SubResource("RectangleShape2D_tmk8o")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Walls" groups=["Walls"]]
+position = Vector2(980, 410)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D2" groups=["Walls"]]
+position = Vector2(20, 0)
+shape = SubResource("RectangleShape2D_tmk8o")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Walls" groups=["Walls"]]
+position = Vector2(568, 630)
+rotation = 1.5708
+scale = Vector2(1, 1.72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D3" groups=["Walls"]]
+position = Vector2(1, -1.16279)
+shape = SubResource("RectangleShape2D_tmk8o")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Walls" groups=["Walls"]]
+position = Vector2(568, 189)
+rotation = 1.5708
+scale = Vector2(1, 1.72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D4" groups=["Walls"]]
+position = Vector2(1, -1.16275)
+shape = SubResource("RectangleShape2D_tmk8o")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_68fa6")
+script = ExtResource("4_lvltd")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(198, 250)
+
+[node name="miniEnemy" parent="Path2D/PathFollow2D" instance=ExtResource("5_tg25d")]
+scale = Vector2(0.4, 0.4)
+
+[node name="MoveTimer" type="Timer" parent="."]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 146.0
+offset_top = 97.0
+offset_right = 186.0
+offset_bottom = 137.0
+
+[node name="CooldownBar" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 30.0
+offset_right = 869.0
+offset_bottom = 57.0
+scale = Vector2(1, 0.989967)
+theme_override_styles/fill = SubResource("StyleBoxFlat_fyxbb")
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="UI/CooldownBar"]
+layout_mode = 0
+offset_right = 266.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Basic"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CooldownBar2" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 603.0
+offset_top = -6.0
+offset_right = 869.0
+offset_bottom = 21.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_fyxbb")
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="UI/CooldownBar2"]
+layout_mode = 0
+offset_right = 266.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Basic"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CooldownBar3" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 603.0
+offset_top = -43.0
+offset_right = 869.0
+offset_bottom = -16.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_fyxbb")
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="UI/CooldownBar3"]
+layout_mode = 0
+offset_right = 266.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Basic"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HPBar" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = -18.0
+offset_top = -53.0
+offset_right = 127.0
+offset_bottom = -26.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_boqq8")
+show_percentage = false
+
+[node name="MoveCooldown" type="Timer" parent="."]
+
+[connection signal="timeout" from="MoveTimer" to="Path2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="MoveCooldown" to="player" method="_on_move_cooldown_timeout"]
