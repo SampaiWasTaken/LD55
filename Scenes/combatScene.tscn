@@ -1,0 +1,136 @@
+[gd_scene load_steps=12 format=3 uid="uid://40pvj01vaun1"]
+
+[ext_resource type="PackedScene" uid="uid://bhwmn8uw5scwn" path="res://Scenes/miniplayer.tscn" id="1_cjc6f"]
+[ext_resource type="Script" path="res://Scenes/combatScene.gd" id="1_kgstj"]
+[ext_resource type="Script" path="res://Scenes/miniplayer.gd" id="2_hnghp"]
+[ext_resource type="PackedScene" uid="uid://b75a3u87d3x1p" path="res://Scenes/tutorial_enemy.tscn" id="3_3uxy8"]
+[ext_resource type="Script" path="res://Scenes/Path2D.gd" id="3_qeior"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxa3q"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmk8o"]
+size = Vector2(38, 478)
+
+[sub_resource type="Curve2D" id="Curve2D_68fa6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 221, 250, 0, 0, 0, 0, 954, 250)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e61cc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyxbb"]
+bg_color = Color(0, 1, 0.8, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boqq8"]
+bg_color = Color(0, 1, 0, 1)
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("Player")]
+script = ExtResource("1_kgstj")
+Player = NodePath("player")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 650.0
+metadata/_edit_lock_ = true
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 160.0
+offset_top = 210.0
+offset_right = 981.0
+offset_bottom = 612.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxa3q")
+
+[node name="player" parent="." groups=["MiniPlayer"] instance=ExtResource("1_cjc6f")]
+position = Vector2(568, 574)
+script = ExtResource("2_hnghp")
+
+[node name="Walls" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls" groups=["Walls"]]
+position = Vector2(150, 410)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D" groups=["Walls"]]
+position = Vector2(-10, 0)
+shape = SubResource("RectangleShape2D_tmk8o")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Walls" groups=["Walls"]]
+position = Vector2(980, 410)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D2" groups=["Walls"]]
+position = Vector2(20, 0)
+shape = SubResource("RectangleShape2D_tmk8o")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Walls" groups=["Walls"]]
+position = Vector2(568, 630)
+rotation = 1.5708
+scale = Vector2(1, 1.72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D3" groups=["Walls"]]
+position = Vector2(1, -1.16279)
+shape = SubResource("RectangleShape2D_tmk8o")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Walls" groups=["Walls"]]
+position = Vector2(568, 189)
+rotation = 1.5708
+scale = Vector2(1, 1.72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D4" groups=["Walls"]]
+position = Vector2(1, -1.16275)
+shape = SubResource("RectangleShape2D_tmk8o")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_68fa6")
+script = ExtResource("3_qeior")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(221, 250)
+
+[node name="miniEnemy" parent="Path2D/PathFollow2D" groups=["Enemy"] instance=ExtResource("3_3uxy8")]
+scale = Vector2(0.3, 0.3)
+
+[node name="MoveTimer" type="Timer" parent="."]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 146.0
+offset_top = 97.0
+offset_right = 186.0
+offset_bottom = 137.0
+
+[node name="CooldownBar" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 30.0
+offset_right = 869.0
+offset_bottom = 57.0
+theme_override_styles/background = SubResource("StyleBoxFlat_e61cc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fyxbb")
+value = 100.0
+show_percentage = false
+
+[node name="HPBar" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = -18.0
+offset_top = -53.0
+offset_right = 127.0
+offset_bottom = -26.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_boqq8")
+show_percentage = false
+
+[node name="MoveCooldown" type="Timer" parent="."]
+
+[connection signal="timeout" from="MoveTimer" to="Path2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="MoveCooldown" to="player" method="_on_move_cooldown_timeout"]
