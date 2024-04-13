@@ -50,6 +50,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yxa3q")
 [node name="player" parent="." groups=["MiniPlayer"] instance=ExtResource("2_rkvdr")]
 position = Vector2(576, 566)
 scale = Vector2(0.5, 0.5)
+collision_mask = 129
 script = ExtResource("3_sdnaq")
 
 [node name="Walls" type="Control" parent="."]
@@ -88,6 +89,16 @@ rotation = 1.5708
 scale = Vector2(1, 1.72)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D4" groups=["Walls"]]
+position = Vector2(1, -1.16275)
+shape = SubResource("RectangleShape2D_tmk8o")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Walls" groups=["Walls"]]
+position = Vector2(568, 303)
+rotation = 1.5708
+scale = Vector2(1, 1.72)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D5" groups=["Walls"]]
 position = Vector2(1, -1.16275)
 shape = SubResource("RectangleShape2D_tmk8o")
 

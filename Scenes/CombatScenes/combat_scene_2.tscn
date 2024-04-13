@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://40pvj01vaun1" path="res://Scenes/CombatScenes/combatScene.tscn" id="1_hv7md"]
 [ext_resource type="Script" path="res://Scripts/Combat/Path2D.gd" id="2_o0lmy"]
-[ext_resource type="PackedScene" uid="uid://b75a3u87d3x1p" path="res://Scenes/CombatScenes/tutorial_enemy.tscn" id="3_d72xd"]
+[ext_resource type="PackedScene" uid="uid://xyyuqu4gxd2t" path="res://Scenes/CombatScenes/mini_enemy_plant.tscn" id="3_x0hna"]
 
 [sub_resource type="Curve2D" id="Curve2D_mctoj"]
 _data = {
@@ -12,9 +12,6 @@ point_count = 2
 
 [node name="Node2D" instance=ExtResource("1_hv7md")]
 
-[node name="MoveTimer" parent="." index="4"]
-wait_time = 0.25
-
 [node name="Path2D" type="Path2D" parent="." index="7"]
 curve = SubResource("Curve2D_mctoj")
 script = ExtResource("2_o0lmy")
@@ -23,5 +20,7 @@ script = ExtResource("2_o0lmy")
 position = Vector2(198, 256)
 rotation = -0.00257731
 
-[node name="miniEnemy" parent="Path2D/PathFollow2D" index="0" instance=ExtResource("3_d72xd")]
+[node name="miniEnemy" parent="Path2D/PathFollow2D" index="0" instance=ExtResource("3_x0hna")]
 scale = Vector2(0.4, 0.4)
+
+[connection signal="timeout" from="MoveTimer" to="Path2D" method="_on_move_timer_timeout"]

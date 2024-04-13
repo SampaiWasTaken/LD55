@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://xyyuqu4gxd2t"]
+
+[ext_resource type="PackedScene" uid="uid://bvnh656bbcyon" path="res://Scenes/CombatScenes/mini_enemy.tscn" id="1_cj3a0"]
+[ext_resource type="Script" path="res://Scenes/CombatScenes/mini_enemy_plant.gd" id="2_fe4fv"]
+[ext_resource type="Texture2D" uid="uid://cjgkuwst0o8ld" path="res://icon.svg" id="3_oro16"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8ahe"]
+size = Vector2(126, 126)
+
+[node name="miniEnemy" instance=ExtResource("1_cj3a0")]
+script = ExtResource("2_fe4fv")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_oro16")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_g8ahe")
+
+[node name="SpreadTimer" type="Timer" parent="." index="4"]
+wait_time = 4.5
+
+[connection signal="timeout" from="SpreadTimer" to="." method="_on_spread_timer_timeout"]

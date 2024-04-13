@@ -21,9 +21,6 @@ func _physics_process(delta):
 		move_and_slide()
 	else:
 		target = Vector2(195 + randi()%986, 210 + randi()%610)
-	
-	pass
-	
 
 func hurt():
 	pass
