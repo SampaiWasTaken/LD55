@@ -15,3 +15,9 @@ func _on_timer_timeout():
 	var pr = $PathFollow2D.progress_ratio
 	pr += randf_range(-0.25, 0.25)
 	$PathFollow2D.progress_ratio = pr
+
+
+func _on_move_timer_timeout():
+	var pr = $PathFollow2D.progress_ratio
+	pr += randf_range(-0.25, 0.25)
+	$PathFollow2D.progress_ratio = pr
