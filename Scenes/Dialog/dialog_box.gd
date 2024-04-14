@@ -6,7 +6,9 @@ var dialog = []#stores the dialog after reading the file
 var dialog_counter: int = -1 #stores current dialog index
 var dialog_active: bool = false
 
-var nextScene: PackedScene
+var placeholderPort = preload("res://Assets/Portraits/PlaceholderPortrait.png")
+
+var nextScene: String
 
 
 func _ready():
@@ -47,11 +49,31 @@ func next_dialog_text():
 		return
 	$NinePatchRect/Name.text = dialog[dialog_counter]["name"]
 	$NinePatchRect/Text.text = dialog[dialog_counter]["text"]
+	var fileName = dialog[dialog_counter]["portrait"]
+	if not (fileName == "" or fileName == "none"):
+		var res = load("res://Assets/Portraits/"+dialog[dialog_counter]["portrait"]+".png")
+		$NinePatchRect/Portrait.texture = res
+		if res != null:
+			$NinePatchRect/Portrait.visible = true
+		else :
+			$NinePatchRect/Portrait.texture  = placeholderPort
+
+	else:
+		$NinePatchRect/Portrait.visible = false
+		
 
 
 func _on_timer_timeout():
 	dialog_active = false
 	Globals.currently_interacting = false
+	#print("kill me")
+	#print(nextScene)
+	#print(nextScene.resource_path)
+	#if nextScene.get_path() == "res://Scenes/main_scene.tscn":
+	#	print("AAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHH WTF")
+	#	TransitionLayer.change_scene_to_main(nextScene)
+	#	return
+	print(nextScene)
 	if nextScene:
 		TransitionLayer.change_scene(nextScene)
 		#get_tree().change_scene_to_packed(nextScene)

@@ -1,16 +1,20 @@
-[gd_scene load_steps=33 format=3 uid="uid://ckf7m8yh7nmvh"]
+[gd_scene load_steps=34 format=3 uid="uid://c7sa32nvdk4si"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
 [ext_resource type="Texture2D" uid="uid://ctqki6e868q44" path="res://Assets/Background/Grass_9x9.png" id="1_jue6y"]
+[ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_obbhs"]
 [ext_resource type="Texture2D" uid="uid://dgiq2a821h71q" path="res://Assets/Background/Grass 1x 96x96.jpg" id="2_aode6"]
 [ext_resource type="Shader" path="res://Scenes/shader test/test.gdshader" id="2_nsnny"]
+[ext_resource type="Shader" path="res://Scenes/shader test/pixelArt.gdshader" id="2_vbctf"]
 [ext_resource type="Texture2D" uid="uid://baavxdvggqbjy" path="res://Assets/Buildings/House I 1x 96x96.png" id="4_tyj0k"]
 [ext_resource type="Texture2D" uid="uid://cine24ypaw4k8" path="res://Assets/Buildings/House III 1x 96x96.png" id="5_1arlt"]
 [ext_resource type="Texture2D" uid="uid://dm38nmec2b13l" path="res://Assets/Buildings/House II 1x 96x96.png" id="6_11yhy"]
 [ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/Buildings/NEW_Church_1x_96x96.png" id="6_phxmo"]
-[ext_resource type="PackedScene" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
-[ext_resource type="PackedScene" path="res://Scenes/church_inside.tscn" id="8_tovud"]
-[ext_resource type="AudioStream" uid="uid://bk2aig06g6rma" path="res://Assets/lepicsong.wav" id="11_h4nkb"]
+[ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bue2p"]
+shader = ExtResource("2_vbctf")
+shader_parameter/amount = 94
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("1_jue6y")
@@ -135,8 +139,10 @@ shader_parameter/y_buffer = 2.0
 size = Vector2(80, 35)
 
 [node name="Main Scene" type="Node2D"]
+script = ExtResource("1_obbhs")
 
 [node name="TileMap" type="TileMap" parent="."]
+material = SubResource("ShaderMaterial_bue2p")
 tile_set = SubResource("TileSet_goxcy")
 format = 2
 layer_0/tile_data = PackedInt32Array(131072, 65536, 1, 196608, 65536, 1, 262144, 65536, 1, 327680, 0, 1, 393216, 0, 2, 393217, 65536, 2, 393218, 65536, 2, 393219, 65536, 2, 393220, 65536, 2, 393221, 65536, 2, 393222, 65536, 2, 393223, 65536, 2, 393224, 65536, 2, 393225, 65536, 2, 393226, 65536, 2, 393227, 131072, 2, 327691, 131072, 1, 262155, 131072, 1, 196619, 131072, 1, 131083, 131072, 1, 65547, 131072, 1, 11, 131072, 0, 10, 65536, 0, 9, 65536, 0, 8, 65536, 0, 7, 65536, 1, 6, 65536, 1, 5, 65536, 1, 4, 65536, 0, 3, 65536, 0, 2, 65536, 0, 1, 65536, 0, 0, 0, 0, 65536, 0, 1, 65537, 65536, 1, 131073, 65536, 1, 196609, 65536, 1, 262145, 65536, 1, 327681, 65536, 1, 65538, 65536, 1, 131074, 65536, 1, 196610, 65536, 1, 262146, 65536, 1, 327682, 65536, 1, 65539, 65536, 1, 131075, 65536, 1, 196611, 65536, 1, 262147, 65536, 1, 327683, 65536, 1, 65540, 65536, 1, 131076, 65536, 1, 196612, 65536, 1, 262148, 65536, 1, 327684, 65536, 1, 65541, 65536, 1, 131077, 65536, 1, 196613, 65536, 1, 262149, 65536, 1, 327685, 65536, 1, 65542, 65536, 1, 131078, 65536, 1, 196614, 65536, 1, 262150, 65536, 1, 327686, 65536, 1, 65543, 65536, 1, 131079, 65536, 1, 196615, 65536, 1, 262151, 65536, 1, 327687, 65536, 1, 65544, 65536, 1, 131080, 65536, 1, 196616, 65536, 1, 262152, 65536, 1, 327688, 65536, 1, 65545, 65536, 1, 131081, 65536, 1, 196617, 65536, 1, 262153, 65536, 1, 327689, 65536, 1, 65546, 65536, 1, 131082, 65536, 1, 196618, 65536, 1, 262154, 65536, 1, 327690, 65536, 1, -65530, 65536, 1, -65531, 0, 1, -131067, 0, 1, -65529, 131072, 1, -131065, 131072, 1, -196601, 131072, 1, -262137, 131072, 1, -196603, 0, 1, -262139, 0, 1, -131066, 65536, 1, -196602, 65536, 1, -262138, 65536, 1, -65532, 1, 0, -65533, 1, 0, -65534, 1, 0, -65535, 1, 0, -131072, 1, 0, -131071, 1, 0, -131070, 1, 0, -131069, 1, 0, -131068, 1, 0, -65536, 1, 0, 262143, 65536, 1, 196607, 65536, 0, 196606, 65536, 0, 327679, 65536, 2, 327678, 65536, 2, 262142, 65536, 1)
@@ -144,7 +150,7 @@ layer_0/tile_data = PackedInt32Array(131072, 65536, 1, 196608, 65536, 1, 262144,
 [node name="Ground" type="Node2D" parent="."]
 
 [node name="MainChar" parent="." instance=ExtResource("1_4beut")]
-position = Vector2(752, 333)
+position = Vector2(695, 502)
 
 [node name="Camera2D" type="Camera2D" parent="MainChar"]
 zoom = Vector2(3, 3)
@@ -242,7 +248,9 @@ shape = SubResource("RectangleShape2D_nuwa4")
 [node name="InteractableSquare" parent="Buildings/HouseIii1x96x99" instance=ExtResource("7_j12tx")]
 position = Vector2(10.0001, 37)
 scale = Vector2(0.56001, 0.76)
-dialog_file = "res://DialogText/MainCharHouseDialog.json"
+interact_type = "Dialog_With_Szene_Change_from_Overworld"
+dialog_file = "res://DialogText/Overworld/MainCharHouseDialog.json"
+ChangeToScene = "res://Scenes/HouseInsides/main_char_house_inside.tscn"
 
 [node name="HouseIi1x96x97" type="Sprite2D" parent="Buildings"]
 material = SubResource("ShaderMaterial_lervd")
@@ -269,7 +277,6 @@ position = Vector2(-1.00001, 36)
 scale = Vector2(0.71, 1.025)
 interact_type = "Dialog_With_Szene_Change"
 dialog_file = "res://DialogText/ChurchDialog.json"
-ChangeToScene = ExtResource("8_tovud")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Buildings/Church"]
 
