@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7iy0ckisjusy"]
+
+[ext_resource type="Texture2D" uid="uid://bdgjpb2si22po" path="res://Assets/poison.png" id="1_gxldk"]
+[ext_resource type="Script" path="res://Scenes/CombatScenes/bad_gas.gd" id="1_pdxlk"]
+[ext_resource type="Material" uid="uid://d3qdx6tm4dhi1" path="res://Assets/bad_gas.tres" id="2_nnhm1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fgxdo"]
+radius = 63.0079
+
+[node name="Node2D" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_pdxlk")
+oppositionString = "MiniPlayer"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+texture_filter = 2
+texture_repeat = 2
+scale = Vector2(0.1, 0.1)
+amount = 100
+process_material = ExtResource("2_nnhm1")
+texture = ExtResource("1_gxldk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fgxdo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_gxldk")
