@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://40pvj01vaun1"]
+[gd_scene load_steps=8 format=3 uid="uid://40pvj01vaun1"]
 
 [ext_resource type="Script" path="res://Scripts/Combat/combatScene.gd" id="1_2evti"]
 [ext_resource type="PackedScene" uid="uid://bhwmn8uw5scwn" path="res://Scenes/CombatScenes/miniplayer.tscn" id="2_rkvdr"]
-[ext_resource type="Script" path="res://Scripts/Combat/miniplayer.gd" id="3_sdnaq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxa3q"]
 bg_color = Color(0, 0, 0, 1)
@@ -58,9 +57,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_otk6x")
 
 [node name="player" parent="." groups=["MiniPlayer"] instance=ExtResource("2_rkvdr")]
 position = Vector2(576, 566)
-scale = Vector2(0.5, 0.5)
 collision_mask = 134
-script = ExtResource("3_sdnaq")
 
 [node name="Walls" type="Control" parent="."]
 layout_mode = 3

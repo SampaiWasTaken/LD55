@@ -16,7 +16,7 @@ func _physics_process(delta):
 	if global_position.distance_to(playerPos) < 200:
 		var dv = (playerPos - position).normalized() * speed
 		var steer = -(dv - velocity) 
-		velocity dw= steer
+		velocity = steer
 	if position.distance_to(target) > 10:
 		move_and_slide()
 	else:

@@ -1,15 +1,54 @@
-[gd_scene load_steps=32 format=3 uid="uid://c7sa32nvdk4si"]
+[gd_scene load_steps=39 format=3 uid="uid://c7sa32nvdk4si"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
-[ext_resource type="Texture2D" uid="uid://k0xwisqigv6v" path="res://Assets/Grass_9x9.png" id="1_jue6y"]
-[ext_resource type="Texture2D" uid="uid://cakaolpwwo5ky" path="res://Assets/Grass 1x 96x96.jpg" id="2_aode6"]
+[ext_resource type="Texture2D" uid="uid://ctqki6e868q44" path="res://Assets/Grass_9x9.png" id="1_jue6y"]
+[ext_resource type="Texture2D" uid="uid://dgiq2a821h71q" path="res://Assets/Grass 1x 96x96.jpg" id="2_aode6"]
 [ext_resource type="Shader" path="res://Scenes/shader test/test.gdshader" id="2_nsnny"]
+[ext_resource type="Texture2D" uid="uid://bahs5eu7hxd7m" path="res://Assets/Path Ways_9x9.jpg" id="3_uyc3e"]
+[ext_resource type="Texture2D" uid="uid://bycu1mhqics5f" path="res://Assets/Cave Floor 1x 96x96.png" id="4_so0q0"]
 [ext_resource type="Texture2D" uid="uid://baavxdvggqbjy" path="res://Assets/House I 1x 96x96.png" id="4_tyj0k"]
 [ext_resource type="Texture2D" uid="uid://cine24ypaw4k8" path="res://Assets/House III 1x 96x96.png" id="5_1arlt"]
 [ext_resource type="Texture2D" uid="uid://dm38nmec2b13l" path="res://Assets/House II 1x 96x96.png" id="6_11yhy"]
 [ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/NEW_Church_1x_96x96.png" id="6_phxmo"]
-[ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
-[ext_resource type="PackedScene" uid="uid://d1rjps32op2pd" path="res://Scenes/church_inside.tscn" id="8_tovud"]
+[ext_resource type="PackedScene" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
+[ext_resource type="PackedScene" path="res://Scenes/church_inside.tscn" id="8_tovud"]
+[ext_resource type="AudioStream" uid="uid://bk2aig06g6rma" path="res://Assets/lepicsong.wav" id="13_puw8j"]
+
+[sub_resource type="Shader" id="Shader_gfbpd"]
+code = "shader_type canvas_item;
+
+uniform vec2 size;
+uniform int samples = 0;
+
+vec4 getPixel(sampler2D tex, vec2 uv, vec2 offset) {
+	return texture(tex, uv + offset);
+}
+
+void fragment() {
+	vec4 color = vec4(0.0);
+	for (int x = -samples; x < 100; x++) {
+		for (int y = -samples; y < 100; y++) {
+			color += getPixel(TEXTURE, UV, vec2(float(x) * size.x, float(y) * size.y));
+
+			if (y > samples) {
+				break;
+			}
+		}
+		if (x > samples) {
+			break;
+		}
+	}
+	if (samples == 0) {
+		COLOR = getPixel(TEXTURE, UV, vec2(0.0, 0.0));
+	} else {
+		COLOR = color / float((samples * 2 + 1) * (samples * 2 + 1) - 1) + getPixel(TEXTURE, UV, vec2(0.0, 0.0));
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6dkxa"]
+shader = SubResource("Shader_gfbpd")
+shader_parameter/size = Vector2(96, 96)
+shader_parameter/samples = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("1_jue6y")
@@ -29,10 +68,32 @@ texture = ExtResource("2_aode6")
 texture_region_size = Vector2i(96, 96)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fb5un"]
+texture = ExtResource("3_uyc3e")
+texture_region_size = Vector2i(96, 96)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/next_alternative_id = 2
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ultbt"]
+texture = ExtResource("4_so0q0")
+texture_region_size = Vector2i(96, 96)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_goxcy"]
 tile_size = Vector2i(96, 96)
+uv_clipping = true
 sources/0 = SubResource("TileSetAtlasSource_ts157")
 sources/1 = SubResource("TileSetAtlasSource_b6ns7")
+sources/2 = SubResource("TileSetAtlasSource_fb5un")
+sources/3 = SubResource("TileSetAtlasSource_ultbt")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ombe6"]
 shader = ExtResource("2_nsnny")
@@ -136,9 +197,11 @@ size = Vector2(80, 35)
 [node name="Main Scene" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+texture_filter = 5
+material = SubResource("ShaderMaterial_6dkxa")
 tile_set = SubResource("TileSet_goxcy")
 format = 2
-layer_0/tile_data = PackedInt32Array(131072, 65536, 1, 196608, 65536, 1, 262144, 65536, 1, 327680, 0, 1, 393216, 0, 2, 393217, 65536, 2, 393218, 65536, 2, 393219, 65536, 2, 393220, 65536, 2, 393221, 65536, 2, 393222, 65536, 2, 393223, 65536, 2, 393224, 65536, 2, 393225, 65536, 2, 393226, 65536, 2, 393227, 131072, 2, 327691, 131072, 1, 262155, 131072, 1, 196619, 131072, 1, 131083, 131072, 1, 65547, 131072, 1, 11, 131072, 0, 10, 65536, 0, 9, 65536, 0, 8, 65536, 0, 7, 65536, 1, 6, 65536, 1, 5, 65536, 1, 4, 65536, 0, 3, 65536, 0, 2, 65536, 0, 1, 65536, 0, 0, 0, 0, 65536, 0, 1, 65537, 65536, 1, 131073, 65536, 1, 196609, 65536, 1, 262145, 65536, 1, 327681, 65536, 1, 65538, 65536, 1, 131074, 65536, 1, 196610, 65536, 1, 262146, 65536, 1, 327682, 65536, 1, 65539, 65536, 1, 131075, 65536, 1, 196611, 65536, 1, 262147, 65536, 1, 327683, 65536, 1, 65540, 65536, 1, 131076, 65536, 1, 196612, 65536, 1, 262148, 65536, 1, 327684, 65536, 1, 65541, 65536, 1, 131077, 65536, 1, 196613, 65536, 1, 262149, 65536, 1, 327685, 65536, 1, 65542, 65536, 1, 131078, 65536, 1, 196614, 65536, 1, 262150, 65536, 1, 327686, 65536, 1, 65543, 65536, 1, 131079, 65536, 1, 196615, 65536, 1, 262151, 65536, 1, 327687, 65536, 1, 65544, 65536, 1, 131080, 65536, 1, 196616, 65536, 1, 262152, 65536, 1, 327688, 65536, 1, 65545, 65536, 1, 131081, 65536, 1, 196617, 65536, 1, 262153, 65536, 1, 327689, 65536, 1, 65546, 65536, 1, 131082, 65536, 1, 196618, 65536, 1, 262154, 65536, 1, 327690, 65536, 1, -65530, 65536, 1, -65531, 0, 1, -131067, 0, 1, -65529, 131072, 1, -131065, 131072, 1, -196601, 131072, 1, -262137, 131072, 1, -196603, 0, 1, -262139, 0, 1, -131066, 65536, 1, -196602, 65536, 1, -262138, 65536, 1, -65532, 1, 0, -65533, 1, 0, -65534, 1, 0, -65535, 1, 0, -131072, 1, 0, -131071, 1, 0, -131070, 1, 0, -131069, 1, 0, -131068, 1, 0, -65536, 1, 0, 262143, 65536, 1, 196607, 65536, 0, 196606, 65536, 0, 327679, 65536, 2, 327678, 65536, 2, 262142, 65536, 1)
+layer_0/tile_data = PackedInt32Array(131072, 65538, 1, 196608, 65538, 1, 262144, 65538, 1, 327680, 2, 1, 393216, 2, 2, 393217, 65538, 2, 393218, 65538, 2, 393219, 65538, 2, 393220, 65538, 2, 393221, 65538, 2, 393222, 65538, 2, 393223, 65538, 2, 393224, 65538, 2, 393225, 65538, 2, 393226, 65538, 2, 393227, 131074, 2, 327691, 131074, 1, 262155, 131074, 1, 196619, 131074, 1, 131083, 131074, 1, 65547, 131074, 1, 11, 131074, 0, 10, 65538, 0, 9, 65538, 0, 8, 65538, 0, 7, 65538, 1, 6, 65538, 1, 5, 65538, 1, 4, 65538, 0, 3, 65538, 0, 2, 65538, 0, 1, 65538, 0, 0, 2, 0, 65536, 2, 1, 65537, 65538, 1, 131073, 65538, 1, 196609, 65538, 1, 262145, 65538, 1, 327681, 65538, 1, 65538, 65538, 1, 131074, 65538, 1, 196610, 65538, 1, 262146, 65538, 1, 327682, 65538, 1, 65539, 65538, 1, 131075, 65538, 1, 196611, 65538, 1, 262147, 65538, 1, 327683, 65538, 1, 65540, 65538, 1, 131076, 65538, 1, 196612, 65538, 1, 262148, 65538, 1, 327684, 65538, 1, 65541, 65538, 1, 131077, 65538, 1, 196613, 65538, 1, 262149, 65538, 1, 327685, 65538, 1, 65542, 65538, 1, 131078, 65538, 1, 196614, 65538, 1, 262150, 65538, 1, 327686, 65538, 1, 65543, 65538, 1, 131079, 65538, 1, 196615, 65538, 1, 262151, 65538, 1, 327687, 65538, 1, 65544, 65538, 1, 131080, 65538, 1, 196616, 65538, 1, 262152, 65538, 1, 327688, 65538, 1, 65545, 65538, 1, 131081, 65538, 1, 196617, 65538, 1, 262153, 65538, 1, 327689, 65538, 1, 65546, 65538, 1, 131082, 65538, 1, 196618, 65538, 1, 262154, 65538, 1, 327690, 65538, 1, -65530, 65538, 1, -65531, 2, 1, -131067, 2, 1, -65529, 131074, 1, -131065, 131074, 1, -196601, 131074, 1, -262137, 131074, 1, -196603, 2, 1, -262139, 2, 1, -131066, 65538, 1, -196602, 65538, 1, -262138, 65538, 1, -65532, 1, 0, -65533, 1, 0, -65534, 1, 0, -65535, 1, 0, -131072, 1, 0, -131071, 1, 0, -131070, 1, 0, -131069, 1, 0, -131068, 1, 0, -65536, 1, 0, 262143, 65538, 1, 196607, 65538, 0, 196606, 65538, 0, 327679, 65538, 2, 327678, 65538, 2, 262142, 65538, 1)
 
 [node name="Ground" type="Node2D" parent="."]
 
@@ -270,3 +333,7 @@ ChangeToScene = ExtResource("8_tovud")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Church/StaticBody2D"]
 position = Vector2(-1, 28.5)
 shape = SubResource("RectangleShape2D_ognwo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_puw8j")
+autoplay = true

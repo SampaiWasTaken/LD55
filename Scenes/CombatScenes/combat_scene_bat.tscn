@@ -18,13 +18,13 @@ point_count = 2
 [node name="Node2D" instance=ExtResource("1_bfrwy")]
 script = ExtResource("2_38kw8")
 
-[node name="Walls" parent="." index="3"]
+[node name="Walls" parent="." index="4"]
 metadata/_edit_use_anchors_ = true
 
-[node name="UI" parent="." index="5"]
+[node name="UI" parent="." index="6"]
 metadata/_edit_use_anchors_ = true
 
-[node name="HPBar" parent="UI" index="3"]
+[node name="HPBar" parent="UI" index="2"]
 metadata/_edit_use_anchors_ = true
 
 [node name="BoulderPath" type="Path2D" parent="." index="7"]
@@ -34,7 +34,7 @@ curve = SubResource("Curve2D_kdrnh")
 
 [node name="BoulderSpawner" type="PathFollow2D" parent="BoulderPath" index="0"]
 position = Vector2(127.142, 153)
-rotation = -0.00222749
+rotation = -0.0022275
 
 [node name="BoulderTimer" type="Timer" parent="." index="8"]
 wait_time = 0.5

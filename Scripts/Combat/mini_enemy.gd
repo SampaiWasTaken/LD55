@@ -14,7 +14,7 @@ func _process(_delta):
 	pass
 
 func shoot(direction: float, speed: float):
-	print("shot")
+	#print("shot")
 	var bullet = obj_bullet.instantiate()
 	bullet.scale = Vector2(0.5, 0.5)
 	bullet.position = $Marker2D.global_position
@@ -36,7 +36,7 @@ func shootSpread(direction: float, speed: float):
 		bullets[i].velocity = Vector2(speed, 0).rotated(bullets[i].rotation)
 		
 func _on_shoot_timer_timeout():
-	print("shot")
+	#print("shot")
 	var dir = global_position.direction_to(player.global_position)
 	shoot(dir.angle(), 50 + randi()%100)
 	
