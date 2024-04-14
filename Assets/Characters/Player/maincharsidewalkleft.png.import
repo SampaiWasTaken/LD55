@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bycu1mhqics5f"
-path="res://.godot/imported/Cave Floor 1x 96x96.png-25dc1d97505205d3192f9d1896b3b294.ctex"
+uid="uid://81u0pn03kkcf"
+path="res://.godot/imported/maincharsidewalkleft.png-b3ac2d3662249afaa3d1e86b9654e2ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cave Floor 1x 96x96.png"
-dest_files=["res://.godot/imported/Cave Floor 1x 96x96.png-25dc1d97505205d3192f9d1896b3b294.ctex"]
+source_file="res://Assets/Characters/Player/maincharsidewalkleft.png"
+dest_files=["res://.godot/imported/maincharsidewalkleft.png-b3ac2d3662249afaa3d1e86b9654e2ce.ctex"]
 
 [params]
 

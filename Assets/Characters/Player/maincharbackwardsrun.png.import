@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bahs5eu7hxd7m"
-path="res://.godot/imported/Path Ways_9x9.jpg-f9fa08a065fc307de6399f038e793d81.ctex"
+uid="uid://de88j6yxottd4"
+path="res://.godot/imported/maincharbackwardsrun.png-0e5a2f4796c86ebdad162c85882b0691.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Path Ways_9x9.jpg"
-dest_files=["res://.godot/imported/Path Ways_9x9.jpg-f9fa08a065fc307de6399f038e793d81.ctex"]
+source_file="res://Assets/Characters/Player/maincharbackwardsrun.png"
+dest_files=["res://.godot/imported/maincharbackwardsrun.png-0e5a2f4796c86ebdad162c85882b0691.ctex"]
 
 [params]
 

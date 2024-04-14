@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqqftuvy4fjyd"
-path="res://.godot/imported/boulder.png-35ecb6e2a061d6dc0bae1b4bdef2e8ee.ctex"
+uid="uid://2e65sd6wjtea"
+path="res://.godot/imported/Tree 1 1x 96x96.png-62e245fcd583fe5ca0969e713a4c5cd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/boulder.png"
-dest_files=["res://.godot/imported/boulder.png-35ecb6e2a061d6dc0bae1b4bdef2e8ee.ctex"]
+source_file="res://Assets/Background/Tree 1 1x 96x96.png"
+dest_files=["res://.godot/imported/Tree 1 1x 96x96.png-62e245fcd583fe5ca0969e713a4c5cd0.ctex"]
 
 [params]
 

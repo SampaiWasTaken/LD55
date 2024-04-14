@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdgjpb2si22po"
-path="res://.godot/imported/poison.png-a28b192a51dc6d6ba531227526f667e0.ctex"
+uid="uid://bahs5eu7hxd7m"
+path="res://.godot/imported/Path Ways_9x9.jpg-a71ee66da6f54e807f852d4f832b071e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/poison.png"
-dest_files=["res://.godot/imported/poison.png-a28b192a51dc6d6ba531227526f667e0.ctex"]
+source_file="res://Assets/Background/Path Ways_9x9.jpg"
+dest_files=["res://.godot/imported/Path Ways_9x9.jpg-a71ee66da6f54e807f852d4f832b071e.ctex"]
 
 [params]
 

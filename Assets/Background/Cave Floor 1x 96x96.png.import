@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7naa81357jrb"
-path="res://.godot/imported/Base for Tiles.jpg-94ffbefaec199e50aee92ab179214598.ctex"
+uid="uid://bycu1mhqics5f"
+path="res://.godot/imported/Cave Floor 1x 96x96.png-eb32d486fd5dd2d635ec560ba8399a07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Base for Tiles.jpg"
-dest_files=["res://.godot/imported/Base for Tiles.jpg-94ffbefaec199e50aee92ab179214598.ctex"]
+source_file="res://Assets/Background/Cave Floor 1x 96x96.png"
+dest_files=["res://.godot/imported/Cave Floor 1x 96x96.png-eb32d486fd5dd2d635ec560ba8399a07.ctex"]
 
 [params]
 
