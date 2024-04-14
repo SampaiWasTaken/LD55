@@ -1,32 +1,46 @@
 [gd_scene load_steps=3 format=3 uid="uid://c7856uknhdgf0"]
 
-[ext_resource type="Texture2D" uid="uid://cjgkuwst0o8ld" path="res://icon.svg" id="1_63rna"]
 [ext_resource type="Script" path="res://Scenes/Dialog/dialog_box.gd" id="1_g0vab"]
+[ext_resource type="Texture2D" uid="uid://cmx0gxbgnluvx" path="res://Assets/Portraits/9patch (2).png" id="2_ju4c3"]
 
 [node name="DialogBox" type="CanvasLayer"]
 script = ExtResource("1_g0vab")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 visible = false
-offset_right = 1150.0
-offset_bottom = 163.0
-texture = ExtResource("1_63rna")
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 166.0
+grow_horizontal = 2
+texture = ExtResource("2_ju4c3")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
 
 [node name="Name" type="RichTextLabel" parent="NinePatchRect"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 11.0
-offset_right = 174.0
-offset_bottom = 51.0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 150.0
+offset_bottom = 45.0
 text = "Name"
 
 [node name="Text" type="RichTextLabel" parent="NinePatchRect"]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 43.0
-offset_right = 1109.0
-offset_bottom = 149.0
+offset_left = 154.0
+offset_top = 30.0
+offset_right = 1126.0
+offset_bottom = 134.0
 text = "awdawdad"
+
+[node name="Portrait" type="TextureRect" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 35.0
+offset_right = 143.0
+offset_bottom = 163.0
+stretch_mode = 4
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1

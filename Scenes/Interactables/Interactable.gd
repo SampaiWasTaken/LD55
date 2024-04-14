@@ -1,10 +1,10 @@
-class_name Interactable extends StaticBody2D
+class_name Interactable extends Node2D
 
 @export var interact_label = "none"
 @export var interact_type = "none"
 @export var interaction_value = "none"
 @export_global_file("*.json") var dialog_file
-@export var ChangeToScene: PackedScene
+@export var ChangeToScene: String
 
 var nextScene
 

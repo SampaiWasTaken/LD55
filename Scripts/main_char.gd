@@ -9,7 +9,6 @@ func getInput():
 	
 	#movement
 	var input_direction = Input.get_vector("walkLeft", "walkRight", "walkUp", "walkDown")
-	print(input_direction)
 	if Input.is_action_pressed("walkRight"):
 		input_direction.y = 0
 		animeSprite.play("walkRight")
@@ -65,6 +64,10 @@ func interact():
 			#Chages the after dialog
 			"Dialog_With_Szene_Change" : 
 					Globals.currently_interacting = true
+					newest_interaction.showDialogSceneChange()
+			"Dialog_With_Szene_Change_from_Overworld" : 
+					Globals.currently_interacting = true
+					Globals.overworld_player_pos = global_position
 					newest_interaction.showDialogSceneChange()
 			#Pickup Item with a Dialog
 			"Item_With_Dialog" : 
