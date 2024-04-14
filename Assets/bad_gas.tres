@@ -1,0 +1,10 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://d3qdx6tm4dhi1"]
+
+[resource]
+lifetime_randomness = 0.12
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+radial_velocity_max = 200.0
+scale_max = 5.0
+color = Color(0, 1, 0, 0.196078)
+hue_variation_max = 0.3

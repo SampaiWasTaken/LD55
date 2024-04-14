@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://40pvj01vaun1"]
+[gd_scene load_steps=9 format=3 uid="uid://40pvj01vaun1"]
 
 [ext_resource type="Script" path="res://Scripts/Combat/combatScene.gd" id="1_2evti"]
 [ext_resource type="PackedScene" uid="uid://bhwmn8uw5scwn" path="res://Scenes/CombatScenes/miniplayer.tscn" id="2_rkvdr"]
@@ -11,8 +11,10 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otk6x"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tmk8o"]
-size = Vector2(38, 478)
+size = Vector2(3.49998, 482.023)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyxbb"]
 bg_color = Color(0, 1, 0.8, 1)
@@ -41,11 +43,18 @@ offset_bottom = 650.0
 metadata/_edit_lock_ = true
 
 [node name="Panel2" type="Panel" parent="."]
-offset_left = 168.0
-offset_top = 210.0
-offset_right = 989.0
-offset_bottom = 612.0
+offset_left = 170.0
+offset_top = 208.0
+offset_right = 991.0
+offset_bottom = 610.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_yxa3q")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 170.0
+offset_top = 299.0
+offset_right = 991.0
+offset_bottom = 306.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_otk6x")
 
 [node name="player" parent="." groups=["MiniPlayer"] instance=ExtResource("2_rkvdr")]
 position = Vector2(576, 566)
@@ -66,7 +75,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D" groups=["Walls"]]
-position = Vector2(-10, 0)
+position = Vector2(12, 0)
 shape = SubResource("RectangleShape2D_tmk8o")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Walls" groups=["Walls"]]
@@ -75,7 +84,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D2" groups=["Walls"]]
-position = Vector2(20, 0)
+position = Vector2(3, 0)
 shape = SubResource("RectangleShape2D_tmk8o")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Walls" groups=["Walls"]]
@@ -86,7 +95,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D3" groups=["Walls"]]
-position = Vector2(1, -1.16279)
+position = Vector2(-20, -0.581341)
 shape = SubResource("RectangleShape2D_tmk8o")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Walls" groups=["Walls"]]
@@ -97,7 +106,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D4" groups=["Walls"]]
-position = Vector2(1, -1.16275)
+position = Vector2(14.75, -1.16278)
 shape = SubResource("RectangleShape2D_tmk8o")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="Walls" groups=["Walls"]]
@@ -107,7 +116,7 @@ scale = Vector2(1, 1.72)
 collision_layer = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D5" groups=["Walls"]]
-position = Vector2(1, -1.16275)
+position = Vector2(1.00001, 5.126e-06)
 shape = SubResource("RectangleShape2D_tmk8o")
 
 [node name="MoveTimer" type="Timer" parent="."]
@@ -122,16 +131,17 @@ offset_bottom = 137.0
 
 [node name="CooldownBar" type="ProgressBar" parent="UI"]
 layout_mode = 0
-offset_left = 603.0
-offset_top = 30.0
-offset_right = 869.0
-offset_bottom = 57.0
+offset_left = 574.0
+offset_top = 40.0
+offset_right = 840.0
+offset_bottom = 67.0
 scale = Vector2(1, 0.989967)
 theme_override_styles/fill = SubResource("StyleBoxFlat_fyxbb")
 value = 100.0
 show_percentage = false
 
 [node name="Label" type="Label" parent="UI/CooldownBar"]
+visible = false
 layout_mode = 0
 offset_right = 266.0
 offset_bottom = 28.0
@@ -140,50 +150,20 @@ text = "Basic"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CooldownBar2" type="ProgressBar" parent="UI"]
+[node name="Label" type="Label" parent="UI"]
 layout_mode = 0
-offset_left = 603.0
-offset_top = -6.0
-offset_right = 869.0
-offset_bottom = 21.0
-theme_override_styles/fill = SubResource("StyleBoxFlat_fyxbb")
-value = 100.0
-show_percentage = false
-
-[node name="Label" type="Label" parent="UI/CooldownBar2"]
-layout_mode = 0
-offset_right = 266.0
-offset_bottom = 28.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Basic"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CooldownBar3" type="ProgressBar" parent="UI"]
-layout_mode = 0
-offset_left = 603.0
-offset_top = -43.0
-offset_right = 869.0
-offset_bottom = -16.0
-theme_override_styles/fill = SubResource("StyleBoxFlat_fyxbb")
-value = 100.0
-show_percentage = false
-
-[node name="Label" type="Label" parent="UI/CooldownBar3"]
-layout_mode = 0
-offset_right = 266.0
-offset_bottom = 28.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Basic"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = 24.0
+offset_top = 9.0
+offset_right = 76.0
+offset_bottom = 32.0
+text = "Health"
 
 [node name="HPBar" type="ProgressBar" parent="UI"]
 layout_mode = 0
-offset_left = -18.0
-offset_top = -53.0
-offset_right = 127.0
-offset_bottom = -26.0
+offset_left = 24.0
+offset_top = 40.0
+offset_right = 169.0
+offset_bottom = 67.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_boqq8")
 show_percentage = false
 
