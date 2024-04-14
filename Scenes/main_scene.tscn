@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://c7sa32nvdk4si"]
+[gd_scene load_steps=35 format=3 uid="uid://ckf7m8yh7nmvh"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
 [ext_resource type="Texture2D" uid="uid://ctqki6e868q44" path="res://Assets/Background/Grass_9x9.png" id="1_jue6y"]
@@ -10,7 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cine24ypaw4k8" path="res://Assets/Buildings/House III 1x 96x96.png" id="5_1arlt"]
 [ext_resource type="Texture2D" uid="uid://dm38nmec2b13l" path="res://Assets/Buildings/House II 1x 96x96.png" id="6_11yhy"]
 [ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/Buildings/NEW_Church_1x_96x96.png" id="6_phxmo"]
-[ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
+[ext_resource type="PackedScene" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
+[ext_resource type="AudioStream" uid="uid://bk2aig06g6rma" path="res://Assets/lepicsong.wav" id="11_h4nkb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bue2p"]
 shader = ExtResource("2_vbctf")
@@ -283,3 +284,7 @@ dialog_file = "res://DialogText/ChurchDialog.json"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Church/StaticBody2D"]
 position = Vector2(-1, 28.5)
 shape = SubResource("RectangleShape2D_ognwo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_h4nkb")
+autoplay = true
