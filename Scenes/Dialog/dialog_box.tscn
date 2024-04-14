@@ -7,6 +7,7 @@
 script = ExtResource("1_g0vab")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
 offset_right = 1150.0
 offset_bottom = 163.0
 texture = ExtResource("1_63rna")
