@@ -1,8 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://c7sa32nvdk4si"]
+[gd_scene load_steps=32 format=3 uid="uid://c7sa32nvdk4si"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
 [ext_resource type="Texture2D" uid="uid://k0xwisqigv6v" path="res://Assets/Grass_9x9.png" id="1_jue6y"]
+[ext_resource type="Texture2D" uid="uid://cakaolpwwo5ky" path="res://Assets/Grass 1x 96x96.jpg" id="2_aode6"]
 [ext_resource type="Shader" path="res://Scenes/shader test/test.gdshader" id="2_nsnny"]
+[ext_resource type="Texture2D" uid="uid://baavxdvggqbjy" path="res://Assets/House I 1x 96x96.png" id="4_tyj0k"]
+[ext_resource type="Texture2D" uid="uid://cine24ypaw4k8" path="res://Assets/House III 1x 96x96.png" id="5_1arlt"]
+[ext_resource type="Texture2D" uid="uid://dm38nmec2b13l" path="res://Assets/House II 1x 96x96.png" id="6_11yhy"]
 [ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/NEW_Church_1x_96x96.png" id="6_phxmo"]
 [ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
 [ext_resource type="PackedScene" uid="uid://d1rjps32op2pd" path="res://Scenes/church_inside.tscn" id="8_tovud"]
@@ -20,9 +24,103 @@ texture_region_size = Vector2i(96, 96)
 1:2/0 = 0
 2:2/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b6ns7"]
+texture = ExtResource("2_aode6")
+texture_region_size = Vector2i(96, 96)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_goxcy"]
 tile_size = Vector2i(96, 96)
 sources/0 = SubResource("TileSetAtlasSource_ts157")
+sources/1 = SubResource("TileSetAtlasSource_b6ns7")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ombe6"]
+shader = ExtResource("2_nsnny")
+shader_parameter/deform = Vector2(-0.23, 0.155)
+shader_parameter/offset = Vector2(-0.235, 12.18)
+shader_parameter/modulate = Color(0, 0, 0, 0.392157)
+shader_parameter/x_buffer = 2.0
+shader_parameter/y_buffer = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guhdo"]
+size = Vector2(47, 32)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_867jc"]
+shader = ExtResource("2_nsnny")
+shader_parameter/deform = Vector2(-0.23, 0.155)
+shader_parameter/offset = Vector2(-0.235, 12.18)
+shader_parameter/modulate = Color(0, 0, 0, 0.392157)
+shader_parameter/x_buffer = 2.0
+shader_parameter/y_buffer = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58crj"]
+size = Vector2(48, 32)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n82ak"]
+shader = ExtResource("2_nsnny")
+shader_parameter/deform = Vector2(-0.17, 0.105)
+shader_parameter/offset = Vector2(-2.755, 8.89)
+shader_parameter/modulate = Color(0, 0, 0, 0.392157)
+shader_parameter/x_buffer = 2.0
+shader_parameter/y_buffer = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqxss"]
+size = Vector2(69, 29)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ma6s7"]
+shader = ExtResource("2_nsnny")
+shader_parameter/deform = Vector2(0.23, 0.155)
+shader_parameter/offset = Vector2(-0.235, 12.18)
+shader_parameter/modulate = Color(0, 0, 0, 0.392157)
+shader_parameter/x_buffer = 2.0
+shader_parameter/y_buffer = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drj0p"]
+size = Vector2(47.5, 34)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nr3om"]
+shader = ExtResource("2_nsnny")
+shader_parameter/deform = Vector2(0.23, 0.155)
+shader_parameter/offset = Vector2(-0.235, 12.18)
+shader_parameter/modulate = Color(0, 0, 0, 0.392157)
+shader_parameter/x_buffer = 2.0
+shader_parameter/y_buffer = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnmfj"]
+size = Vector2(47, 32)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c4f4j"]
+shader = ExtResource("2_nsnny")
+shader_parameter/deform = Vector2(0.23, 0.155)
+shader_parameter/offset = Vector2(-0.235, 12.18)
+shader_parameter/modulate = Color(0, 0, 0, 0.392157)
+shader_parameter/x_buffer = 2.0
+shader_parameter/y_buffer = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e38d3"]
+size = Vector2(48, 32)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_07p4v"]
+shader = ExtResource("2_nsnny")
+shader_parameter/deform = Vector2(0.23, 0.155)
+shader_parameter/offset = Vector2(-0.235, 12.18)
+shader_parameter/modulate = Color(0, 0, 0, 0.392157)
+shader_parameter/x_buffer = 2.0
+shader_parameter/y_buffer = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nuwa4"]
+size = Vector2(48, 31)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lervd"]
+shader = ExtResource("2_nsnny")
+shader_parameter/deform = Vector2(0.23, 0.155)
+shader_parameter/offset = Vector2(3.795, 12.18)
+shader_parameter/modulate = Color(0, 0, 0, 0.392157)
+shader_parameter/x_buffer = 2.0
+shader_parameter/y_buffer = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6qqu"]
+size = Vector2(68, 31)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qbxy6"]
 shader = ExtResource("2_nsnny")
@@ -32,30 +130,143 @@ shader_parameter/modulate = Color(0, 0, 0, 0.392157)
 shader_parameter/x_buffer = 2.0
 shader_parameter/y_buffer = 2.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ognwo"]
+size = Vector2(80, 35)
+
 [node name="Main Scene" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_goxcy")
 format = 2
-layer_0/tile_data = PackedInt32Array(131072, 0, 1, 196608, 0, 1, 262144, 0, 1, 327680, 0, 1, 393216, 0, 2, 393217, 65536, 2, 393218, 65536, 2, 393219, 65536, 2, 393220, 65536, 2, 393221, 65536, 2, 393222, 65536, 2, 393223, 65536, 2, 393224, 65536, 2, 393225, 65536, 2, 393226, 65536, 2, 393227, 131072, 2, 327691, 131072, 1, 262155, 131072, 1, 196619, 131072, 1, 131083, 131072, 1, 65547, 131072, 1, 11, 131072, 0, 10, 65536, 0, 9, 65536, 0, 8, 65536, 0, 7, 65536, 1, 6, 65536, 1, 5, 65536, 1, 4, 65536, 0, 3, 65536, 0, 2, 65536, 0, 1, 65536, 0, 0, 0, 0, 65536, 0, 1, 65537, 65536, 1, 131073, 65536, 1, 196609, 65536, 1, 262145, 65536, 1, 327681, 65536, 1, 65538, 65536, 1, 131074, 65536, 1, 196610, 65536, 1, 262146, 65536, 1, 327682, 65536, 1, 65539, 65536, 1, 131075, 65536, 1, 196611, 65536, 1, 262147, 65536, 1, 327683, 65536, 1, 65540, 65536, 1, 131076, 65536, 1, 196612, 65536, 1, 262148, 65536, 1, 327684, 65536, 1, 65541, 65536, 1, 131077, 65536, 1, 196613, 65536, 1, 262149, 65536, 1, 327685, 65536, 1, 65542, 65536, 1, 131078, 65536, 1, 196614, 65536, 1, 262150, 65536, 1, 327686, 65536, 1, 65543, 65536, 1, 131079, 65536, 1, 196615, 65536, 1, 262151, 65536, 1, 327687, 65536, 1, 65544, 65536, 1, 131080, 65536, 1, 196616, 65536, 1, 262152, 65536, 1, 327688, 65536, 1, 65545, 65536, 1, 131081, 65536, 1, 196617, 65536, 1, 262153, 65536, 1, 327689, 65536, 1, 65546, 65536, 1, 131082, 65536, 1, 196618, 65536, 1, 262154, 65536, 1, 327690, 65536, 1, -65530, 65536, 1, -65531, 0, 1, -131067, 0, 1, -65529, 131072, 1, -131065, 131072, 1, -196601, 131072, 1, -262137, 131072, 1, -196603, 0, 1, -262139, 0, 1, -131066, 65536, 1, -196602, 65536, 1, -262138, 65536, 1)
+layer_0/tile_data = PackedInt32Array(131072, 65536, 1, 196608, 65536, 1, 262144, 65536, 1, 327680, 0, 1, 393216, 0, 2, 393217, 65536, 2, 393218, 65536, 2, 393219, 65536, 2, 393220, 65536, 2, 393221, 65536, 2, 393222, 65536, 2, 393223, 65536, 2, 393224, 65536, 2, 393225, 65536, 2, 393226, 65536, 2, 393227, 131072, 2, 327691, 131072, 1, 262155, 131072, 1, 196619, 131072, 1, 131083, 131072, 1, 65547, 131072, 1, 11, 131072, 0, 10, 65536, 0, 9, 65536, 0, 8, 65536, 0, 7, 65536, 1, 6, 65536, 1, 5, 65536, 1, 4, 65536, 0, 3, 65536, 0, 2, 65536, 0, 1, 65536, 0, 0, 0, 0, 65536, 0, 1, 65537, 65536, 1, 131073, 65536, 1, 196609, 65536, 1, 262145, 65536, 1, 327681, 65536, 1, 65538, 65536, 1, 131074, 65536, 1, 196610, 65536, 1, 262146, 65536, 1, 327682, 65536, 1, 65539, 65536, 1, 131075, 65536, 1, 196611, 65536, 1, 262147, 65536, 1, 327683, 65536, 1, 65540, 65536, 1, 131076, 65536, 1, 196612, 65536, 1, 262148, 65536, 1, 327684, 65536, 1, 65541, 65536, 1, 131077, 65536, 1, 196613, 65536, 1, 262149, 65536, 1, 327685, 65536, 1, 65542, 65536, 1, 131078, 65536, 1, 196614, 65536, 1, 262150, 65536, 1, 327686, 65536, 1, 65543, 65536, 1, 131079, 65536, 1, 196615, 65536, 1, 262151, 65536, 1, 327687, 65536, 1, 65544, 65536, 1, 131080, 65536, 1, 196616, 65536, 1, 262152, 65536, 1, 327688, 65536, 1, 65545, 65536, 1, 131081, 65536, 1, 196617, 65536, 1, 262153, 65536, 1, 327689, 65536, 1, 65546, 65536, 1, 131082, 65536, 1, 196618, 65536, 1, 262154, 65536, 1, 327690, 65536, 1, -65530, 65536, 1, -65531, 0, 1, -131067, 0, 1, -65529, 131072, 1, -131065, 131072, 1, -196601, 131072, 1, -262137, 131072, 1, -196603, 0, 1, -262139, 0, 1, -131066, 65536, 1, -196602, 65536, 1, -262138, 65536, 1, -65532, 1, 0, -65533, 1, 0, -65534, 1, 0, -65535, 1, 0, -131072, 1, 0, -131071, 1, 0, -131070, 1, 0, -131069, 1, 0, -131068, 1, 0, -65536, 1, 0, 262143, 65536, 1, 196607, 65536, 0, 196606, 65536, 0, 327679, 65536, 2, 327678, 65536, 2, 262142, 65536, 1)
 
 [node name="Ground" type="Node2D" parent="."]
 
 [node name="MainChar" parent="." instance=ExtResource("1_4beut")]
+position = Vector2(752, 333)
 
 [node name="Camera2D" type="Camera2D" parent="MainChar"]
-position = Vector2(66, 73)
+zoom = Vector2(3, 3)
 limit_smoothed = true
-position_smoothing_speed = 5000.0
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 
-[node name="NewChurch1x96x96" type="Sprite2D" parent="."]
+[node name="Buildings" type="Node2D" parent="."]
+
+[node name="HouseI1x96x96" type="Sprite2D" parent="Buildings"]
+material = SubResource("ShaderMaterial_ombe6")
+position = Vector2(713, 233)
+texture = ExtResource("4_tyj0k")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Buildings/HouseI1x96x96"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/HouseI1x96x96/StaticBody2D"]
+position = Vector2(-0.5, 26)
+shape = SubResource("RectangleShape2D_guhdo")
+
+[node name="HouseIii1x96x97" type="Sprite2D" parent="Buildings"]
+material = SubResource("ShaderMaterial_867jc")
+position = Vector2(912, 233)
+texture = ExtResource("5_1arlt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Buildings/HouseIii1x96x97"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/HouseIii1x96x97/StaticBody2D"]
+position = Vector2(-1, 29)
+shape = SubResource("RectangleShape2D_58crj")
+
+[node name="HouseIi1x96x96" type="Sprite2D" parent="Buildings"]
+material = SubResource("ShaderMaterial_n82ak")
+position = Vector2(495, 244)
+texture = ExtResource("6_11yhy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Buildings/HouseIi1x96x96"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/HouseIi1x96x96/StaticBody2D"]
+position = Vector2(0.5, 13.5)
+shape = SubResource("RectangleShape2D_hqxss")
+
+[node name="HouseIii1x96x96" type="Sprite2D" parent="Buildings"]
+material = SubResource("ShaderMaterial_ma6s7")
+position = Vector2(438, 232)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("5_1arlt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Buildings/HouseIii1x96x96"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/HouseIii1x96x96/StaticBody2D"]
+position = Vector2(-1, 28)
+shape = SubResource("RectangleShape2D_drj0p")
+
+[node name="HouseI1x96x97" type="Sprite2D" parent="Buildings"]
+material = SubResource("ShaderMaterial_nr3om")
+position = Vector2(922, 424)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("4_tyj0k")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Buildings/HouseI1x96x97"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/HouseI1x96x97/StaticBody2D"]
+position = Vector2(-0.5, 27)
+shape = SubResource("RectangleShape2D_jnmfj")
+
+[node name="HouseIii1x96x98" type="Sprite2D" parent="Buildings"]
+material = SubResource("ShaderMaterial_c4f4j")
+position = Vector2(815, 422)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("5_1arlt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Buildings/HouseIii1x96x98"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/HouseIii1x96x98/StaticBody2D"]
+position = Vector2(-1, 29)
+shape = SubResource("RectangleShape2D_e38d3")
+
+[node name="HouseIii1x96x99" type="Sprite2D" parent="Buildings"]
+material = SubResource("ShaderMaterial_07p4v")
+position = Vector2(429, 419)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("5_1arlt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Buildings/HouseIii1x96x99"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/HouseIii1x96x99/StaticBody2D"]
+position = Vector2(-1, 29.5)
+shape = SubResource("RectangleShape2D_nuwa4")
+
+[node name="HouseIi1x96x97" type="Sprite2D" parent="Buildings"]
+material = SubResource("ShaderMaterial_lervd")
+position = Vector2(714, 449)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("6_11yhy")
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Buildings/HouseIi1x96x97"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/HouseIi1x96x97/StaticBody2D"]
+position = Vector2(1, 12.5)
+shape = SubResource("RectangleShape2D_g6qqu")
+
+[node name="Church" type="Sprite2D" parent="Buildings"]
 material = SubResource("ShaderMaterial_qbxy6")
 position = Vector2(811, 233)
 texture = ExtResource("6_phxmo")
+metadata/_edit_lock_ = true
 
-[node name="InteractableSquare" parent="NewChurch1x96x96" instance=ExtResource("7_j12tx")]
+[node name="InteractableSquare" parent="Buildings/Church" instance=ExtResource("7_j12tx")]
 position = Vector2(-1.00001, 36)
 scale = Vector2(0.71, 1.025)
 interact_type = "Dialog_With_Szene_Change"
 dialog_file = "res://DialogText/ChurchDialog.json"
 ChangeToScene = ExtResource("8_tovud")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Buildings/Church"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Church/StaticBody2D"]
+position = Vector2(-1, 28.5)
+shape = SubResource("RectangleShape2D_ognwo")

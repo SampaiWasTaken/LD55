@@ -31,7 +31,7 @@ func getInput():
 	if Input.is_action_just_pressed("interact"):
 		interact()
 
-func _physics_process(_delta):
+func _process(_delta):
 	if not Globals.currently_interacting:
 		getInput()
 		move_and_slide()

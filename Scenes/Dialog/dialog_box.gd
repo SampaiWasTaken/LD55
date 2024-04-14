@@ -53,5 +53,6 @@ func _on_timer_timeout():
 	dialog_active = false
 	Globals.currently_interacting = false
 	if nextScene:
-		get_tree().change_scene_to_packed(nextScene)
+		TransitionLayer.change_scene(nextScene)
+		#get_tree().change_scene_to_packed(nextScene)
 	pass # Replace with function body.
