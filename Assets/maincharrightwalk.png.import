@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baavxdvggqbjy"
-path="res://.godot/imported/House I 1x 96x96.png-3173dc3174aec304eb59e277e679cd0c.ctex"
+uid="uid://bd67n4ixufiol"
+path="res://.godot/imported/maincharrightwalk.png-4b41ceca9130646c1fbe288d449ca8cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/House I 1x 96x96.png"
-dest_files=["res://.godot/imported/House I 1x 96x96.png-3173dc3174aec304eb59e277e679cd0c.ctex"]
+source_file="res://Assets/maincharrightwalk.png"
+dest_files=["res://.godot/imported/maincharrightwalk.png-4b41ceca9130646c1fbe288d449ca8cf.ctex"]
 
 [params]
 

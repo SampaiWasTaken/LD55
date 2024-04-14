@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd8xcgksjyhe0"
-path="res://.godot/imported/Base_for_Tiles_II.jpg-b4a5b72650ddc26a1489c1d0377ab593.ctex"
+uid="uid://bqqftuvy4fjyd"
+path="res://.godot/imported/boulder.png-35ecb6e2a061d6dc0bae1b4bdef2e8ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Base_for_Tiles_II.jpg"
-dest_files=["res://.godot/imported/Base_for_Tiles_II.jpg-b4a5b72650ddc26a1489c1d0377ab593.ctex"]
+source_file="res://Assets/boulder.png"
+dest_files=["res://.godot/imported/boulder.png-35ecb6e2a061d6dc0bae1b4bdef2e8ee.ctex"]
 
 [params]
 

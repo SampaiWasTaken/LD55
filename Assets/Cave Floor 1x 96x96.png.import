@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dttkw7vg73rb2"
-path="res://.godot/imported/House_III_1x_96x96.png-320da7c1aaf32bd52f0befcc1bb52c0f.ctex"
+uid="uid://bycu1mhqics5f"
+path="res://.godot/imported/Cave Floor 1x 96x96.png-25dc1d97505205d3192f9d1896b3b294.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/House_III_1x_96x96.png"
-dest_files=["res://.godot/imported/House_III_1x_96x96.png-320da7c1aaf32bd52f0befcc1bb52c0f.ctex"]
+source_file="res://Assets/Cave Floor 1x 96x96.png"
+dest_files=["res://.godot/imported/Cave Floor 1x 96x96.png-25dc1d97505205d3192f9d1896b3b294.ctex"]
 
 [params]
 

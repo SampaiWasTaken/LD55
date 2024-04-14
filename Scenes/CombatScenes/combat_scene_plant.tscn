@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmyosp3yql6tx"]
+
+[ext_resource type="PackedScene" uid="uid://40pvj01vaun1" path="res://Scenes/CombatScenes/combatScene.tscn" id="1_4h184"]
+[ext_resource type="Script" path="res://Scripts/Combat/Path2D.gd" id="2_61rj7"]
+[ext_resource type="PackedScene" uid="uid://xyyuqu4gxd2t" path="res://Scenes/CombatScenes/mini_enemy_plant.tscn" id="3_ffiy5"]
+
+[sub_resource type="Curve2D" id="Curve2D_mctoj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 197, 245, 0, 0, 0, 0, 956, 244)
+}
+point_count = 2
+
+[node name="Node2D" instance=ExtResource("1_4h184")]
+
+[node name="Path2D" type="Path2D" parent="." index="7"]
+curve = SubResource("Curve2D_mctoj")
+script = ExtResource("2_61rj7")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" index="0"]
+position = Vector2(197, 245)
+rotation = -0.00131752
+
+[node name="miniEnemy" parent="Path2D/PathFollow2D" index="0" instance=ExtResource("3_ffiy5")]
+scale = Vector2(0.4, 0.4)
+collision_layer = 1
+collision_mask = 1
+
+[connection signal="timeout" from="MoveTimer" to="Path2D" method="_on_move_timer_timeout"]

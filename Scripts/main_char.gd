@@ -1,6 +1,7 @@
 extends CharacterBody2D
-
+@onready var animeSprite = $AnimatedSprite2D
 @export var speed = 200
+
 
 var stored_interactions_areas = []
 
@@ -8,6 +9,22 @@ func getInput():
 	
 	#movement
 	var input_direction = Input.get_vector("walkLeft", "walkRight", "walkUp", "walkDown")
+	if Input.is_action_pressed("walkRight"):
+		input_direction.y = 0
+		animeSprite.play("walkRight")
+	elif Input.is_action_pressed("walkLeft"):
+		input_direction.y = 0
+		animeSprite.play("walkLeft")
+	elif Input.is_action_pressed("walkUp"):
+		input_direction.x = 0
+		animeSprite.play("walkUp")
+	elif Input.is_action_pressed("walkDown"):
+		input_direction.x = 0
+		animeSprite.play("walkDown")
+	else:
+		input_direction = Vector2.ZERO
+		animeSprite.stop()
+		animeSprite.frame = 0
 	velocity = input_direction * speed
 	
 	#interaction
@@ -18,6 +35,7 @@ func _physics_process(_delta):
 	if not Globals.currently_interacting:
 		getInput()
 		move_and_slide()
+	
 	
 
 

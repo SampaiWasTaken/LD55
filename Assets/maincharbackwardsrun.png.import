@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2dk8ev35ry75"
-path="res://.godot/imported/Church_1x_96x96.png-569832c5b0d9d1150a220119c9c35d18.ctex"
+uid="uid://de88j6yxottd4"
+path="res://.godot/imported/maincharbackwardsrun.png-77b5b1eefdd9364aa87c36f3b36093c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Church_1x_96x96.png"
-dest_files=["res://.godot/imported/Church_1x_96x96.png-569832c5b0d9d1150a220119c9c35d18.ctex"]
+source_file="res://Assets/maincharbackwardsrun.png"
+dest_files=["res://.godot/imported/maincharbackwardsrun.png-77b5b1eefdd9364aa87c36f3b36093c5.ctex"]
 
 [params]
 
