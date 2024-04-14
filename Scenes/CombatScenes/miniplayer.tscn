@@ -1,10 +1,10 @@
 [gd_scene load_steps=24 format=3 uid="uid://bhwmn8uw5scwn"]
 
 [ext_resource type="Script" path="res://Scripts/Combat/miniplayer.gd" id="1_elprh"]
-[ext_resource type="Texture2D" uid="uid://dc1yvt2k4sriq" path="res://Assets/maincahrfrontrun.png" id="1_wlksx"]
-[ext_resource type="Texture2D" uid="uid://81u0pn03kkcf" path="res://Assets/maincharsidewalkleft.png" id="2_c5bw1"]
-[ext_resource type="Texture2D" uid="uid://bd67n4ixufiol" path="res://Assets/maincharrightwalk.png" id="3_lnd7j"]
-[ext_resource type="Texture2D" uid="uid://de88j6yxottd4" path="res://Assets/maincharbackwardsrun.png" id="4_cm5kq"]
+[ext_resource type="Texture2D" uid="uid://dc1yvt2k4sriq" path="res://Assets/Characters/Player/maincahrfrontrun.png" id="1_wlksx"]
+[ext_resource type="Texture2D" uid="uid://81u0pn03kkcf" path="res://Assets/Characters/Player/maincharsidewalkleft.png" id="2_c5bw1"]
+[ext_resource type="Texture2D" uid="uid://bd67n4ixufiol" path="res://Assets/Characters/Player/maincharrightwalk.png" id="3_lnd7j"]
+[ext_resource type="Texture2D" uid="uid://de88j6yxottd4" path="res://Assets/Characters/Player/maincharbackwardsrun.png" id="4_cm5kq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ay4rc"]
 atlas = ExtResource("1_wlksx")
@@ -157,5 +157,5 @@ scale = Vector2(1.04, 1)
 shape = SubResource("RectangleShape2D_1dxc1")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(0, -64)
+position = Vector2(0, -14)
 scale = Vector2(-6.0343, 40.2664)

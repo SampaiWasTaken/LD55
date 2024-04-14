@@ -78,7 +78,6 @@ scale = Vector2(10, 10)
 [node name="Node2D" type="Node2D" parent="WhipAttack" index="0"]
 position = Vector2(-7.7, -63)
 rotation = -2.61799
-scale = Vector2(1, 1)
 
 [node name="WhipSprite" type="Sprite2D" parent="WhipAttack/Node2D" index="0"]
 position = Vector2(7.7, 63.2)
@@ -87,7 +86,6 @@ texture = ExtResource("4_mmmj8")
 [node name="WhipHitbox" type="Area2D" parent="WhipAttack/Node2D/WhipSprite" index="0"]
 position = Vector2(55.3, -70.9)
 rotation = -1.5708
-scale = Vector2(1, 1)
 collision_layer = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WhipAttack/Node2D/WhipSprite/WhipHitbox" index="0"]

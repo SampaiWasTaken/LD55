@@ -11,6 +11,9 @@ script = ExtResource("2_b84ci")
 process_mode = 4
 visible = false
 
+[node name="player" parent="." index="3"]
+position = Vector2(581, 461)
+
 [node name="StaticBody2D5" parent="Walls" index="4"]
 process_mode = 4
 

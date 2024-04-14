@@ -53,5 +53,7 @@ rotation = 1.5708
 position = Vector2(-2, -1)
 rotation = -1.57428
 
+[node name="LevelTimer" type="Timer" parent="." index="12"]
+
 [connection signal="timeout" from="BoulderTimer" to="." method="_on_boulder_timer_timeout"]
 [connection signal="timeout" from="GasTimer" to="." method="_on_gas_timer_timeout"]
