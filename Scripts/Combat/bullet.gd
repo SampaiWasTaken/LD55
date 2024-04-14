@@ -18,7 +18,7 @@ func _process(delta):
 
 func _on_body_entered(body:Node2D):
 	if body.is_in_group(oppositionString):
-		body.hurt()
+		body.hurt(10)
 		queue_free()
 	elif(body.is_in_group("Walls")):
 		queue_free()
