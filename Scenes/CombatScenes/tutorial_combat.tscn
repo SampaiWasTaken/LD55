@@ -7,11 +7,19 @@
 [node name="Node2D" instance=ExtResource("1_a0gxs")]
 script = ExtResource("2_b84ci")
 
-[node name="MoveTimer" parent="." index="4"]
+[node name="Panel3" parent="." index="2"]
+process_mode = 4
+visible = false
+
+[node name="StaticBody2D5" parent="Walls" index="4"]
+process_mode = 4
+
+[node name="MoveTimer" parent="." index="5"]
 wait_time = 0.25
 
 [node name="tutorialEnemy" parent="." index="7" instance=ExtResource("3_k1k6u")]
 position = Vector2(206, 246)
 scale = Vector2(0.4, 0.4)
+speed = null
 
 [connection signal="timeout" from="MoveTimer" to="tutorialEnemy" method="_on_move_timer_timeout"]
