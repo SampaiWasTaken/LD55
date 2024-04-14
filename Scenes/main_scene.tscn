@@ -1,54 +1,15 @@
 [gd_scene load_steps=39 format=3 uid="uid://c7sa32nvdk4si"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
-[ext_resource type="Texture2D" uid="uid://ctqki6e868q44" path="res://Assets/Grass_9x9.png" id="1_jue6y"]
-[ext_resource type="Texture2D" uid="uid://dgiq2a821h71q" path="res://Assets/Grass 1x 96x96.jpg" id="2_aode6"]
+[ext_resource type="Texture2D" uid="uid://ctqki6e868q44" path="res://Assets/Background/Grass_9x9.png" id="1_jue6y"]
+[ext_resource type="Texture2D" uid="uid://dgiq2a821h71q" path="res://Assets/Background/Grass 1x 96x96.jpg" id="2_aode6"]
 [ext_resource type="Shader" path="res://Scenes/shader test/test.gdshader" id="2_nsnny"]
-[ext_resource type="Texture2D" uid="uid://bahs5eu7hxd7m" path="res://Assets/Path Ways_9x9.jpg" id="3_uyc3e"]
-[ext_resource type="Texture2D" uid="uid://bycu1mhqics5f" path="res://Assets/Cave Floor 1x 96x96.png" id="4_so0q0"]
-[ext_resource type="Texture2D" uid="uid://baavxdvggqbjy" path="res://Assets/House I 1x 96x96.png" id="4_tyj0k"]
-[ext_resource type="Texture2D" uid="uid://cine24ypaw4k8" path="res://Assets/House III 1x 96x96.png" id="5_1arlt"]
-[ext_resource type="Texture2D" uid="uid://dm38nmec2b13l" path="res://Assets/House II 1x 96x96.png" id="6_11yhy"]
-[ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/NEW_Church_1x_96x96.png" id="6_phxmo"]
-[ext_resource type="PackedScene" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
-[ext_resource type="PackedScene" path="res://Scenes/church_inside.tscn" id="8_tovud"]
-[ext_resource type="AudioStream" uid="uid://bk2aig06g6rma" path="res://Assets/lepicsong.wav" id="13_puw8j"]
-
-[sub_resource type="Shader" id="Shader_gfbpd"]
-code = "shader_type canvas_item;
-
-uniform vec2 size;
-uniform int samples = 0;
-
-vec4 getPixel(sampler2D tex, vec2 uv, vec2 offset) {
-	return texture(tex, uv + offset);
-}
-
-void fragment() {
-	vec4 color = vec4(0.0);
-	for (int x = -samples; x < 100; x++) {
-		for (int y = -samples; y < 100; y++) {
-			color += getPixel(TEXTURE, UV, vec2(float(x) * size.x, float(y) * size.y));
-
-			if (y > samples) {
-				break;
-			}
-		}
-		if (x > samples) {
-			break;
-		}
-	}
-	if (samples == 0) {
-		COLOR = getPixel(TEXTURE, UV, vec2(0.0, 0.0));
-	} else {
-		COLOR = color / float((samples * 2 + 1) * (samples * 2 + 1) - 1) + getPixel(TEXTURE, UV, vec2(0.0, 0.0));
-	}
-}"
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6dkxa"]
-shader = SubResource("Shader_gfbpd")
-shader_parameter/size = Vector2(96, 96)
-shader_parameter/samples = 0
+[ext_resource type="Texture2D" uid="uid://baavxdvggqbjy" path="res://Assets/Buildings/House I 1x 96x96.png" id="4_tyj0k"]
+[ext_resource type="Texture2D" uid="uid://cine24ypaw4k8" path="res://Assets/Buildings/House III 1x 96x96.png" id="5_1arlt"]
+[ext_resource type="Texture2D" uid="uid://dm38nmec2b13l" path="res://Assets/Buildings/House II 1x 96x96.png" id="6_11yhy"]
+[ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/Buildings/NEW_Church_1x_96x96.png" id="6_phxmo"]
+[ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
+[ext_resource type="PackedScene" uid="uid://d1rjps32op2pd" path="res://Scenes/church_inside.tscn" id="8_tovud"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("1_jue6y")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4pwb07s31236"
-path="res://.godot/imported/Bush II.png-091f82505b00b24231cd3e008a67239b.ctex"
+uid="uid://bdgjpb2si22po"
+path="res://.godot/imported/poison.png-4c15dea9372d79379d2bbb1d8547cb55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Bush II.png"
-dest_files=["res://.godot/imported/Bush II.png-091f82505b00b24231cd3e008a67239b.ctex"]
+source_file="res://Assets/Effects/poison.png"
+dest_files=["res://.godot/imported/poison.png-4c15dea9372d79379d2bbb1d8547cb55.ctex"]
 
 [params]
 

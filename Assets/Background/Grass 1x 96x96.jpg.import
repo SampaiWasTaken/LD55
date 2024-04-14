@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de88j6yxottd4"
-path="res://.godot/imported/maincharbackwardsrun.png-77b5b1eefdd9364aa87c36f3b36093c5.ctex"
+uid="uid://dgiq2a821h71q"
+path="res://.godot/imported/Grass 1x 96x96.jpg-110b516f18cc92a451e1039f5813dcac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/maincharbackwardsrun.png"
-dest_files=["res://.godot/imported/maincharbackwardsrun.png-77b5b1eefdd9364aa87c36f3b36093c5.ctex"]
+source_file="res://Assets/Background/Grass 1x 96x96.jpg"
+dest_files=["res://.godot/imported/Grass 1x 96x96.jpg-110b516f18cc92a451e1039f5813dcac.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vqld64exjyhn"
-path="res://.godot/imported/NEW_Church 1x 96x96.png-5115f984db4cd08b3eb58879b9fba667.ctex"
+uid="uid://bd67n4ixufiol"
+path="res://.godot/imported/maincharrightwalk.png-a03a135dc866ec8a2aa6616d2945b726.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/NEW_Church 1x 96x96.png"
-dest_files=["res://.godot/imported/NEW_Church 1x 96x96.png-5115f984db4cd08b3eb58879b9fba667.ctex"]
+source_file="res://Assets/Characters/Player/maincharrightwalk.png"
+dest_files=["res://.godot/imported/maincharrightwalk.png-a03a135dc866ec8a2aa6616d2945b726.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxxlolcjxmmv8"
-path="res://.godot/imported/Inside Home_NEW.png-be9916d2fd0bb8cbad3174aa9554a04d.ctex"
+uid="uid://vqld64exjyhn"
+path="res://.godot/imported/NEW_Church 1x 96x96.png-f3f18965678a47e2ae9bca3453a0ad44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inside Home_NEW.png"
-dest_files=["res://.godot/imported/Inside Home_NEW.png-be9916d2fd0bb8cbad3174aa9554a04d.ctex"]
+source_file="res://Assets/Buildings/NEW_Church 1x 96x96.png"
+dest_files=["res://.godot/imported/NEW_Church 1x 96x96.png-f3f18965678a47e2ae9bca3453a0ad44.ctex"]
 
 [params]
 

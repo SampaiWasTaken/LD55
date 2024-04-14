@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://81u0pn03kkcf"
-path="res://.godot/imported/maincharsidewalkleft.png-0051a607f53f9fa534ec6da3cac23f96.ctex"
+uid="uid://bpgwb5r7r1x00"
+path="res://.godot/imported/dadpixl.png-2c23b4bd98c44920f488caf847db85c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/maincharsidewalkleft.png"
-dest_files=["res://.godot/imported/maincharsidewalkleft.png-0051a607f53f9fa534ec6da3cac23f96.ctex"]
+source_file="res://Assets/Characters/dadpixl.png"
+dest_files=["res://.godot/imported/dadpixl.png-2c23b4bd98c44920f488caf847db85c5.ctex"]
 
 [params]
 

@@ -9,6 +9,7 @@ func getInput():
 	
 	#movement
 	var input_direction = Input.get_vector("walkLeft", "walkRight", "walkUp", "walkDown")
+	print(input_direction)
 	if Input.is_action_pressed("walkRight"):
 		animeSprite.play("walkRight")
 	elif Input.is_action_pressed("walkLeft"):
