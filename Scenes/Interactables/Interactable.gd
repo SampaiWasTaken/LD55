@@ -17,4 +17,9 @@ func showDialog():
 func showDialogSceneChange():
 	$DialogBox.startDialog()
 	$DialogBox.nextScene = ChangeToScene
+
+func showDialogSceneChangeWithAnotherDialogLaterAfterChange():
+	$DialogBox.textAfterSceneChange = true
+	$DialogBox.startDialog()
+	$DialogBox.nextScene = ChangeToScene
 	

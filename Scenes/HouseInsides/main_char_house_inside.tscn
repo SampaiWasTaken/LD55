@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ywwyivi82rwt"]
+[gd_scene load_steps=5 format=3 uid="uid://ywwyivi82rwt"]
 
 [ext_resource type="Texture2D" uid="uid://b5gpgenjfrqb6" path="res://Assets/Buildings/Inside Home.png" id="1_egnks"]
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="2_6c4e3"]
 [ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="3_bdiyt"]
+[ext_resource type="PackedScene" uid="uid://q23l73ddhwqe" path="res://Scenes/NPC/dad_npc.tscn" id="4_2sr24"]
 
 [node name="MainCharHouseInside" type="Node2D"]
 
@@ -62,8 +63,11 @@ polygon = PackedVector2Array(-58, -91, -58, -61, -123, -61, -135, -61, -135, -10
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InsideHomeNew/StaticBody2D6"]
 polygon = PackedVector2Array(90, -62, 140, -62, 140, -103, 90, -103)
 
+[node name="DadNPC" parent="." instance=ExtResource("4_2sr24")]
+position = Vector2(166, 44)
+
 [node name="MainChar" parent="." instance=ExtResource("2_6c4e3")]
-position = Vector2(85, 203)
+position = Vector2(160, 68)
 
 [node name="Camera2D" type="Camera2D" parent="MainChar"]
 zoom = Vector2(3, 3)
@@ -75,6 +79,7 @@ position_smoothing_enabled = true
 position = Vector2(31, 192)
 scale = Vector2(3.07, 1)
 interact_type = "Only_Dialog"
+dialog_file = "res://DialogText/PlayerHouse/Kitchen.json"
 
 [node name="Fireplace" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(118, 193)
@@ -94,7 +99,7 @@ interact_type = "Only_Dialog"
 dialog_file = "res://DialogText/PlayerHouse/SingleBed.json"
 
 [node name="DoubleBed" parent="Interactables" instance=ExtResource("3_bdiyt")]
-position = Vector2(42, 65)
+position = Vector2(43, 53)
 scale = Vector2(3.51, 2.235)
 interact_type = "Only_Dialog"
 dialog_file = "res://DialogText/PlayerHouse/DoubleBed.json"
@@ -102,6 +107,6 @@ dialog_file = "res://DialogText/PlayerHouse/DoubleBed.json"
 [node name="Door" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(130, 283)
 scale = Vector2(1.43, 2.48)
-interact_type = "Dialog_With_Szene_Change"
+interact_type = "Dialog_With_Szene_Change_with_dialog_after_change"
 dialog_file = "res://DialogText/PlayerHouse/Door.json"
 ChangeToScene = "res://Scenes/main_scene.tscn"
