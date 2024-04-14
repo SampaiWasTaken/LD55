@@ -19,4 +19,15 @@ shape = SubResource("RectangleShape2D_g8ahe")
 [node name="SpreadTimer" type="Timer" parent="." index="4"]
 wait_time = 4.5
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+
+[node name="WhipAttack" type="Node2D" parent="." index="6"]
+visible = false
+
+[node name="WhipSprite" type="Sprite2D" parent="WhipAttack" index="0"]
+
+[node name="WhipHitbox" type="Area2D" parent="WhipAttack" index="1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WhipAttack/WhipHitbox" index="0"]
+
 [connection signal="timeout" from="SpreadTimer" to="." method="_on_spread_timer_timeout"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddcvt4av8pk8a"]
+
+[ext_resource type="PackedScene" uid="uid://40pvj01vaun1" path="res://Scenes/CombatScenes/combatScene.tscn" id="1_bfrwy"]
+[ext_resource type="Script" path="res://Scenes/CombatScenes/combat_scene_bat.gd" id="2_38kw8"]
+
+[sub_resource type="Curve2D" id="Curve2D_kdrnh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 162, 56, 0, 0, 0, 0, 994, 56)
+}
+point_count = 2
+
+[node name="Node2D" instance=ExtResource("1_bfrwy")]
+script = ExtResource("2_38kw8")
+
+[node name="BoulderPath" type="Path2D" parent="." index="7"]
+curve = SubResource("Curve2D_kdrnh")
+
+[node name="BoulderSpawner" type="PathFollow2D" parent="BoulderPath" index="0"]
+position = Vector2(162, 56)
+
+[node name="BoulderTimer" type="Timer" parent="." index="8"]
+wait_time = 0.5
+
+[connection signal="timeout" from="BoulderTimer" to="." method="_on_boulder_timer_timeout"]

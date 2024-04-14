@@ -50,7 +50,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yxa3q")
 [node name="player" parent="." groups=["MiniPlayer"] instance=ExtResource("2_rkvdr")]
 position = Vector2(576, 566)
 scale = Vector2(0.5, 0.5)
-collision_mask = 129
+collision_mask = 134
 script = ExtResource("3_sdnaq")
 
 [node name="Walls" type="Control" parent="."]
@@ -62,6 +62,8 @@ offset_bottom = 40.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Walls" groups=["Walls"]]
 position = Vector2(150, 410)
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D" groups=["Walls"]]
 position = Vector2(-10, 0)
@@ -69,6 +71,8 @@ shape = SubResource("RectangleShape2D_tmk8o")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Walls" groups=["Walls"]]
 position = Vector2(980, 410)
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D2" groups=["Walls"]]
 position = Vector2(20, 0)
@@ -78,6 +82,8 @@ shape = SubResource("RectangleShape2D_tmk8o")
 position = Vector2(568, 630)
 rotation = 1.5708
 scale = Vector2(1, 1.72)
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D3" groups=["Walls"]]
 position = Vector2(1, -1.16279)
@@ -87,6 +93,8 @@ shape = SubResource("RectangleShape2D_tmk8o")
 position = Vector2(568, 189)
 rotation = 1.5708
 scale = Vector2(1, 1.72)
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D4" groups=["Walls"]]
 position = Vector2(1, -1.16275)
