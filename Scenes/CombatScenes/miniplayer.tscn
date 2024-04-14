@@ -142,7 +142,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1dxc1"]
-size = Vector2(23.0769, 30)
+size = Vector2(23.0769, 31)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_elprh")
@@ -152,7 +152,7 @@ sprite_frames = SubResource("SpriteFrames_v2rp2")
 animation = &"walkDown"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(0, 0.5)
 scale = Vector2(1.04, 1)
 shape = SubResource("RectangleShape2D_1dxc1")
 

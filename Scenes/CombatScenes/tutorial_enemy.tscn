@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b75a3u87d3x1p"]
+[gd_scene load_steps=6 format=3 uid="uid://b75a3u87d3x1p"]
 
 [ext_resource type="PackedScene" uid="uid://bvnh656bbcyon" path="res://Scenes/CombatScenes/mini_enemy.tscn" id="1_t27a4"]
 [ext_resource type="Script" path="res://Scripts/Combat/tutorial_enemy.gd" id="2_73xos"]
@@ -7,9 +7,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3utdc"]
 size = Vector2(131, 128)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_377ma"]
+size = Vector2(144, 138)
+
 [node name="miniEnemy" instance=ExtResource("1_t27a4")]
 script = ExtResource("2_73xos")
-speed = 600
+speed = 6
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_po7w7")
@@ -20,3 +23,10 @@ shape = SubResource("RectangleShape2D_3utdc")
 
 [node name="Marker2D" parent="." index="3"]
 position = Vector2(0, 64)
+
+[node name="Area2D" type="Area2D" parent="." index="4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("RectangleShape2D_377ma")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

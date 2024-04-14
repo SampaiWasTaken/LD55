@@ -3,15 +3,14 @@ extends CharacterBody2D
 
 @onready var player = get_tree().get_first_node_in_group("MiniPlayer")
 var obj_bullet
-@export var maxhp = 100
-var hp
+var maxhp = 100
+@onready var hp = maxhp
 
 
 func _ready():
 	obj_bullet = preload("res://Scenes/CombatScenes/enemy_bullet.tscn")
 	$ShootTimer.start()
 	print($ShootTimer)
-	var hp = maxhp
 
 func _process(_delta):
 	pass
@@ -46,7 +45,6 @@ func _on_shoot_timer_timeout():
 func hurt(damage):
 	hp -= damage
 	if hp <= 0:
-		pass
-		#TransitionLayer.change_scene("res://Scenes/main_scene.tscn")
+		TransitionLayer.change_scene("res://Scenes/main_scene.tscn")
 	print("Ouch")
 	

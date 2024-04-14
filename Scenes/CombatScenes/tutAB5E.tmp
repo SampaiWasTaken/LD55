@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://1arx704cmiwb"]
+
+[ext_resource type="PackedScene" uid="uid://40pvj01vaun1" path="res://Scenes/CombatScenes/combatScene.tscn" id="1_a0gxs"]
+[ext_resource type="Script" path="res://Scripts/Combat/tutorial_combat.gd" id="2_b84ci"]
+[ext_resource type="PackedScene" uid="uid://b75a3u87d3x1p" path="res://Scenes/CombatScenes/tutorial_enemy.tscn" id="3_k1k6u"]
+
+[node name="Node2D" instance=ExtResource("1_a0gxs")]
+script = ExtResource("2_b84ci")
+
+[node name="Panel3" parent="." index="2"]
+process_mode = 4
+visible = false
+
+[node name="player" parent="." index="3"]
+position = Vector2(581, 461)
+
+[node name="StaticBody2D5" parent="Walls" index="4"]
+process_mode = 4
+
+[node name="MoveTimer" parent="." index="5"]
+wait_time = 0.25
+
+[node name="tutorialEnemy" parent="." index="7" instance=ExtResource("3_k1k6u")]
+position = Vector2(206, 246)
+scale = Vector2(0.4, 0.4)
+
+[connection signal="timeout" from="MoveTimer" to="tutorialEnemy" method="_on_move_timer_timeout"]

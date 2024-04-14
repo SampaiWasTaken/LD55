@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 600
+@export var speed = 6
  
 var target = position
 
@@ -22,9 +22,16 @@ func _physics_process(delta):
 	else:
 		target = Vector2(195 + randi()%986, 210 + randi()%610)
 
+
 func hurt():
+	TransitionLayer.change_scene("res://Scenes/main_scene.tscn")
 	pass
 
 
 func _on_move_timer_timeout():
 	target = Vector2(195 + randi()%986, 210 + randi()%610)
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("MiniPlayer"):
+		hurt()

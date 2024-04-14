@@ -12,6 +12,9 @@ point_count = 2
 
 [node name="Node2D" instance=ExtResource("1_4h184")]
 
+[node name="MoveTimer" parent="." index="5"]
+wait_time = 3.0
+
 [node name="Path2D" type="Path2D" parent="." index="7"]
 curve = SubResource("Curve2D_mctoj")
 script = ExtResource("2_61rj7")
@@ -22,7 +25,5 @@ rotation = -0.00131752
 
 [node name="miniEnemy" parent="Path2D/PathFollow2D" index="0" instance=ExtResource("3_ffiy5")]
 scale = Vector2(0.4, 0.4)
-collision_layer = 1
-collision_mask = 1
 
 [connection signal="timeout" from="MoveTimer" to="Path2D" method="_on_move_timer_timeout"]
