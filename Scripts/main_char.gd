@@ -55,19 +55,17 @@ func interact():
 			"print_text" : print(newest_interaction.interaction_value)
 			#Only Shows Dialog, Dialog needed
 			"Only_Dialog" : 
-				Globals.currently_interacting = true
 				newest_interaction.showDialog()
 			#Chages the after dialog
 			"Dialog_With_Szene_Change" : 
-					Globals.currently_interacting = true
 					newest_interaction.showDialogSceneChange()
+			"Dialog_With_Szene_Change_with_dialog_after_change" : 
+					newest_interaction.showDialogSceneChangeWithAnotherDialogLaterAfterChange()
 			"Dialog_With_Szene_Change_from_Overworld" : 
-					Globals.currently_interacting = true
 					Globals.overworld_player_pos = global_position
 					newest_interaction.showDialogSceneChange()
 			#Pickup Item with a Dialog
 			"Item_With_Dialog" : 
-				Globals.currently_interacting = true
 				Globals.player_items.append(newest_interaction.interaction_value)
 				newest_interaction.showDialog()
 				print(Globals.player_items)

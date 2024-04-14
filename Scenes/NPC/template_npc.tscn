@@ -1,17 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bosj8v3yx184q"]
+[gd_scene load_steps=2 format=3 uid="uid://bosj8v3yx184q"]
 
 [ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="1_tw1pt"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s1d3t"]
 
 [node name="TemplateNPC" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("CapsuleShape2D_s1d3t")
 
 [node name="InteractableSquare" parent="." instance=ExtResource("1_tw1pt")]
 

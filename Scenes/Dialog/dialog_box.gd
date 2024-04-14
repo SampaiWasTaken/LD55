@@ -10,6 +10,8 @@ var placeholderPort = preload("res://Assets/Portraits/PlaceholderPortrait.png")
 
 var nextScene: String
 
+var textAfterSceneChange: bool = false
+
 
 func _ready():
 	$NinePatchRect.visible = false
@@ -23,6 +25,7 @@ func _process(_delta):
 func startDialog():
 	if dialog_active:
 		return
+	Globals.currently_interacting = true
 	dialog_active = true
 	$NinePatchRect.visible = true
 	dialog_counter = -1
@@ -75,6 +78,11 @@ func _on_timer_timeout():
 	#	return
 	print(nextScene)
 	if nextScene:
-		TransitionLayer.change_scene(nextScene)
+		if textAfterSceneChange:
+			textAfterSceneChange = false
+			TransitionLayer.change_scene_with_dialog_after_change(nextScene, "res://DialogText/Overworld/ChurchDialog.json")
+			return
+		else:
+			TransitionLayer.change_scene(nextScene)
 		#get_tree().change_scene_to_packed(nextScene)
 	pass # Replace with function body.
