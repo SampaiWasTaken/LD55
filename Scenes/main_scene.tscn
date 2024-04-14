@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cine24ypaw4k8" path="res://Assets/Buildings/House III 1x 96x96.png" id="5_1arlt"]
 [ext_resource type="Texture2D" uid="uid://dm38nmec2b13l" path="res://Assets/Buildings/House II 1x 96x96.png" id="6_11yhy"]
 [ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/Buildings/NEW_Church_1x_96x96.png" id="6_phxmo"]
-[ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
+[ext_resource type="PackedScene" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
 [ext_resource type="AudioStream" uid="uid://bk2aig06g6rma" path="res://Assets/lepicsong.wav" id="11_h4nkb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bue2p"]
@@ -287,6 +287,6 @@ shape = SubResource("RectangleShape2D_ognwo")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_h4nkb")
-pitch_scale = 0.67
+volume_db = -3.0
 autoplay = true
-attenuation = 1.36604
+panning_strength = 3.0

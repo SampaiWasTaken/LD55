@@ -45,6 +45,6 @@ func _on_shoot_timer_timeout():
 func hurt(damage):
 	hp -= damage
 	if hp <= 0:
-		TransitionLayer.change_scene("res://Scenes/main_scene.tscn")
+		pass
 	print("Ouch")
 	
