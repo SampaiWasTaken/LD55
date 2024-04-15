@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://ckf7m8yh7nmvh"]
+[gd_scene load_steps=61 format=3 uid="uid://ckf7m8yh7nmvh"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
 [ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_obbhs"]
@@ -12,13 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://t4fkvgmcrb6i" path="res://Assets/Effects/circle.png" id="6_22my8"]
 [ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/Buildings/NEW_Church_1x_96x96.png" id="6_phxmo"]
 [ext_resource type="Texture2D" uid="uid://b7naa81357jrb" path="res://Assets/Background/Base for Tiles.jpg" id="6_v7153"]
-[ext_resource type="Texture2D" uid="uid://cukrpowy4ve60" path="res://CAVE ENTRANCE DAMN.png" id="7_3vohs"]
 [ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
 [ext_resource type="Texture2D" uid="uid://dwnjmsn113vid" path="res://Assets/Background/NEW_Base for Tiles II.png" id="7_lquwq"]
-[ext_resource type="PackedScene" uid="uid://c7281mtqkqhav" path="res://Scenes/NPC/smith_npc2.tscn" id="8_away5"]
-[ext_resource type="Texture2D" uid="uid://ca2qi48mo2ece" path="res://Assets/Buildings/Smith Booth.png" id="9_ua4en"]
-[ext_resource type="Texture2D" uid="uid://b82gdsdxcl28m" path="res://Assets/Background/Left_Caven Entrance AddTil.png" id="8_2ngvp"]
-[ext_resource type="Texture2D" uid="uid://bxy3impd1irgf" path="res://Assets/Background/Right_Caven Entrance AddTil.png" id="9_mj5p8"]
+[ext_resource type="Texture2D" uid="uid://prt3l2e54t6f" path="res://Assets/Background/Cave Entrance FIN.png" id="7_qaxrs"]
+[ext_resource type="PackedScene" uid="uid://08dx1a8m3dtc" path="res://Scenes/NPC/smith_npc2.tscn" id="8_away5"]
+[ext_resource type="Texture2D" uid="uid://bjqp3okc6jxlw" path="res://Left_Caven Entrance AddTil.png" id="8_hvbjr"]
+[ext_resource type="Texture2D" uid="uid://b5wqhigv3upm0" path="res://NEW_Right_Caven Entrance AddTil.png" id="9_rwb5k"]
+[ext_resource type="Texture2D" uid="uid://bhf536o1c4j8y" path="res://Assets/Buildings/Smith Booth.png" id="9_ua4en"]
 [ext_resource type="Texture2D" uid="uid://2e65sd6wjtea" path="res://Assets/Background/Tree 1 1x 96x96.png" id="12_006vl"]
 [ext_resource type="AudioStream" uid="uid://ba7iuep1v0x0o" path="res://Assets/Audio/3 - Phat Phrog Studios - Wind in the meadows.mp3" id="12_jg8cf"]
 [ext_resource type="Texture2D" uid="uid://c71nrw5ndgy21" path="res://Assets/Background/Tree 2 1x 96x96.png" id="13_14gkp"]
@@ -29,7 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://cotcfjvqnsw2j" path="res://Scenes/NPC/plant_npc.tscn" id="19_7c4gc"]
 [ext_resource type="Texture2D" uid="uid://uemheo6em2by" path="res://Assets/Background/Bush I.png" id="22_deuel"]
 [ext_resource type="Texture2D" uid="uid://4pwb07s31236" path="res://Assets/Background/Bush II.png" id="23_ugeje"]
-[ext_resource type="PackedScene" uid="uid://dfwd7s0wgt8p1" path="res://Scenes/NPC/smith_npc1.tscn" id="25_iaq40"]
+[ext_resource type="PackedScene" uid="uid://bw2oi6qirgiem" path="res://Scenes/NPC/smith_npc1.tscn" id="25_iaq40"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("3_lopaf")
@@ -66,7 +66,7 @@ texture_region_size = Vector2i(96, 96)
 0:0/0/modulate = Color(0.282353, 1, 0, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uyqsl"]
-texture = ExtResource("7_3vohs")
+texture = ExtResource("7_qaxrs")
 texture_region_size = Vector2i(96, 96)
 0:0/0 = 0
 0:0/0/modulate = Color(0.345098, 0.345098, 0.345098, 1)
@@ -91,7 +91,7 @@ texture_region_size = Vector2i(96, 96)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqmoi"]
-texture = ExtResource("8_2ngvp")
+texture = ExtResource("8_hvbjr")
 texture_region_size = Vector2i(96, 96)
 0:0/0 = 0
 1:0/0 = 0
@@ -112,7 +112,7 @@ texture_region_size = Vector2i(96, 96)
 2:2/0/modulate = Color(1, 0.921569, 1, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6nrne"]
-texture = ExtResource("9_mj5p8")
+texture = ExtResource("9_rwb5k")
 texture_region_size = Vector2i(96, 96)
 0:0/0 = 0
 1:0/0 = 0
