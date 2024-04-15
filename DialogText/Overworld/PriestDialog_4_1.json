@@ -1,4 +1,15 @@
 [
-	{"name": "Priest", "text": "We have all gathered here today in worship!", "portrait": "Priest"},
-	{"name": "Priest", "text": "Our guest of honor has prepared throughout the day in order to be consumed for all our ", "portrait": "Priest"},
+{"name": "", "text": "As you approach the priest, a smile spreads on his face and he claps once before he speaks.", "portrait": ""},
+{"name": "Priest", "text": "Welcome, child. We have all been waiting for you. Welcome, to the festivities in your honor.", "portrait": "Priest"},
+{"name": "You", "text": "Yes, Father, I've been waiting for this day to arrive! I can’t wait to finally go on my journey.", "portrait": "Player"},
+{"name": "", "text": "The priest gently smiles at you, content with your answer. He then opens his arms and speaks with a loud voice, addressing everyone in the church.", "portrait": ""},
+{"name": "Priest", "text": "My dearest brothers, sisters, siblings! Today, we celebrate this child giving back to this loving community and finally embarking on their journey.", "portrait": "Priest"},
+{"name": "", "text": "You feel proud as everyone’s gaze lands on you. For some reason, mother and father do not seem to be as happy as the priest and other townspeople but you are too excited to think much of it.","portrait": ""},
+{"name": "Priest", "text": "With this ritual, this child follows our ancient tradition of securing this village’s future. We could not be more grateful or any prouder!","portrait": "Priest"},
+{"name": "", "text": "Your body starts shaking now, brimming with excitement. This is the day you have been looking forward to since you can remember.","portrait": ""},
+{"name": "Priest", "text": "This child is wearing the crown of flowers, the sacred necklace, and the markings of our God!","portrait": "Priest"},
+{"name": "", "text": "The priest addresses you directly now in a lower voice.","portrait": ""},
+{"name": "Priest", "text": "Repeat after me, child.","portrait": "Priest"},
+{"name": "", "text": "You have no difficulty repeating the words in the ancient tongue, too many times had you heard them already in former rituals. Those sacred words have been a part of you ever since the first festival so many years ago.","portrait": ""},
+{"name": "", "text": "As you utter the final syllables of the ancient promise, the ground begins to shake and a growling scream echoes in your head.","portrait": ""},
 ]
