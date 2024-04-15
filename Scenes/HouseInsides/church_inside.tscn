@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3qetojgh157u"]
+[gd_scene load_steps=9 format=3 uid="uid://b2oufd2ch0o3g"]
 
-[ext_resource type="Texture2D" uid="uid://hdua6qr3khty" path="res://Assets/Buildings/Inside Church_Before ceremony.png" id="1_2tp15"]
+[ext_resource type="Texture2D" uid="uid://dvv1m4sitvmf1" path="res://Assets/Buildings/Inside Church_Before ceremony.png" id="1_2tp15"]
+[ext_resource type="Script" path="res://Scenes/HouseInsides/church_inside.gd" id="1_s8pok"]
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="2_rtxvi"]
-[ext_resource type="PackedScene" uid="uid://b47ic3ida2u52" path="res://Scenes/NPC/priest_npc.tscn" id="3_mrtdx"]
+[ext_resource type="PackedScene" uid="uid://bjyctn05fm4s2" path="res://Scenes/NPC/priest_npc.tscn" id="3_mrtdx"]
 [ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="4_xf0qx"]
+[ext_resource type="PackedScene" path="res://Scenes/NPC/priest_npc2.tscn" id="5_qgnmy"]
+[ext_resource type="PackedScene" path="res://Scenes/NPC/priest_npc5.tscn" id="6_8nqpj"]
+[ext_resource type="PackedScene" path="res://Scenes/NPC/priest_npc3.tscn" id="6_cnclp"]
 
 [node name="ChurchInside" type="Node2D"]
+script = ExtResource("1_s8pok")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -207.0
@@ -65,8 +70,22 @@ position = Vector2(142, 0)
 scale = Vector2(0.966188, 1)
 polygon = PackedVector2Array(-105.569, 35, -46.6754, 35, -46.5748, 38, -105.569, 38)
 
-[node name="TemplateNPC" parent="nice" instance=ExtResource("3_mrtdx")]
+[node name="Priest" type="Node2D" parent="nice"]
+
+[node name="PriestNpsPos" type="Marker2D" parent="nice/Priest"]
 position = Vector2(52, 104)
+
+[node name="TemplateNPC" parent="nice/Priest" instance=ExtResource("3_mrtdx")]
+position = Vector2(42, -89)
+
+[node name="TemplateNPC2" parent="nice/Priest" instance=ExtResource("5_qgnmy")]
+position = Vector2(84, -88)
+
+[node name="TemplateNPC3" parent="nice/Priest" instance=ExtResource("6_cnclp")]
+position = Vector2(130, -89)
+
+[node name="TemplateNPC4" parent="nice/Priest" instance=ExtResource("6_8nqpj")]
+position = Vector2(169, -90)
 
 [node name="MainChar" parent="nice" instance=ExtResource("2_rtxvi")]
 position = Vector2(143, 245)
