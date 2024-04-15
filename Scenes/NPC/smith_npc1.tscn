@@ -13,7 +13,7 @@ height = 16.0
 texture = ExtResource("2_i7jn7")
 
 [node name="InteractableSquare" parent="." index="1"]
-interact_type = "Dialog_Only"
+interact_type = "Only_Dialog"
 dialog_file = Array[String](["res://DialogText/Overworld/smith1.json"])
 
 [node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
