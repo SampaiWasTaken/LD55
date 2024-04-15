@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://v1puuk03ssd7"]
+[gd_scene load_steps=4 format=3 uid="uid://dq4l8g2d1xfu3"]
 
 [ext_resource type="PackedScene" uid="uid://bosj8v3yx184q" path="res://Scenes/NPC/template_npc.tscn" id="1_xhcca"]
 [ext_resource type="Texture2D" uid="uid://wukc247atix6" path="res://Assets/Characters/catSprites.png" id="2_w8gq8"]
@@ -16,7 +16,8 @@ region_rect = Rect2(0, 0, 32, 32)
 
 [node name="InteractableSquare" parent="." index="1"]
 interact_type = "Dialog_With_Szene_Change_from_Overworld"
-dialog_file = "F:/LD55/Ld 55/LD55/DialogText/Overworld/catEncounter.json"
+interaction_value = "cat"
+dialog_file = "res://DialogText/Overworld/catEncounter.json"
 ChangeToScene = "res://Scenes/CombatScenes/tutorial_combat.tscn"
 
 [node name="CollisionShape2D" parent="StaticBody2D2" index="0"]

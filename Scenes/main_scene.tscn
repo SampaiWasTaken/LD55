@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://ckf7m8yh7nmvh"]
+[gd_scene load_steps=44 format=3 uid="uid://ckf7m8yh7nmvh"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
 [ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_obbhs"]
@@ -15,8 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://2e65sd6wjtea" path="res://Assets/Background/Tree 1 1x 96x96.png" id="12_006vl"]
 [ext_resource type="Texture2D" uid="uid://c71nrw5ndgy21" path="res://Assets/Background/Tree 2 1x 96x96.png" id="13_14gkp"]
 [ext_resource type="Texture2D" uid="uid://cpvevhel1bc5g" path="res://Assets/Background/Tree 3 1x 96x96.png" id="14_jlwcw"]
-[ext_resource type="Material" path="res://Scenes/shader test/2dShadowShaderMat.tres" id="15_l0xr3"]
-[ext_resource type="Material" path="res://Scenes/shader test/2dShadowShaderMat2.tres" id="16_ieuxu"]
+[ext_resource type="Material" uid="uid://dr8xxssuooouo" path="res://Scenes/shader test/2dShadowShaderMat.tres" id="15_l0xr3"]
+[ext_resource type="Material" uid="uid://ddxyk1bk6jxsr" path="res://Scenes/shader test/2dShadowShaderMat2.tres" id="16_ieuxu"]
+[ext_resource type="PackedScene" uid="uid://dq4l8g2d1xfu3" path="res://Scenes/NPC/cat_npc.tscn" id="18_j4c3b"]
+[ext_resource type="PackedScene" uid="uid://dv2jofhud6x7m" path="res://Scenes/NPC/plant_npc.tscn" id="19_7c4gc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("3_bl7sm")
@@ -2450,6 +2452,13 @@ position = Vector2(818, 434)
 interact_type = "Item_With_Dialog"
 interaction_value = "lantern"
 dialog_file = "res://DialogText/Overworld/Lantern.json"
+
+[node name="CatNPC" parent="." instance=ExtResource("18_j4c3b")]
+position = Vector2(758, 317)
+scale = Vector2(0.5, 0.5)
+
+[node name="PlantNPC" parent="." instance=ExtResource("19_7c4gc")]
+position = Vector2(-495, 333)
 
 [connection signal="body_entered" from="Areas/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Areas/Area2D" to="." method="_on_area_2d_body_exited"]

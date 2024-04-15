@@ -8,11 +8,15 @@ func _ready():
 	
 	if "lantern" in Globals.player_items:
 		$InteractableSquare.queue_free()
-	#for tree in trees:
-	#	if tree.scale.y < 0:
-		#	tree.material = mat1
-		#else:
-		#	tree.material = mat2
+	if "cat" in Globals.player_items:
+		$CatNPC.queue_free()
+	if "plant" in Globals.player_items:
+		$PlantNPC.queue_free()
+	for tree in trees:
+		if tree.scale.y < 0:
+			tree.material = mat1
+		else:
+			tree.material = mat2
 
 
 

@@ -62,6 +62,9 @@ func interact():
 			"Dialog_With_Szene_Change_with_dialog_after_change" : 
 					newest_interaction.showDialogSceneChangeWithAnotherDialogLaterAfterChange()
 			"Dialog_With_Szene_Change_from_Overworld" : 
+					if newest_interaction.interaction_value != "none" and newest_interaction.interaction_value != "":
+						Globals.player_items.append(newest_interaction.interaction_value)
+					print(Globals.player_items)
 					Globals.overworld_player_pos = global_position
 					newest_interaction.showDialogSceneChange()
 			#Pickup Item with a Dialog
