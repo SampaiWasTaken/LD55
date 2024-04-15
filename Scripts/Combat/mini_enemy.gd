@@ -18,7 +18,7 @@ func _process(_delta):
 func shoot(direction: float, speed: float):
 	#print("shot")
 	var bullet = obj_bullet.instantiate()
-	bullet.scale = Vector2(0.5, 0.5)
+	bullet.scale = Vector2(1.5, 1.5)
 	bullet.position = $Marker2D.global_position
 	bullet.rotation = direction
 	bullet.velocity = Vector2(speed, 0).rotated(direction)
@@ -31,7 +31,7 @@ func shootSpread(direction: float, speed: float):
 	#bullets.fill(obj_bullet.instantiate())
 	for i in 5:
 		bullets[i] = obj_bullet.instantiate()
-		bullets[i].scale = Vector2(0.5, 0.5)
+		bullets[i].scale = Vector2(1.5, 1.5)
 		bullets[i].position = $Marker2D.global_position 
 		bullets[i].rotation = 2*PI/8 + i*PI/8
 		$"../../..".add_child(bullets[i])
@@ -45,6 +45,6 @@ func _on_shoot_timer_timeout():
 func hurt(damage):
 	hp -= damage
 	if hp <= 0:
-		TransitionLayer.change_scene("res://Scenes/main_scene.tscn")
+		pass
 	print("Ouch")
 	

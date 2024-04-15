@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 6
+@export var speed = 600
  
 var target = position
 
@@ -10,6 +10,10 @@ func _ready():
 
 func _physics_process(delta):
 	velocity = position.direction_to(target)*speed
+	if velocity.x < 0:
+		$AnimatedSprite2D.play("walkLeft")
+	else:
+		$AnimatedSprite2D.play("walkRight")
 	
 	var playerPos = $"../player".position
 	
@@ -24,7 +28,7 @@ func _physics_process(delta):
 
 
 func hurt():
-	TransitionLayer.change_scene("res://Scenes/main_scene.tscn")
+	TransitionLayer.change_scene_with_dialog_after_change("res://Scenes/main_scene.tscn", "res://DialogText/Overworld/tutorialEnemy.json")
 	pass
 
 

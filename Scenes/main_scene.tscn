@@ -10,12 +10,18 @@
 [ext_resource type="Texture2D" uid="uid://cine24ypaw4k8" path="res://Assets/Buildings/House III 1x 96x96.png" id="5_1arlt"]
 [ext_resource type="Texture2D" uid="uid://dm38nmec2b13l" path="res://Assets/Buildings/House II 1x 96x96.png" id="6_11yhy"]
 [ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/Buildings/NEW_Church_1x_96x96.png" id="6_phxmo"]
+
 [ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
 [ext_resource type="Texture2D" uid="uid://2e65sd6wjtea" path="res://Assets/Background/Tree 1 1x 96x96.png" id="12_006vl"]
 [ext_resource type="Texture2D" uid="uid://c71nrw5ndgy21" path="res://Assets/Background/Tree 2 1x 96x96.png" id="13_14gkp"]
 [ext_resource type="Texture2D" uid="uid://cpvevhel1bc5g" path="res://Assets/Background/Tree 3 1x 96x96.png" id="14_jlwcw"]
 [ext_resource type="Material" uid="uid://dr8xxssuooouo" path="res://Scenes/shader test/2dShadowShaderMat.tres" id="15_l0xr3"]
 [ext_resource type="Material" uid="uid://ddxyk1bk6jxsr" path="res://Scenes/shader test/2dShadowShaderMat2.tres" id="16_ieuxu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bue2p"]
+shader = ExtResource("2_vbctf")
+shader_parameter/amount = 94
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("3_bl7sm")

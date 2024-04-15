@@ -1,5 +1,5 @@
 extends RigidBody2D
-var ttl = 5
+var ttl = 8
 
 func _ready():
 	connect("body_entered",  _on_body_entered)
