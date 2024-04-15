@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bjyctn05fm4s2" path="res://Scenes/NPC/priest_npc.tscn" id="3_mrtdx"]
 [ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="4_xf0qx"]
 [ext_resource type="PackedScene" path="res://Scenes/NPC/priest_npc2.tscn" id="5_qgnmy"]
-[ext_resource type="PackedScene" path="res://Scenes/NPC/priest_npc5.tscn" id="6_8nqpj"]
+[ext_resource type="PackedScene" uid="uid://cuh6ghsnkkk7x" path="res://Scenes/NPC/priest_npc5.tscn" id="6_8nqpj"]
 [ext_resource type="PackedScene" path="res://Scenes/NPC/priest_npc3.tscn" id="6_cnclp"]
 
 [node name="ChurchInside" type="Node2D"]
