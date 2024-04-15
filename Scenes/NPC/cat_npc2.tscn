@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://vor1ilp54v2x"]
+
+[ext_resource type="PackedScene" uid="uid://dq4l8g2d1xfu3" path="res://Scenes/NPC/cat_npc.tscn" id="1_belk6"]
+
+[node name="TemplateNPC" instance=ExtResource("1_belk6")]
+
+[node name="InteractableSquare" parent="." index="1"]
+interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/worship.json"])
+ChangeToScene = ""

@@ -5,6 +5,7 @@
 [node name="TemplateNPC" instance=ExtResource("1_6cdca")]
 
 [node name="InteractableSquare" parent="." index="1"]
+global_dialog_counter = "SmithCounter1"
 interact_type = "Item_With_Dialog"
 interaction_value = "jewelry"
 dialog_file = Array[String](["res://DialogText/Overworld/smith2.json", "res://DialogText/Overworld/smith3.json"])

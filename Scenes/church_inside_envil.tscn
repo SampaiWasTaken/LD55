@@ -1,10 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxm1wc3bhleo3"]
+[gd_scene load_steps=13 format=3 uid="uid://bxm1wc3bhleo3"]
 
 [ext_resource type="PackedScene" uid="uid://b2oufd2ch0o3g" path="res://Scenes/HouseInsides/church_inside.tscn" id="1_b6kfc"]
-[ext_resource type="Script" path="res://Scenes/church_inside_envil.gd" id="2_dcf6c"]
 [ext_resource type="Texture2D" uid="uid://bv4kghfiym3c7" path="res://Assets/Buildings/Inside Church_During ceremony.png" id="2_mvhce"]
 [ext_resource type="Texture2D" uid="uid://t4fkvgmcrb6i" path="res://Assets/Effects/circle.png" id="4_oj3bd"]
 [ext_resource type="PackedScene" uid="uid://c3kh568dblv1y" path="res://Scenes/NPC/priest_npc4.tscn" id="5_cqsuu"]
+[ext_resource type="PackedScene" uid="uid://vor1ilp54v2x" path="res://Scenes/NPC/cat_npc2.tscn" id="6_nbgqg"]
+[ext_resource type="PackedScene" uid="uid://cue21k5tpw8md" path="res://Scenes/NPC/dad_npc5.tscn" id="7_ry667"]
+[ext_resource type="PackedScene" uid="uid://b1yiahghorh75" path="res://Scenes/NPC/evil_npc2.tscn" id="8_dp4vs"]
+[ext_resource type="PackedScene" uid="uid://bgue0aj7bm8wb" path="res://Scenes/NPC/evil_npc.tscn" id="9_k6dbs"]
+[ext_resource type="PackedScene" uid="uid://bqfqvp7gtr1wq" path="res://Scenes/NPC/mom_npc5.tscn" id="10_dro2s"]
+[ext_resource type="PackedScene" uid="uid://cg355wxaxuvkm" path="res://Scenes/NPC/smith_evil.tscn" id="11_ibkcn"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8h130"]
 polygon = PackedVector2Array(134, 248, 136, 243, 136, 233, 146, 231, 152, 234, 150, 240, 152, 247, 154, 249, 154, 253, 150, 253, 150, 256, 150, 260, 145, 260, 144, 256, 143, 255, 142, 256, 142, 260, 137, 260, 136, 253, 133, 253, 132, 251)
@@ -13,7 +18,7 @@ polygon = PackedVector2Array(134, 248, 136, 243, 136, 233, 146, 231, 152, 234, 1
 polygon = PackedVector2Array(41, 153, 41, 160, 104, 160, 104, 153)
 
 [node name="ChurchInside" instance=ExtResource("1_b6kfc")]
-script = ExtResource("2_dcf6c")
+script = null
 
 [node name="PointLight2D" type="PointLight2D" parent="." index="0"]
 position = Vector2(144, 58)
@@ -40,3 +45,25 @@ occluder = SubResource("OccluderPolygon2D_0av42")
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="." index="7"]
 position = Vector2(143, 1)
 occluder = SubResource("OccluderPolygon2D_0av42")
+
+[node name="TemplateNPC2" parent="." index="8" instance=ExtResource("6_nbgqg")]
+position = Vector2(86, 197)
+scale = Vector2(0.5, 0.5)
+
+[node name="DadNPC" parent="." index="9" instance=ExtResource("7_ry667")]
+position = Vector2(111, 184)
+
+[node name="TemplateNPC3" parent="." index="10" instance=ExtResource("8_dp4vs")]
+position = Vector2(264, 199)
+
+[node name="TemplateNPC4" parent="." index="11" instance=ExtResource("9_k6dbs")]
+position = Vector2(36, 138)
+
+[node name="TemplateNPC5" parent="." index="12" instance=ExtResource("10_dro2s")]
+position = Vector2(172, 187)
+
+[node name="TemplateNPC6" parent="." index="13" instance=ExtResource("9_k6dbs")]
+position = Vector2(38, 221)
+
+[node name="TemplateNPC7" parent="." index="14" instance=ExtResource("11_ibkcn")]
+position = Vector2(214, 200)
