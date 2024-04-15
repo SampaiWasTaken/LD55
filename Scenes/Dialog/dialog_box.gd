@@ -14,7 +14,7 @@ var textAfterSceneChange: bool = false
 
 
 func _ready():
-	$NinePatchRect.visible = false
+	$DialogBoxBackground.visible = false
 	pass # Replace with function body.
 
 
@@ -27,7 +27,7 @@ func startDialog():
 		return
 	Globals.currently_interacting = true
 	dialog_active = true
-	$NinePatchRect.visible = true
+	$DialogBoxBackground.visible = true
 	dialog_counter = -1
 	dialog = load_dialogue()
 	next_dialog_text()
@@ -47,22 +47,46 @@ func _input(event):
 func next_dialog_text():
 	dialog_counter += 1
 	if dialog_counter >= len(dialog):
-		$NinePatchRect.visible = false
+		$DialogBoxBackground.visible = false
+		$DialogBoxBackground/PlayerItems.visible = false
+		$DialogBoxBackground/NpcItems.visible = false
+		$DialogBoxBackground/OtherItems.visible = false
 		$Timer.start()
 		return
-	$NinePatchRect/Name.text = dialog[dialog_counter]["name"]
-	$NinePatchRect/Text.text = dialog[dialog_counter]["text"]
+	
+	#load portrait if possible, else "?" portrait will be displayed
 	var fileName = dialog[dialog_counter]["portrait"]
-	if not (fileName == "" or fileName == "none"):
-		var res = load("res://Assets/Portraits/"+dialog[dialog_counter]["portrait"]+".png")
-		$NinePatchRect/Portrait.texture = res
-		if res != null:
-			$NinePatchRect/Portrait.visible = true
-		else :
-			$NinePatchRect/Portrait.texture  = placeholderPort
-
+	var potrait = null
+	
+	var name = dialog[dialog_counter]["name"]
+	
+	if not (name == "" or name == "none"):
+		if not (fileName == "" or fileName == "none"):
+			potrait = load("res://Assets/Portraits/"+dialog[dialog_counter]["portrait"]+".png")
+			if potrait == null:
+				potrait = placeholderPort
+		else: potrait = placeholderPort
+	
+	if name == "Player" or name == "You":
+		$DialogBoxBackground/NpcItems.visible = false
+		$DialogBoxBackground/OtherItems.visible = false
+		$DialogBoxBackground/PlayerItems.visible = true
+		$DialogBoxBackground/PlayerItems/Portrait.texture = potrait
+		$DialogBoxBackground/PlayerItems/Name.text = name
+		$DialogBoxBackground/PlayerItems/Text.text = dialog[dialog_counter]["text"]
+	elif not (name == "" or name == "none"):
+		$DialogBoxBackground/PlayerItems.visible = false
+		$DialogBoxBackground/OtherItems.visible = false
+		$DialogBoxBackground/NpcItems.visible = true
+		$DialogBoxBackground/NpcItems/Portrait.texture = potrait
+		$DialogBoxBackground/NpcItems/Name.text = name
+		$DialogBoxBackground/NpcItems/Text.text = dialog[dialog_counter]["text"]
 	else:
-		$NinePatchRect/Portrait.visible = false
+		$DialogBoxBackground/PlayerItems.visible = false
+		$DialogBoxBackground/NpcItems.visible = false
+		$DialogBoxBackground/OtherItems.visible = true
+		$DialogBoxBackground/OtherItems/Text.text = dialog[dialog_counter]["text"]
+	
 		
 
 

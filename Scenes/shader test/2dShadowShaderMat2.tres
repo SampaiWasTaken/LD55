@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ddxyk1bk6jxsr"]
+
+[ext_resource type="Shader" path="res://Scenes/shader test/test.gdshader" id="1_d4v6j"]
+
+[resource]
+shader = ExtResource("1_d4v6j")
+shader_parameter/deform = Vector2(-0.405, 0.2)
+shader_parameter/offset = Vector2(-8.495, 4.595)
+shader_parameter/modulate = Color(0, 0, 0, 0.392157)
+shader_parameter/x_buffer = 2.0
+shader_parameter/y_buffer = 2.0

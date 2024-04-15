@@ -9,7 +9,7 @@ the modified result to godotshaders.com.
 
 shader_type canvas_item;
 
-uniform int amount = 64;
+uniform int amount = 32;
 
 void fragment()
 {

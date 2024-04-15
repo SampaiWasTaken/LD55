@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dr8xxssuooouo"]
+
+[ext_resource type="Shader" path="res://Scenes/shader test/test.gdshader" id="1_pd22v"]
+
+[resource]
+shader = ExtResource("1_pd22v")
+shader_parameter/deform = Vector2(0.315, 0.4)
+shader_parameter/offset = Vector2(1.58, 3.99)
+shader_parameter/modulate = Color(0, 0, 0, 0.392157)
+shader_parameter/x_buffer = 2.0
+shader_parameter/y_buffer = 2.0

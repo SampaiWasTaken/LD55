@@ -48,7 +48,7 @@ func _on_interaction_area_area_exited(area):
 	pass # Replace with function body.
 	
 func interact():
-	if stored_interactions_areas:
+	if not Globals.currently_interacting and stored_interactions_areas:
 		var newest_interaction = stored_interactions_areas[0].get_parent()
 		match newest_interaction.interact_type:
 			#prints the interaction_value

@@ -67,7 +67,7 @@ polygon = PackedVector2Array(90, -62, 140, -62, 140, -103, 90, -103)
 position = Vector2(166, 44)
 
 [node name="MainChar" parent="." instance=ExtResource("2_6c4e3")]
-position = Vector2(160, 68)
+position = Vector2(130, 248)
 
 [node name="Camera2D" type="Camera2D" parent="MainChar"]
 zoom = Vector2(3, 3)
@@ -107,6 +107,6 @@ dialog_file = "res://DialogText/PlayerHouse/DoubleBed.json"
 [node name="Door" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(130, 283)
 scale = Vector2(1.43, 2.48)
-interact_type = "Dialog_With_Szene_Change_with_dialog_after_change"
+interact_type = "Dialog_With_Szene_Change"
 dialog_file = "res://DialogText/PlayerHouse/Door.json"
 ChangeToScene = "res://Scenes/main_scene.tscn"

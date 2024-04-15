@@ -6,6 +6,8 @@ class_name Interactable extends Node2D
 @export_global_file("*.json") var dialog_file
 @export var ChangeToScene: String
 
+var NumberOfInteractions:int = 0
+
 var nextScene
 
 func  _ready(): 
