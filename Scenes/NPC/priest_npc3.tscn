@@ -5,5 +5,4 @@
 [node name="TemplateNPC" instance=ExtResource("1_m4pys")]
 
 [node name="InteractableSquare" parent="." index="1"]
-interact_label = "none"
 dialog_file = Array[String](["res://DialogText/Overworld/PriestDialog_3_1.json"])
