@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cotcfjvqnsw2j"]
+
+[ext_resource type="PackedScene" uid="uid://bosj8v3yx184q" path="res://Scenes/NPC/template_npc.tscn" id="1_l8w6n"]
+[ext_resource type="Texture2D" uid="uid://cmcaagu3fx2hr" path="res://Assets/Characters/plant.png" id="2_mvolm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nc84v"]
+size = Vector2(28, 32)
+
+[node name="TemplateNPC" instance=ExtResource("1_l8w6n")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_mvolm")
+
+[node name="InteractableSquare" parent="." index="1"]
+interact_type = "Dialog_With_Szene_Change_from_Overworld"
+dialog_file = "F:/LD55/Ld 55/LD55/DialogText/Overworld/plantEncounter.json"
+ChangeToScene = "res://Scenes/CombatScenes/combat_scene_plant.tscn"
+
+[node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
+shape = SubResource("RectangleShape2D_nc84v")

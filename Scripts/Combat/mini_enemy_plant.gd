@@ -37,7 +37,7 @@ func _on_whip_hitbox_body_entered(body):
 func hurt(damage):
 	hp -= damage
 	if hp <= 0:
-		TransitionLayer.change_scene_with_dialog_after_change("res://Scenes/main_scene.tscn", "res://DialogText/Overworld/ChurchDialog.json")
+		TransitionLayer.change_scene_with_dialog_after_change("res://Scenes/main_scene.tscn", "res://DialogText/Overworld/plantEnemy.json")
 	print("Ouch")
 
 

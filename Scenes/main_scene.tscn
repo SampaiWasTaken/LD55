@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://ckf7m8yh7nmvh"]
+[gd_scene load_steps=42 format=3 uid="uid://ckf7m8yh7nmvh"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
 [ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_obbhs"]
@@ -10,13 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://cine24ypaw4k8" path="res://Assets/Buildings/House III 1x 96x96.png" id="5_1arlt"]
 [ext_resource type="Texture2D" uid="uid://dm38nmec2b13l" path="res://Assets/Buildings/House II 1x 96x96.png" id="6_11yhy"]
 [ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/Buildings/NEW_Church_1x_96x96.png" id="6_phxmo"]
-
-[ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
+[ext_resource type="PackedScene" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
 [ext_resource type="Texture2D" uid="uid://2e65sd6wjtea" path="res://Assets/Background/Tree 1 1x 96x96.png" id="12_006vl"]
 [ext_resource type="Texture2D" uid="uid://c71nrw5ndgy21" path="res://Assets/Background/Tree 2 1x 96x96.png" id="13_14gkp"]
 [ext_resource type="Texture2D" uid="uid://cpvevhel1bc5g" path="res://Assets/Background/Tree 3 1x 96x96.png" id="14_jlwcw"]
-[ext_resource type="Material" uid="uid://dr8xxssuooouo" path="res://Scenes/shader test/2dShadowShaderMat.tres" id="15_l0xr3"]
-[ext_resource type="Material" uid="uid://ddxyk1bk6jxsr" path="res://Scenes/shader test/2dShadowShaderMat2.tres" id="16_ieuxu"]
+[ext_resource type="Material" path="res://Scenes/shader test/2dShadowShaderMat.tres" id="15_l0xr3"]
+[ext_resource type="Material" path="res://Scenes/shader test/2dShadowShaderMat2.tres" id="16_ieuxu"]
+[ext_resource type="PackedScene" uid="uid://v1puuk03ssd7" path="res://Scenes/NPC/cat_npc.tscn" id="17_cywas"]
+[ext_resource type="PackedScene" uid="uid://cotcfjvqnsw2j" path="res://Scenes/NPC/plant_npc.tscn" id="18_6wpex"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("3_bl7sm")
@@ -623,3 +624,9 @@ texture = ExtResource("12_006vl")
 [node name="Tree11x96x127" type="Sprite2D" parent="Trees"]
 position = Vector2(1257, 952)
 texture = ExtResource("12_006vl")
+
+[node name="TemplateNPC" parent="." instance=ExtResource("17_cywas")]
+position = Vector2(429, 338)
+
+[node name="TemplateNPC2" parent="." instance=ExtResource("18_6wpex")]
+position = Vector2(519, 350)

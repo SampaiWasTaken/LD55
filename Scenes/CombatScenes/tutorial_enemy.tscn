@@ -63,7 +63,7 @@ size = Vector2(38, 34)
 
 [node name="miniEnemy" instance=ExtResource("1_t27a4")]
 script = ExtResource("2_73xos")
-speed = 600
+speed = 400
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
 material = SubResource("ShaderMaterial_xykrp")

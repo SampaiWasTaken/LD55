@@ -22,5 +22,6 @@ wait_time = 0.25
 
 [node name="tutorialEnemy" parent="." index="7" instance=ExtResource("3_k1k6u")]
 position = Vector2(206, 246)
+speed = 400
 
 [connection signal="timeout" from="MoveTimer" to="tutorialEnemy" method="_on_move_timer_timeout"]
