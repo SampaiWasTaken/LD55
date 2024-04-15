@@ -69,3 +69,6 @@ func interact():
 				Globals.player_items.append(newest_interaction.interaction_value)
 				newest_interaction.showDialog()
 				print(Globals.player_items)
+				stored_interactions_areas[0].queue_free()
+				
+				
