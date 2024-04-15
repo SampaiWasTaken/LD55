@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/Buildings/NEW_Church_1x_96x96.png" id="6_phxmo"]
 [ext_resource type="Texture2D" uid="uid://b7naa81357jrb" path="res://Assets/Background/Base for Tiles.jpg" id="6_v7153"]
 [ext_resource type="Texture2D" uid="uid://4ouvt78biqwb" path="res://Assets/Background/Base for Tiles II.jpg" id="7_gpnoi"]
-[ext_resource type="PackedScene" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
+[ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
 [ext_resource type="Texture2D" uid="uid://2e65sd6wjtea" path="res://Assets/Background/Tree 1 1x 96x96.png" id="12_006vl"]
 [ext_resource type="AudioStream" uid="uid://ba7iuep1v0x0o" path="res://Assets/Audio/3 - Phat Phrog Studios - Wind in the meadows.mp3" id="12_jg8cf"]
 [ext_resource type="Texture2D" uid="uid://c71nrw5ndgy21" path="res://Assets/Background/Tree 2 1x 96x96.png" id="13_14gkp"]
@@ -324,7 +324,6 @@ shape = SubResource("RectangleShape2D_nuwa4")
 position = Vector2(10.0001, 37)
 scale = Vector2(0.56001, 0.76)
 interact_type = "Dialog_With_Szene_Change_from_Overworld"
-dialog_file = Array[String](["res://DialogText/Overworld/MainCharHouseDialog.json"])
 ChangeToScene = "res://Scenes/HouseInsides/main_char_house_inside.tscn"
 
 [node name="HouseIi1x96x97" type="Sprite2D" parent="Buildings"]
@@ -3585,6 +3584,7 @@ collision_layer = 128
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D4"]
+position = Vector2(-64, -18)
 polygon = PackedVector2Array(57, 77, 395, 43, 510, -365, 423, -475, 367, -687, 398, -1084, 405, -1279, 530, -1582, 1653, -1623, 1646, -1147, 1130, -1032, 874, -429, 881, -159, 903, -10, 1192, -4, 1182, 717, 1217, 1114, 2351, 946, 2122, -2223, -577, -2035, -930, -905)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Walls"]
