@@ -11,7 +11,7 @@
 texture = ExtResource("2_8fkfp")
 
 [node name="InteractableSquare" parent="." index="1"]
-interact_label = "MomCounter1"
+global_dialog_counter = "MomCounter1"
 interact_type = "Only_Dialog"
 dialog_file = Array[String](["res://DialogText/PlayerHouse/Mom.json", "res://DialogText/PlayerHouse/Mom2.json"])
 

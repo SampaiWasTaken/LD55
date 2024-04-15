@@ -8,5 +8,3 @@ var DadCounter1 = 0
 var PriestCounter1 = 0
 var MomCounter1 = 0
 var SmithCounter1 = 0
-
-

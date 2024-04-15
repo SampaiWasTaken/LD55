@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7ym30ea7wr20"]
+[gd_scene load_steps=2 format=3 uid="uid://cn7lfuem6ie00"]
 
 [ext_resource type="PackedScene" uid="uid://cs2s5dqagndes" path="res://Scenes/NPC/mom_npc.tscn" id="1_qohlu"]
 
 [node name="TemplateNPC" instance=ExtResource("1_qohlu")]
 
 [node name="InteractableSquare" parent="." index="1"]
+global_dialog_counter = "none"
 dialog_file = Array[String](["res://DialogText/PlayerHouse/Mom_2_1.json"])

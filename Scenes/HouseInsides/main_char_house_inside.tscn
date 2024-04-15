@@ -1,10 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://ywwyivi82rwt"]
+[gd_scene load_steps=13 format=3 uid="uid://ywwyivi82rwt"]
 
 [ext_resource type="Texture2D" uid="uid://b5gpgenjfrqb6" path="res://Assets/Buildings/Inside Home.png" id="1_egnks"]
 [ext_resource type="Script" path="res://Scenes/HouseInsides/main_char_house_inside.gd" id="1_rlxk1"]
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="2_6c4e3"]
 [ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="3_bdiyt"]
+[ext_resource type="PackedScene" uid="uid://cs2s5dqagndes" path="res://Scenes/NPC/mom_npc.tscn" id="3_qj62s"]
 [ext_resource type="PackedScene" uid="uid://q23l73ddhwqe" path="res://Scenes/NPC/dad_npc.tscn" id="4_2sr24"]
+[ext_resource type="PackedScene" uid="uid://cn7lfuem6ie00" path="res://Scenes/NPC/mom_npc2.tscn" id="4_2ytii"]
+[ext_resource type="PackedScene" uid="uid://c5csd2xfcctyt" path="res://Scenes/NPC/mom_npc3.tscn" id="5_e6djq"]
+[ext_resource type="PackedScene" path="res://Scenes/NPC/mom_npc4.tscn" id="6_g8gpc"]
 [ext_resource type="PackedScene" uid="uid://ceg78vobimfst" path="res://Scenes/NPC/dad_npc2.tscn" id="6_irxh6"]
 [ext_resource type="PackedScene" uid="uid://cx02tdxp3pkdv" path="res://Scenes/NPC/dad_npc3.tscn" id="7_7ddbr"]
 [ext_resource type="PackedScene" uid="uid://bygj1l1x1ysg1" path="res://Scenes/NPC/dad_npc4.tscn" id="8_hxeeg"]
@@ -68,6 +72,18 @@ polygon = PackedVector2Array(-58, -91, -58, -61, -123, -61, -135, -61, -135, -10
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InsideHomeNew/StaticBody2D6"]
 polygon = PackedVector2Array(90, -62, 140, -62, 140, -103, 90, -103)
 
+[node name="MomNPC" parent="." instance=ExtResource("3_qj62s")]
+position = Vector2(159, -154)
+
+[node name="MomNPC2" parent="." instance=ExtResource("4_2ytii")]
+position = Vector2(193, -153)
+
+[node name="MomNPC3" parent="." instance=ExtResource("5_e6djq")]
+position = Vector2(229, -154)
+
+[node name="MomNPC4" parent="." instance=ExtResource("6_g8gpc")]
+position = Vector2(264, -153)
+
 [node name="DadNPC" parent="." instance=ExtResource("4_2sr24")]
 position = Vector2(158, -108)
 
@@ -82,6 +98,9 @@ position = Vector2(265, -108)
 
 [node name="DadNpcPos" type="Marker2D" parent="."]
 position = Vector2(156, 48)
+
+[node name="MomNpcPos" type="Marker2D" parent="."]
+position = Vector2(15, 124)
 
 [node name="MainChar" parent="." instance=ExtResource("2_6c4e3")]
 position = Vector2(130, 248)

@@ -79,15 +79,20 @@ func next_dialog_text():
 	var potrait = null
 	
 	var name = local_dialog[dialog_counter]["name"]
+	var fuck_you_sam = false
 	
 	if not (name == "" or name == "none"):
 		if not (fileName == "" or fileName == "none"):
 			potrait = load("res://Assets/Portraits/"+local_dialog[dialog_counter]["portrait"]+".png")
 			if potrait == null:
+				fuck_you_sam = true
 				potrait = placeholderPort
-		else: potrait = placeholderPort
+		else: 
+			potrait = placeholderPort
+			fuck_you_sam = true
 	
 	if name == "Player" or name == "You":
+		potrait = load("res://Assets/Portraits/Player.png")
 		$DialogBoxBackground/NpcItems.visible = false
 		$DialogBoxBackground/OtherItems.visible = false
 		$DialogBoxBackground/PlayerItems.visible = true
@@ -98,7 +103,11 @@ func next_dialog_text():
 		$DialogBoxBackground/PlayerItems.visible = false
 		$DialogBoxBackground/OtherItems.visible = false
 		$DialogBoxBackground/NpcItems.visible = true
-		$DialogBoxBackground/NpcItems/Portrait.texture = potrait
+		if not fuck_you_sam:
+			$DialogBoxBackground/NpcItems/Portrait.texture = potrait
+			$DialogBoxBackground/NpcItems/Portrait.visible = true
+		else:
+			$DialogBoxBackground/NpcItems/Portrait.visible = false
 		$DialogBoxBackground/NpcItems/Name.text = name
 		$DialogBoxBackground/NpcItems/Text.text = local_dialog[dialog_counter]["text"]
 	else:
