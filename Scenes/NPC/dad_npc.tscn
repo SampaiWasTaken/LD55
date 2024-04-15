@@ -13,7 +13,6 @@ height = 14.0
 texture = ExtResource("2_hyv7a")
 
 [node name="InteractableSquare" parent="." index="1"]
-interact_label = "DadCounter1"
 interact_type = "Only_Dialog"
 dialog_file = Array[String](["res://DialogText/PlayerHouse/Dad.json", "res://DialogText/PlayerHouse/Dad2.json"])
 
