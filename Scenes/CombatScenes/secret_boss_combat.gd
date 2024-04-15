@@ -1,13 +1,29 @@
 extends combatScene
 
-var obj_boulder = preload("res://Scenes/CombatScenes/boulder.tscn")
-var obj_gas = preload("res://Scenes/CombatScenes/bad_gas.tscn")
+var obj_boulder = preload("res://Scenes/CombatScenes/secret_boss_boulder.tscn")
+var obj_gas = preload("res://Scenes/CombatScenes/secret_boss_bad_gas.tscn")
+
+func _init():
+	pass
 
 func _ready():
+	$Path2D/PathFollow2D.progress_ratio = 0.5
 	$BoulderTimer.start()
 	$GasTimer.start()
-	$UI/ObjectiveLabel.text = "Survive"
-	$LevelTimer.start()
+	#$LevelTimer.start()
+	
+func _process(_delta):
+	$UI/HPBar.value = Player.health
+	$UI/BossHp.value = $Path2D/PathFollow2D/miniEnemy.hp
+
+func _on_mini_enemy_whipping():
+	$MoveTimer.paused = true
+	pass # Replace with function body.
+
+func _on_mini_enemy_whipping_stopped():
+	print("stopped")
+	$MoveTimer.paused = false
+	pass # Replace with function body.	
 	
 func _on_boulder_timer_timeout():
 	var boulder = obj_boulder.instantiate()
@@ -22,23 +38,18 @@ func _on_boulder_timer_timeout():
 	add_child(boulder)
 	$BoulderEffect.play()
 
-
 func _on_gas_timer_timeout():
 	var dir = global_position.direction_to($player.global_position)
 	shoot(150)
-	$Path2D/PathFollow2D.progress_ratio = randf()
+	$GasPath/PathFollow2D.progress_ratio = randf()
 	
 func shoot(speed: float):
 	print("gas")
 	var gas = obj_gas.instantiate()
-	var loc = $Path2D/PathFollow2D/GasSpawn.global_position
+	var loc = $GasPath/PathFollow2D/GasSpawn.global_position
 	gas.position = loc
 	gas.scale = Vector2(0.1, 0.1)
 	gas.velocity = Vector2(speed, 0)
 	$GasEffect.play()
 	$"..".add_child(gas)
-	$GasTimer.start(randi_range(2,7))
-
-
-func _on_level_timer_timeout():
-	TransitionLayer.change_scene_with_dialog_after_change("res://Scenes/main_scene.tscn", "res://DialogText/Overworld/caveEnemy.json")
+	$GasTimer.start(randi_range(2,4))

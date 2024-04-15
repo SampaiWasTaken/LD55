@@ -1,6 +1,8 @@
 [
-	{"name": "Dad", "text": "Son what are you doing", "portrait": "Dad"},
-	{"name": "Dad", "text": "Go get all the stuff idk", "portrait": "Dad"},
-	{"name": "Dad", "text": "Go to forest and idk the cave", "portrait": "Dad"},
-	{"name": "You", "text": "I know dad", "portrait": "You"},
+	{"name": "Dad", "text": "It's finally time. Today is your big day.", "portrait": "Dad"},
+	{"name": "Dad", "text": "The priest is already waiting for you, you'll find him at the church.", "portrait": "Dad"},
+	{"name": "Dad", "text": "Go get your ceremonial markings there. He will instruct you further.", "portrait": "Dad"},
+	{"name": "You", "text": "I'll get right to it, Dad!", "portrait": "You"},
+	{"name": "Dad", "text": "And be careful, we wouldn't want a single scratch on you!", "portrait": "Dad"},
+	{"name": "You", "text": "Yes Dad... I'll be careful.", "portrait": "You"},
 ]

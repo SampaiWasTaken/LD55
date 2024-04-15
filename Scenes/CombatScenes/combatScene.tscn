@@ -56,10 +56,9 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("Player")]
+[node name="Node2D" type="Node2D"]
 position = Vector2(-2, 0)
 script = ExtResource("1_2evti")
-Player = NodePath("player")
 metadata/_edit_vertical_guides_ = [575.0]
 
 [node name="Panel" type="Panel" parent="."]
@@ -218,6 +217,7 @@ scale = Vector2(27.7537, 15.8799)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_yjstg")
+volume_db = -15.0
 autoplay = true
 
 [connection signal="timeout" from="MoveCooldown" to="player" method="_on_move_cooldown_timeout"]
