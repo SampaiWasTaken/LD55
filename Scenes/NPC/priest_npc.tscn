@@ -14,7 +14,7 @@ texture = ExtResource("2_xk0jp")
 [node name="InteractableSquare" parent="." index="1"]
 interact_label = "PriestCounter1"
 interact_type = "Only_Dialog"
-dialog_file = Array[String](["res://DialogText/Overworld/PriestDialog1.json", "res://DialogText/Overworld/PriestDialog1.json"])
+dialog_file = Array[String](["res://DialogText/Overworld/PriestDialog1.json", "res://DialogText/Overworld/PriestDialog2.json"])
 
 [node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
 shape = SubResource("CapsuleShape2D_e7rbh")
