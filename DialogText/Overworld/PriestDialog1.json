@@ -1,5 +1,5 @@
 [
-	{"name": "Priest", "text": "Ah! There you are. I have been waiting for you", "portrait": "Priest"},
+	{"name": "Priest", "text": "Ah! There you are. I have been waiting for you.", "portrait": "Priest"},
 	{"name": "Priest", "text": "It's finally time for you to go on a journey.", "portrait": "Priest"},
 	{"name": "Priest", "text": "I hope you have prepared yourself!", "portrait": "Priest"},
 	{"name": "You", "text": "Yes Father, I'm ready!", "portrait": "Player"},

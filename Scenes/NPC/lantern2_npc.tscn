@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dovypgwnf2fi1"]
+[gd_scene load_steps=3 format=3 uid="uid://dovypgwnf2fi1"]
 
 [ext_resource type="PackedScene" uid="uid://bosj8v3yx184q" path="res://Scenes/NPC/template_npc.tscn" id="1_uxvsx"]
+[ext_resource type="Texture2D" uid="uid://caokjwy4i4734" path="res://Assets/Background/Decoration_Lamps.png" id="2_tj6cq"]
 
 [node name="TemplateNPC" instance=ExtResource("1_uxvsx")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_tj6cq")
+region_enabled = true
+region_rect = Rect2(54, 0, 48, 96)
 
 [node name="InteractableSquare" parent="." index="1"]
 interact_type = "Only_Dialog"
