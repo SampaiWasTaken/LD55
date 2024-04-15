@@ -19,8 +19,8 @@
 [ext_resource type="AudioStream" uid="uid://ba7iuep1v0x0o" path="res://Assets/Audio/3 - Phat Phrog Studios - Wind in the meadows.mp3" id="12_jg8cf"]
 [ext_resource type="Texture2D" uid="uid://c71nrw5ndgy21" path="res://Assets/Background/Tree 2 1x 96x96.png" id="13_14gkp"]
 [ext_resource type="Texture2D" uid="uid://cpvevhel1bc5g" path="res://Assets/Background/Tree 3 1x 96x96.png" id="14_jlwcw"]
-[ext_resource type="Material" uid="uid://dr8xxssuooouo" path="res://Scenes/shader test/2dShadowShaderMat.tres" id="15_l0xr3"]
-[ext_resource type="Material" uid="uid://ddxyk1bk6jxsr" path="res://Scenes/shader test/2dShadowShaderMat2.tres" id="16_ieuxu"]
+[ext_resource type="Material" path="res://Scenes/shader test/2dShadowShaderMat.tres" id="15_l0xr3"]
+[ext_resource type="Material" path="res://Scenes/shader test/2dShadowShaderMat2.tres" id="16_ieuxu"]
 [ext_resource type="PackedScene" uid="uid://dq4l8g2d1xfu3" path="res://Scenes/NPC/cat_npc.tscn" id="18_j4c3b"]
 [ext_resource type="PackedScene" uid="uid://cotcfjvqnsw2j" path="res://Scenes/NPC/plant_npc.tscn" id="19_7c4gc"]
 [ext_resource type="Texture2D" uid="uid://uemheo6em2by" path="res://Assets/Background/Bush I.png" id="22_deuel"]
@@ -282,30 +282,37 @@ shape = SubResource("RectangleShape2D_e38d3")
 [node name="InteractableSquare" parent="Buildings/HouseIii1x96x98" instance=ExtResource("7_j12tx")]
 position = Vector2(9.00009, 37)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/Overworld/randomHouse.json"])
 
 [node name="InteractableSquare2" parent="Buildings/HouseIii1x96x98" instance=ExtResource("7_j12tx")]
 position = Vector2(107, 44.9997)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/Overworld/randomHouse.json"])
 
 [node name="InteractableSquare3" parent="Buildings/HouseIii1x96x98" instance=ExtResource("7_j12tx")]
 position = Vector2(-108, 37.0003)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/Overworld/randomHouse.json"])
 
 [node name="InteractableSquare4" parent="Buildings/HouseIii1x96x98" instance=ExtResource("7_j12tx")]
 position = Vector2(-108, -153)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/Overworld/randomHouse.json"])
 
 [node name="InteractableSquare5" parent="Buildings/HouseIii1x96x98" instance=ExtResource("7_j12tx")]
 position = Vector2(102, -154)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/Overworld/randomHouse.json"])
 
 [node name="InteractableSquare6" parent="Buildings/HouseIii1x96x98" instance=ExtResource("7_j12tx")]
 position = Vector2(314, -158.001)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/Overworld/randomHouse.json"])
 
 [node name="InteractableSquare7" parent="Buildings/HouseIii1x96x98" instance=ExtResource("7_j12tx")]
 position = Vector2(386, -155.001)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/Overworld/randomHouse.json"])
 
 [node name="HouseIii1x96x99" type="Sprite2D" parent="Buildings"]
 material = SubResource("ShaderMaterial_07p4v")
@@ -338,7 +345,7 @@ metadata/_edit_lock_ = true
 [node name="StaticBody2D" type="StaticBody2D" parent="Buildings/HouseIi1x96x97"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/HouseIi1x96x97/StaticBody2D"]
-position = Vector2(1, 12.5)
+position = Vector2(1.00006, 14)
 shape = SubResource("RectangleShape2D_g6qqu")
 
 [node name="Church" type="Sprite2D" parent="Buildings"]
@@ -351,6 +358,8 @@ metadata/_edit_lock_ = true
 position = Vector2(-1.00001, 36)
 scale = Vector2(0.71, 1.025)
 interact_type = "Dialog_With_Szene_Change_from_Overworld"
+interaction_value = "res://Scenes/HouseInsides/church_inside.tscn"
+dialog_file = Array[String](["res://DialogText/Overworld/ChurchDialog.json"])
 ChangeToScene = "res://Scenes/HouseInsides/church_inside.tscn"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Buildings/Church"]

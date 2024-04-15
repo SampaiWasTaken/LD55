@@ -10,6 +10,8 @@ func change_scene_with_dialog_after_change(target: String, dialog_file: String) 
 	$AnimationPlayer.play("Fade_to_Black")
 	await $AnimationPlayer.animation_finished
 	get_tree().change_scene_to_file(target)
-	$DialogBox.dialog_file = dialog_file
+	var test:Array[String] = [dialog_file]
+	#test.append(dialog_file)
+	$DialogBox.dialog_file = test
 	$DialogBox.startDialog()
 	$AnimationPlayer.play("reveal")

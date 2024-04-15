@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2oufd2ch0o3g"]
+[gd_scene load_steps=5 format=3 uid="uid://b3qetojgh157u"]
 
-[ext_resource type="Texture2D" uid="uid://dvv1m4sitvmf1" path="res://Assets/Buildings/Inside Church_Before ceremony.png" id="1_2tp15"]
+[ext_resource type="Texture2D" uid="uid://hdua6qr3khty" path="res://Assets/Buildings/Inside Church_Before ceremony.png" id="1_2tp15"]
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="2_rtxvi"]
-[ext_resource type="PackedScene" uid="uid://bjyctn05fm4s2" path="res://Scenes/NPC/priest_npc.tscn" id="3_mrtdx"]
+[ext_resource type="PackedScene" uid="uid://b47ic3ida2u52" path="res://Scenes/NPC/priest_npc.tscn" id="3_mrtdx"]
 [ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="4_xf0qx"]
 
 [node name="ChurchInside" type="Node2D"]
@@ -72,27 +72,39 @@ position_smoothing_enabled = true
 
 [node name="Altar" parent="Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(144, 112)
+interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/ChurchInside/ChurchAltar.json"])
 
 [node name="Dresser" parent="Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(198, 108)
+interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/ChurchInside/ChurchDresser.json"])
 
 [node name="Dresser2" parent="Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(89, 108)
+interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/ChurchInside/ChurchDresser.json"])
 
 [node name="Door" parent="Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(142, 266)
 interact_type = "Dialog_With_Szene_Change"
+interaction_value = "res://Scenes/main_scene.tscn"
+dialog_file = Array[String](["res://DialogText/PlayerHouse/Door.json"])
 ChangeToScene = "res://Scenes/main_scene.tscn"
 
 [node name="Book" parent="Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(267, 113)
+interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/ChurchInside/ChurchBook.json"])
 
 [node name="BenchLeft" parent="Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(212, 170)
 scale = Vector2(2.075, 1.465)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/ChurchInside/ChurchBenches.json"])
 
 [node name="BenchRight" parent="Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(73, 176)
 scale = Vector2(2.64, 1.59)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/ChurchInside/ChurchBenches.json"])
