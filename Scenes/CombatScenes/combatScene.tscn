@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://40pvj01vaun1"]
+[gd_scene load_steps=11 format=3 uid="uid://40pvj01vaun1"]
 
 [ext_resource type="Script" path="res://Scripts/Combat/combatScene.gd" id="1_2evti"]
 [ext_resource type="Shader" path="res://Scenes/CombatScenes/combatScene.gdshader" id="2_n6pou"]
 [ext_resource type="PackedScene" uid="uid://bhwmn8uw5scwn" path="res://Scenes/CombatScenes/miniplayer.tscn" id="2_rkvdr"]
+[ext_resource type="AudioStream" uid="uid://ssvvmkv2o2e4" path="res://Assets/Audio/Time For Action (Looped).wav" id="4_yjstg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxa3q"]
 bg_color = Color(0, 0, 0, 1)
@@ -214,5 +215,9 @@ offset_left = 2.0
 offset_right = 44.0
 offset_bottom = 41.0
 scale = Vector2(27.7537, 15.8799)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_yjstg")
+autoplay = true
 
 [connection signal="timeout" from="MoveCooldown" to="player" method="_on_move_cooldown_timeout"]

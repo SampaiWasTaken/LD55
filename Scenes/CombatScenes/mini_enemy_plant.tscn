@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://xyyuqu4gxd2t"]
+[gd_scene load_steps=10 format=3 uid="uid://xyyuqu4gxd2t"]
 
 [ext_resource type="PackedScene" uid="uid://bvnh656bbcyon" path="res://Scenes/CombatScenes/mini_enemy.tscn" id="1_cj3a0"]
 [ext_resource type="Script" path="res://Scripts/Combat/mini_enemy_plant.gd" id="2_fe4fv"]
 [ext_resource type="Texture2D" uid="uid://cmcaagu3fx2hr" path="res://Assets/Characters/plant.png" id="3_6mgdh"]
 [ext_resource type="Texture2D" uid="uid://cojj1r8b8wwbo" path="res://Assets/Effects/vine_whip.png" id="4_n1ngi"]
+[ext_resource type="AudioStream" uid="uid://bmc2j7wehmjh1" path="res://Assets/Audio/plantShoot.wav" id="5_tncte"]
+[ext_resource type="AudioStream" uid="uid://cnw6uklupgh8d" path="res://Assets/Audio/random(1).wav" id="6_0lrxg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g8ahe"]
 size = Vector2(36, 32)
@@ -99,6 +101,13 @@ wait_time = 8.0
 
 [node name="WhippingTimer" type="Timer" parent="." index="8"]
 wait_time = 3.0
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="." index="9"]
+stream = ExtResource("5_tncte")
+
+[node name="VineSound" type="AudioStreamPlayer2D" parent="." index="10"]
+stream = ExtResource("6_0lrxg")
+pitch_scale = 0.6
 
 [connection signal="timeout" from="SpreadTimer" to="." method="_on_spread_timer_timeout"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
