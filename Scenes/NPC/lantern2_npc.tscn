@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dovypgwnf2fi1"]
+
+[ext_resource type="PackedScene" uid="uid://bosj8v3yx184q" path="res://Scenes/NPC/template_npc.tscn" id="1_uxvsx"]
+
+[node name="TemplateNPC" instance=ExtResource("1_uxvsx")]
+
+[node name="InteractableSquare" parent="." index="1"]
+interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/Overworld/Lantern.json"])

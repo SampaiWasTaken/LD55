@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bus8euhpsmjx1"]
+
+[ext_resource type="PackedScene" uid="uid://bosj8v3yx184q" path="res://Scenes/NPC/template_npc.tscn" id="1_gypxf"]
+[ext_resource type="Texture2D" uid="uid://ddaq27qaff0kl" path="res://Assets/Background/Decoration_Garland.png" id="2_tjvlv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffqmo"]
+size = Vector2(68, 20)
+
+[node name="TemplateNPC" instance=ExtResource("1_gypxf")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_tjvlv")
+
+[node name="InteractableSquare" parent="." index="1"]
+interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/Overworld/Garland.json"])
+
+[node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_ffqmo")
+disabled = true
