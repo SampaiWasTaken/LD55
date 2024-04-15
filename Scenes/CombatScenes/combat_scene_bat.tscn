@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddcvt4av8pk8a"]
+[gd_scene load_steps=7 format=3 uid="uid://ddcvt4av8pk8a"]
 
 [ext_resource type="PackedScene" uid="uid://40pvj01vaun1" path="res://Scenes/CombatScenes/combatScene.tscn" id="1_bfrwy"]
 [ext_resource type="Script" path="res://Scripts/Combat/combat_scene_bat.gd" id="2_38kw8"]
+[ext_resource type="AudioStream" uid="uid://ngacnw0ck2u7" path="res://Assets/Audio/explosion.wav" id="3_xbvn7"]
+[ext_resource type="AudioStream" uid="uid://b2aw7girwpbhx" path="res://Assets/Audio/synth.wav" id="4_wsxq3"]
 
 [sub_resource type="Curve2D" id="Curve2D_kdrnh"]
 _data = {
@@ -37,7 +39,7 @@ position = Vector2(127.142, 153)
 rotation = -0.0022275
 
 [node name="BoulderTimer" type="Timer" parent="." index="8"]
-wait_time = 0.5
+wait_time = 0.8
 
 [node name="GasTimer" type="Timer" parent="." index="9"]
 wait_time = 3.0
@@ -55,6 +57,14 @@ rotation = -1.57428
 
 [node name="LevelTimer" type="Timer" parent="." index="12"]
 wait_time = 30.0
+
+[node name="BoulderEffect" type="AudioStreamPlayer2D" parent="." index="15"]
+stream = ExtResource("3_xbvn7")
+volume_db = -15.0
+
+[node name="GasEffect" type="AudioStreamPlayer2D" parent="." index="16"]
+stream = ExtResource("4_wsxq3")
+volume_db = 8.0
 
 [connection signal="timeout" from="BoulderTimer" to="." method="_on_boulder_timer_timeout"]
 [connection signal="timeout" from="GasTimer" to="." method="_on_gas_timer_timeout"]

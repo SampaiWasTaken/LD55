@@ -1,9 +1,9 @@
 [
-	{"name": "", "text": "a table,", "portrait": ""},
+	{"name": "", "text": "A table.", "portrait": ""},
 	{"name": "", "text": "Here you usually eat food.", "portrait": ""},
 	{"name": "", "text": "You like food.", "portrait": ""},
-	{"name": "", "text": "All humans like food", "portrait": ""},
-	{"name": "", "text": "There is no food on the table right now", "portrait": ""},
-	{"name": "", "text": "sad :c", "portrait": ""},
-	{"name": "", "text": "you are hungry", "portrait": ""},
+	{"name": "", "text": "All humans like food.", "portrait": ""},
+	{"name": "", "text": "There is no food on the table right now.", "portrait": ""},
+	{"name": "", "text": "You feel sad.", "portrait": ""},
+	{"name": "You", "text": "I'm hungry...", "portrait": "Player"},
 ]
