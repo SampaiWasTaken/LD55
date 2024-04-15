@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7iy0ckisjusy"]
+[gd_scene load_steps=5 format=3 uid="uid://crjrm2rfevpgw"]
 
-[ext_resource type="Texture2D" uid="uid://bdgjpb2si22po" path="res://Assets/poison.png" id="1_gxldk"]
+[ext_resource type="Texture2D" uid="uid://bdgjpb2si22po" path="res://Assets/Effects/poison.png" id="1_gxldk"]
 [ext_resource type="Script" path="res://Scenes/CombatScenes/bad_gas.gd" id="1_pdxlk"]
-[ext_resource type="Material" uid="uid://d3qdx6tm4dhi1" path="res://Assets/bad_gas.tres" id="2_nnhm1"]
+[ext_resource type="Material" path="res://Assets/bad_gas.tres" id="2_nnhm1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fgxdo"]
 radius = 63.0079

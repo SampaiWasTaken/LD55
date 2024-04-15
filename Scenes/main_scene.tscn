@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://ckf7m8yh7nmvh"]
+[gd_scene load_steps=46 format=3 uid="uid://ckf7m8yh7nmvh"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
 [ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_obbhs"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dm38nmec2b13l" path="res://Assets/Buildings/House II 1x 96x96.png" id="6_11yhy"]
 [ext_resource type="Texture2D" uid="uid://t4fkvgmcrb6i" path="res://Assets/Effects/circle.png" id="6_22my8"]
 [ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/Buildings/NEW_Church_1x_96x96.png" id="6_phxmo"]
-[ext_resource type="PackedScene" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
+[ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
 [ext_resource type="Texture2D" uid="uid://2e65sd6wjtea" path="res://Assets/Background/Tree 1 1x 96x96.png" id="12_006vl"]
 [ext_resource type="AudioStream" uid="uid://ba7iuep1v0x0o" path="res://Assets/Audio/3 - Phat Phrog Studios - Wind in the meadows.mp3" id="12_jg8cf"]
 [ext_resource type="Texture2D" uid="uid://c71nrw5ndgy21" path="res://Assets/Background/Tree 2 1x 96x96.png" id="13_14gkp"]
@@ -154,6 +154,9 @@ size = Vector2(80, 35)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xvqq"]
 size = Vector2(1940, 1288)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbeja"]
+size = Vector2(1384.75, 139)
+
 [node name="Main Scene" type="Node2D"]
 script = ExtResource("1_obbhs")
 
@@ -165,7 +168,7 @@ layer_0/tile_data = PackedInt32Array(131072, 65536, 1, 196608, 65536, 1, 262144,
 [node name="Ground" type="Node2D" parent="."]
 
 [node name="MainChar" parent="." instance=ExtResource("1_4beut")]
-position = Vector2(665, -390)
+position = Vector2(596, 339)
 
 [node name="Camera2D" type="Camera2D" parent="MainChar"]
 zoom = Vector2(3, 3)
@@ -296,8 +299,9 @@ metadata/_edit_lock_ = true
 [node name="InteractableSquare" parent="Buildings/Church" instance=ExtResource("7_j12tx")]
 position = Vector2(-1.00001, 36)
 scale = Vector2(0.71, 1.025)
-interact_type = "Dialog_With_Szene_Change"
-dialog_file = "res://DialogText/ChurchDialog.json"
+interact_type = "Dialog_With_Szene_Change_from_Overworld"
+dialog_file = "res://DialogText/Overworld/ChurchDialog.json"
+ChangeToScene = "res://Scenes/HouseInsides/church_inside.tscn"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Buildings/Church"]
 
@@ -2371,7 +2375,7 @@ collision_layer = 128
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D4"]
-polygon = PackedVector2Array(57, 77, 395, 43, 510, -365, 423, -475, 367, -687, 122, -1062, -80, -1305, 84, -1640, 1509, -1551, 1623, -1020, 1506, -797, 874, -429, 881, -159, 903, -10, 1192, -4, 1182, 717, 1217, 1114, 2351, 946, 2122, -2223, -577, -2035, -930, -905)
+polygon = PackedVector2Array(57, 77, 395, 43, 510, -365, 423, -475, 367, -687, 398, -1084, 405, -1279, 530, -1582, 1653, -1623, 1646, -1147, 1130, -1032, 874, -429, 881, -159, 903, -10, 1192, -4, 1182, 717, 1217, 1114, 2351, 946, 2122, -2223, -577, -2035, -930, -905)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Walls"]
 collision_layer = 128
@@ -2439,11 +2443,27 @@ polygon = PackedVector2Array(-862, 482, -858, 463, -846, 462, -797, 466, -793, 4
 [node name="Areas" type="Node2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="Areas"]
+visible = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Area2D"]
 position = Vector2(859, -1063)
 shape = SubResource("RectangleShape2D_0xvqq")
+
+[node name="CaveEncounterTrigger" type="Area2D" parent="Areas"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/CaveEncounterTrigger"]
+position = Vector2(803, -1050)
+shape = SubResource("RectangleShape2D_xbeja")
+
+[node name="InteractableSquare" parent="Areas/CaveEncounterTrigger" instance=ExtResource("7_j12tx")]
+position = Vector2(799, -1049)
+scale = Vector2(76.79, 7.475)
+interact_type = "Dialog_With_Szene_Change_from_Overworld"
+interaction_value = "cave"
+dialog_file = "C:/Users/Leon/Documents/GitHub/LD55/DialogText/Overworld/caveEnemy.json"
+ChangeToScene = "res://Scenes/CombatScenes/combat_scene_bat.tscn"
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 energy = 0.0
@@ -2464,3 +2484,5 @@ position = Vector2(-495, 333)
 
 [connection signal="body_entered" from="Areas/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Areas/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Areas/CaveEncounterTrigger" to="." method="_on_cave_encounter_trigger_body_entered"]
+[connection signal="body_entered" from="Areas/CaveEncounterTrigger" to="Areas/CaveEncounterTrigger" method="_on_body_entered"]

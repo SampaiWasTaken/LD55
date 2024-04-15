@@ -12,6 +12,8 @@ func _ready():
 		$CatNPC.queue_free()
 	if "plant" in Globals.player_items:
 		$PlantNPC.queue_free()
+	if "cave" in Globals.player_items:
+		$PlantNPC.queue_free()
 	for tree in trees:
 		if tree.scale.y < 0:
 			tree.material = mat1
@@ -38,3 +40,7 @@ func _on_area_2d_body_exited(body):
 	await tween.finished
 	$MainChar/PointLight2D.hide()
 	pass # Replace with function body.
+
+
+func _on_cave_encounter_trigger_body_entered(body):
+	$MainChar.interact()
