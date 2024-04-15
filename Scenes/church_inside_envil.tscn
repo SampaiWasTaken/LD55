@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxm1wc3bhleo3"]
+
+[ext_resource type="PackedScene" uid="uid://b3qetojgh157u" path="res://Scenes/HouseInsides/church_inside.tscn" id="1_b6kfc"]
+[ext_resource type="Script" path="res://Scenes/church_inside_envil.gd" id="2_dcf6c"]
+[ext_resource type="Texture2D" uid="uid://bv4kghfiym3c7" path="res://Assets/Buildings/Inside Church_During ceremony.png" id="2_mvhce"]
+[ext_resource type="Texture2D" uid="uid://t4fkvgmcrb6i" path="res://Assets/Effects/circle.png" id="4_oj3bd"]
+[ext_resource type="PackedScene" uid="uid://c3kh568dblv1y" path="res://Scenes/NPC/priest_npc4.tscn" id="5_cqsuu"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8h130"]
+polygon = PackedVector2Array(134, 248, 136, 243, 136, 233, 146, 231, 152, 234, 150, 240, 152, 247, 154, 249, 154, 253, 150, 253, 150, 256, 150, 260, 145, 260, 144, 256, 143, 255, 142, 256, 142, 260, 137, 260, 136, 253, 133, 253, 132, 251)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0av42"]
+polygon = PackedVector2Array(41, 153, 41, 160, 104, 160, 104, 153)
+
+[node name="ChurchInside" instance=ExtResource("1_b6kfc")]
+script = ExtResource("2_dcf6c")
+
+[node name="PointLight2D" type="PointLight2D" parent="." index="0"]
+position = Vector2(144, 58)
+color = Color(1, 0.2, 0.168627, 1)
+shadow_enabled = true
+texture = ExtResource("4_oj3bd")
+
+[node name="InsideChurchBeforeCeremony" parent="." index="3"]
+texture = ExtResource("2_mvhce")
+
+[node name="TemplateNPC" parent="." index="4" instance=ExtResource("5_cqsuu")]
+position = Vector2(145, 140)
+
+[node name="TemplateNPC" parent="nice" index="5"]
+z_index = 1
+
+[node name="MainChar" parent="nice" index="6"]
+position = Vector2(145, 230)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="nice/MainChar" index="4"]
+position = Vector2(-143, -245)
+occluder = SubResource("OccluderPolygon2D_8h130")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="6"]
+occluder = SubResource("OccluderPolygon2D_0av42")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="." index="7"]
+position = Vector2(143, 1)
+occluder = SubResource("OccluderPolygon2D_0av42")

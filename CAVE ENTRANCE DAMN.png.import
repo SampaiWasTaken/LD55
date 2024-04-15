@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbvgj2hbqfqfb"
-path="res://.godot/imported/Base Background_9x9.png-7a524e69624a6a1be9882dec9f7b233c.ctex"
+uid="uid://cukrpowy4ve60"
+path="res://.godot/imported/CAVE ENTRANCE DAMN.png-72097083d232c8f8906b8b03410144e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/Base Background_9x9.png"
-dest_files=["res://.godot/imported/Base Background_9x9.png-7a524e69624a6a1be9882dec9f7b233c.ctex"]
+source_file="res://CAVE ENTRANCE DAMN.png"
+dest_files=["res://.godot/imported/CAVE ENTRANCE DAMN.png-72097083d232c8f8906b8b03410144e8.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbvgj2hbqfqfb"
-path="res://.godot/imported/Base Background_9x9.png-7a524e69624a6a1be9882dec9f7b233c.ctex"
+uid="uid://bxy3impd1irgf"
+path="res://.godot/imported/Right_Caven Entrance AddTil.png-683b5478d8a4b1507aedd048378e4cc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/Base Background_9x9.png"
-dest_files=["res://.godot/imported/Base Background_9x9.png-7a524e69624a6a1be9882dec9f7b233c.ctex"]
+source_file="res://Assets/Background/Right_Caven Entrance AddTil.png"
+dest_files=["res://.godot/imported/Right_Caven Entrance AddTil.png-683b5478d8a4b1507aedd048378e4cc4.ctex"]
 
 [params]
 
