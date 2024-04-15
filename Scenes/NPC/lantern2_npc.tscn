@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dovypgwnf2fi1"]
+[gd_scene load_steps=4 format=3 uid="uid://dovypgwnf2fi1"]
 
 [ext_resource type="PackedScene" uid="uid://bosj8v3yx184q" path="res://Scenes/NPC/template_npc.tscn" id="1_uxvsx"]
 [ext_resource type="Texture2D" uid="uid://caokjwy4i4734" path="res://Assets/Background/Decoration_Lamps.png" id="2_tj6cq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_godp8"]
+size = Vector2(20, 54)
 
 [node name="TemplateNPC" instance=ExtResource("1_uxvsx")]
 
@@ -11,5 +14,11 @@ region_enabled = true
 region_rect = Rect2(54, 0, 48, 96)
 
 [node name="InteractableSquare" parent="." index="1"]
+position = Vector2(0, 16)
+scale = Vector2(1.18544, 2.82919)
 interact_type = "Only_Dialog"
 dialog_file = Array[String](["res://DialogText/Overworld/Lantern.json"])
+
+[node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
+position = Vector2(0, 17)
+shape = SubResource("RectangleShape2D_godp8")

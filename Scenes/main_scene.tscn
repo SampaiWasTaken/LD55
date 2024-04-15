@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://ckf7m8yh7nmvh"]
+[gd_scene load_steps=67 format=3 uid="uid://ckf7m8yh7nmvh"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
 [ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_obbhs"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bn10s5fy00wuq" path="res://Assets/Background/NEW_Path Ways_9x9.png" id="3_lopaf"]
 [ext_resource type="Texture2D" uid="uid://baavxdvggqbjy" path="res://Assets/Buildings/House I 1x 96x96.png" id="4_tyj0k"]
 [ext_resource type="Texture2D" uid="uid://cine24ypaw4k8" path="res://Assets/Buildings/House III 1x 96x96.png" id="5_1arlt"]
-[ext_resource type="Texture2D" uid="uid://cytdwpqwaed31" path="res://Assets/Background/NEW_Cave Tiles.png" id="5_o40ki"]
+[ext_resource type="Texture2D" uid="uid://btg7lg02tlkgl" path="res://Assets/Background/NEW_Cave Tiles.png" id="5_o40ki"]
 [ext_resource type="Texture2D" uid="uid://dm38nmec2b13l" path="res://Assets/Buildings/House II 1x 96x96.png" id="6_11yhy"]
 [ext_resource type="Texture2D" uid="uid://t4fkvgmcrb6i" path="res://Assets/Effects/circle.png" id="6_22my8"]
 [ext_resource type="Texture2D" uid="uid://b7xdtc32qssqr" path="res://Assets/Buildings/NEW_Church_1x_96x96.png" id="6_phxmo"]
@@ -18,18 +18,24 @@
 [ext_resource type="PackedScene" uid="uid://c7281mtqkqhav" path="res://Scenes/NPC/smith_npc2.tscn" id="8_away5"]
 [ext_resource type="Texture2D" uid="uid://bjqp3okc6jxlw" path="res://Left_Caven Entrance AddTil.png" id="8_hvbjr"]
 [ext_resource type="Texture2D" uid="uid://b5wqhigv3upm0" path="res://NEW_Right_Caven Entrance AddTil.png" id="9_rwb5k"]
-[ext_resource type="Texture2D" uid="uid://ca2qi48mo2ece" path="res://Assets/Buildings/Smith Booth.png" id="9_ua4en"]
+[ext_resource type="Texture2D" uid="uid://bhf536o1c4j8y" path="res://Assets/Buildings/Smith Booth.png" id="9_ua4en"]
 [ext_resource type="Texture2D" uid="uid://2e65sd6wjtea" path="res://Assets/Background/Tree 1 1x 96x96.png" id="12_006vl"]
 [ext_resource type="AudioStream" uid="uid://ba7iuep1v0x0o" path="res://Assets/Audio/3 - Phat Phrog Studios - Wind in the meadows.mp3" id="12_jg8cf"]
 [ext_resource type="Texture2D" uid="uid://c71nrw5ndgy21" path="res://Assets/Background/Tree 2 1x 96x96.png" id="13_14gkp"]
 [ext_resource type="Texture2D" uid="uid://cpvevhel1bc5g" path="res://Assets/Background/Tree 3 1x 96x96.png" id="14_jlwcw"]
-[ext_resource type="Material" uid="uid://dr8xxssuooouo" path="res://Scenes/shader test/2dShadowShaderMat.tres" id="15_l0xr3"]
-[ext_resource type="Material" uid="uid://ddxyk1bk6jxsr" path="res://Scenes/shader test/2dShadowShaderMat2.tres" id="16_ieuxu"]
+[ext_resource type="Material" path="res://Scenes/shader test/2dShadowShaderMat.tres" id="15_l0xr3"]
+[ext_resource type="Material" path="res://Scenes/shader test/2dShadowShaderMat2.tres" id="16_ieuxu"]
 [ext_resource type="PackedScene" uid="uid://dq4l8g2d1xfu3" path="res://Scenes/NPC/cat_npc.tscn" id="18_j4c3b"]
 [ext_resource type="PackedScene" uid="uid://cotcfjvqnsw2j" path="res://Scenes/NPC/plant_npc.tscn" id="19_7c4gc"]
 [ext_resource type="Texture2D" uid="uid://uemheo6em2by" path="res://Assets/Background/Bush I.png" id="22_deuel"]
 [ext_resource type="Texture2D" uid="uid://4pwb07s31236" path="res://Assets/Background/Bush II.png" id="23_ugeje"]
-[ext_resource type="PackedScene" uid="uid://dfwd7s0wgt8p1" path="res://Scenes/NPC/smith_npc1.tscn" id="25_iaq40"]
+[ext_resource type="PackedScene" uid="uid://bw2oi6qirgiem" path="res://Scenes/NPC/smith_npc1.tscn" id="25_iaq40"]
+[ext_resource type="PackedScene" uid="uid://ckrhtu3ovvcpt" path="res://Scenes/NPC/lantern1_npc.tscn" id="31_jmopl"]
+[ext_resource type="PackedScene" uid="uid://dovypgwnf2fi1" path="res://Scenes/NPC/lantern2_npc.tscn" id="32_bfqr3"]
+[ext_resource type="Texture2D" uid="uid://ddaq27qaff0kl" path="res://Assets/Background/Decoration_Garland.png" id="33_mcw0d"]
+[ext_resource type="PackedScene" uid="uid://cjcqtqfjol83k" path="res://Scenes/NPC/npc1.tscn" id="34_vjbao"]
+[ext_resource type="PackedScene" uid="uid://bidtuc3l6hg52" path="res://Scenes/NPC/npc2.tscn" id="35_3qcxk"]
+[ext_resource type="PackedScene" uid="uid://8jnj0ai4e5nx" path="res://Scenes/NPC/npc3.tscn" id="36_vcm76"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("3_lopaf")
@@ -3839,6 +3845,49 @@ position = Vector2(-495, 333)
 [node name="BushIi" type="Sprite2D" parent="."]
 position = Vector2(29, 197)
 texture = ExtResource("23_ugeje")
+
+[node name="TemplateNPC" parent="." instance=ExtResource("31_jmopl")]
+position = Vector2(66, 395)
+
+[node name="TemplateNPC4" parent="." instance=ExtResource("31_jmopl")]
+position = Vector2(65, 212)
+
+[node name="TemplateNPC2" parent="." instance=ExtResource("32_bfqr3")]
+position = Vector2(773, 289)
+scale = Vector2(0.5, 0.5)
+
+[node name="TemplateNPC3" parent="." instance=ExtResource("32_bfqr3")]
+position = Vector2(846, 290)
+scale = Vector2(0.5, 0.5)
+
+[node name="DecorationGarland" type="Sprite2D" parent="."]
+position = Vector2(763, 439)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("33_mcw0d")
+
+[node name="DecorationGarland2" type="Sprite2D" parent="."]
+position = Vector2(869, 438)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("33_mcw0d")
+
+[node name="DecorationGarland3" type="Sprite2D" parent="."]
+position = Vector2(868, 247)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("33_mcw0d")
+
+[node name="DecorationGarland4" type="Sprite2D" parent="."]
+position = Vector2(752, 247)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("33_mcw0d")
+
+[node name="TemplateNPC5" parent="." instance=ExtResource("34_vjbao")]
+position = Vector2(974, 306)
+
+[node name="TemplateNPC6" parent="." instance=ExtResource("35_3qcxk")]
+position = Vector2(473, 452)
+
+[node name="TemplateNPC7" parent="." instance=ExtResource("36_vcm76")]
+position = Vector2(872, 462)
 
 [connection signal="body_entered" from="Areas/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Areas/Area2D" to="." method="_on_area_2d_body_exited"]
