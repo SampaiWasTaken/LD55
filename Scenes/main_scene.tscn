@@ -18,11 +18,6 @@
 [ext_resource type="Material" uid="uid://dr8xxssuooouo" path="res://Scenes/shader test/2dShadowShaderMat.tres" id="15_l0xr3"]
 [ext_resource type="Material" uid="uid://ddxyk1bk6jxsr" path="res://Scenes/shader test/2dShadowShaderMat2.tres" id="16_ieuxu"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bue2p"]
-shader = ExtResource("2_vbctf")
-shader_parameter/amount = 94
-
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("3_bl7sm")
 texture_region_size = Vector2i(96, 96)
