@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs2s5dqagndes"]
+
+[ext_resource type="PackedScene" uid="uid://bosj8v3yx184q" path="res://Scenes/NPC/template_npc.tscn" id="1_hr1ge"]
+[ext_resource type="Texture2D" uid="uid://yiqdeqt62m6c" path="res://Assets/Characters/mompixl.png" id="2_8fkfp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hu717"]
+
+[node name="TemplateNPC" instance=ExtResource("1_hr1ge")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_8fkfp")
+
+[node name="InteractableSquare" parent="." index="1"]
+interact_type = "Only_Dialog"
+
+[node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
+shape = SubResource("CapsuleShape2D_hu717")

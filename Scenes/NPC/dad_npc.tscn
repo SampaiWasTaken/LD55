@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bpgwb5r7r1x00" path="res://Assets/Characters/dadpixl.png" id="2_hyv7a"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wmadb"]
-radius = 5.0
-height = 14.0
+radius = 7.0
+height = 28.0
 
 [node name="DadNPC" instance=ExtResource("1_n7upg")]
 

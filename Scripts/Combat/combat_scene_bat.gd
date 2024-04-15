@@ -7,6 +7,7 @@ func _ready():
 	$BoulderTimer.start()
 	$GasTimer.start()
 	$UI/ObjectiveLabel.text = "Survive"
+	$LevelTimer.start()
 	
 func _on_boulder_timer_timeout():
 	var boulder = obj_boulder.instantiate()
@@ -42,3 +43,7 @@ func shoot(speed: float):
 	
 	$"..".add_child(gas)
 	$GasTimer.start(randi_range(2,7))
+
+
+func _on_level_timer_timeout():
+	TransitionLayer.change_scene_with_dialog_after_change("res://Scenes/main_scene.tscn", "res://DialogText/Overworld/caveEnemy.json")
