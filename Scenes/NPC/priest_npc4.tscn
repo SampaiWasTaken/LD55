@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3kh568dblv1y"]
+[gd_scene load_steps=3 format=3 uid="uid://c3kh568dblv1y"]
 
 [ext_resource type="PackedScene" uid="uid://b74qrhmihynpw" path="res://Scenes/NPC/priest_npc2.tscn" id="1_6yu4f"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_nwjmg"]
+polygon = PackedVector2Array(-8, -7, -7, -11, -2, -12, 2, -12, 6, -11, 7, -7, 7, -3, 11, 5, 10, 8, 7, 7, 6, 15, -6, 15, -7, 8, -11, 7, -11, 3, -9, 1, -7, -4)
 
 [node name="TemplateNPC" instance=ExtResource("1_6yu4f")]
 
 [node name="InteractableSquare" parent="." index="1"]
-interact_type = "Dialog_With_Szene_Change_from_Overworld"
 dialog_file = Array[String](["res://DialogText/Overworld/PriestDialog_4_1.json"])
-ChangeToScene = "res://Scenes/church_inside_evil.tscn"
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="3"]
+occluder = SubResource("OccluderPolygon2D_nwjmg")

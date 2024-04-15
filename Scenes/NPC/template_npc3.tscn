@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bn0ky18s4unhk"]
-
-[ext_resource type="PackedScene" uid="uid://b74qrhmihynpw" path="res://Scenes/NPC/priest_npc2.tscn" id="1_3y5ky"]
-
-[node name="TemplateNPC" instance=ExtResource("1_3y5ky")]
-
-[node name="InteractableSquare" parent="." index="1"]
-interact_label = "none"
-dialog_file = Array[String](["res://DialogText/Overworld/PriestDialog_3_1.json"])

@@ -25,85 +25,92 @@ color = Color(0.188235, 0.666667, 0.803922, 1)
 position = Vector2(149, 149)
 texture = ExtResource("1_2tp15")
 
-[node name="Walls" type="StaticBody2D" parent="InsideChurchBeforeCeremony"]
+[node name="nice" type="Node2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InsideChurchBeforeCeremony/Walls"]
+[node name="Walls" type="StaticBody2D" parent="nice"]
+position = Vector2(149, 149)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="nice/Walls"]
 polygon = PackedVector2Array(-26, 87, -25, 131, 15, 131, 14, 87, 131, 87, 131, -1, 131, -22, 110, -22, 110, -58, 28, -58, 28, -34, -37, -34, -37, -57, -131, -57, -131, 87, -203, 131, -196, -32, -163, -148, 182, -142, 208, 228, 143, 224, -198, 219, -197, 127, -131, 87)
 
-[node name="Bench" type="StaticBody2D" parent="InsideChurchBeforeCeremony"]
+[node name="Bench" type="StaticBody2D" parent="nice"]
+position = Vector2(149, 149)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InsideChurchBeforeCeremony/Bench"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="nice/Bench"]
 position = Vector2(-2.99999, 0)
 scale = Vector2(0.966188, 1)
 polygon = PackedVector2Array(-105.569, 35, -46.6754, 35, -46.5748, 38, -105.569, 38)
 
-[node name="Bench2" type="StaticBody2D" parent="InsideChurchBeforeCeremony"]
+[node name="Bench2" type="StaticBody2D" parent="nice"]
+position = Vector2(149, 149)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InsideChurchBeforeCeremony/Bench2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="nice/Bench2"]
 position = Vector2(-2.99999, -30)
 scale = Vector2(0.966188, 1)
 polygon = PackedVector2Array(-105.569, 35, -46.6754, 35, -46.5748, 38, -105.569, 38)
 
-[node name="Bench3" type="StaticBody2D" parent="InsideChurchBeforeCeremony"]
+[node name="Bench3" type="StaticBody2D" parent="nice"]
+position = Vector2(149, 149)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InsideChurchBeforeCeremony/Bench3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="nice/Bench3"]
 position = Vector2(140, -30)
 scale = Vector2(0.966188, 1)
 polygon = PackedVector2Array(-105.569, 35, -46.6754, 35, -46.5748, 38, -105.569, 38)
 
-[node name="Bench4" type="StaticBody2D" parent="InsideChurchBeforeCeremony"]
+[node name="Bench4" type="StaticBody2D" parent="nice"]
+position = Vector2(149, 149)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InsideChurchBeforeCeremony/Bench4"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="nice/Bench4"]
 position = Vector2(142, 0)
 scale = Vector2(0.966188, 1)
 polygon = PackedVector2Array(-105.569, 35, -46.6754, 35, -46.5748, 38, -105.569, 38)
 
-[node name="TemplateNPC" parent="." instance=ExtResource("3_mrtdx")]
+[node name="TemplateNPC" parent="nice" instance=ExtResource("3_mrtdx")]
 position = Vector2(52, 104)
 
-[node name="MainChar" parent="." instance=ExtResource("2_rtxvi")]
+[node name="MainChar" parent="nice" instance=ExtResource("2_rtxvi")]
 position = Vector2(143, 245)
 
-[node name="Camera2D" type="Camera2D" parent="MainChar"]
+[node name="Camera2D" type="Camera2D" parent="nice/MainChar"]
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Node2D" type="Node2D" parent="nice"]
 
-[node name="Altar" parent="Node2D" instance=ExtResource("4_xf0qx")]
+[node name="Altar" parent="nice/Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(144, 112)
 interact_type = "Only_Dialog"
 dialog_file = Array[String](["res://DialogText/ChurchInside/ChurchAltar.json"])
 
-[node name="Dresser" parent="Node2D" instance=ExtResource("4_xf0qx")]
+[node name="Dresser" parent="nice/Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(198, 108)
 interact_type = "Only_Dialog"
 dialog_file = Array[String](["res://DialogText/ChurchInside/ChurchDresser.json"])
 
-[node name="Dresser2" parent="Node2D" instance=ExtResource("4_xf0qx")]
+[node name="Dresser2" parent="nice/Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(89, 108)
 interact_type = "Only_Dialog"
 dialog_file = Array[String](["res://DialogText/ChurchInside/ChurchDresser.json"])
 
-[node name="Door" parent="Node2D" instance=ExtResource("4_xf0qx")]
+[node name="Door" parent="nice/Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(142, 266)
 interact_type = "Dialog_With_Szene_Change"
 interaction_value = "res://Scenes/main_scene.tscn"
 dialog_file = Array[String](["res://DialogText/PlayerHouse/Door.json"])
 ChangeToScene = "res://Scenes/main_scene.tscn"
 
-[node name="Book" parent="Node2D" instance=ExtResource("4_xf0qx")]
+[node name="Book" parent="nice/Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(267, 113)
 interact_type = "Only_Dialog"
 dialog_file = Array[String](["res://DialogText/ChurchInside/ChurchBook.json"])
 
-[node name="BenchLeft" parent="Node2D" instance=ExtResource("4_xf0qx")]
+[node name="BenchLeft" parent="nice/Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(212, 170)
 scale = Vector2(2.075, 1.465)
 interact_type = "Only_Dialog"
 dialog_file = Array[String](["res://DialogText/ChurchInside/ChurchBenches.json"])
 
-[node name="BenchRight" parent="Node2D" instance=ExtResource("4_xf0qx")]
+[node name="BenchRight" parent="nice/Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(73, 176)
 scale = Vector2(2.64, 1.59)
 interact_type = "Only_Dialog"
