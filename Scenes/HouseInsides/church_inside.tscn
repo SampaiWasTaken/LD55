@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2oufd2ch0o3g"]
+[gd_scene load_steps=5 format=3 uid="uid://b3qetojgh157u"]
 
-[ext_resource type="Texture2D" uid="uid://dvv1m4sitvmf1" path="res://Assets/Buildings/Inside Church_Before ceremony.png" id="1_2tp15"]
+[ext_resource type="Texture2D" uid="uid://hdua6qr3khty" path="res://Assets/Buildings/Inside Church_Before ceremony.png" id="1_2tp15"]
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="2_rtxvi"]
-[ext_resource type="PackedScene" uid="uid://bjyctn05fm4s2" path="res://Scenes/NPC/priest_npc.tscn" id="3_mrtdx"]
-[ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="4_xf0qx"]
+[ext_resource type="PackedScene" uid="uid://b47ic3ida2u52" path="res://Scenes/NPC/priest_npc.tscn" id="3_mrtdx"]
+[ext_resource type="PackedScene" path="res://Scenes/Interactables/interactable_square.tscn" id="4_xf0qx"]
 
 [node name="ChurchInside" type="Node2D"]
 
