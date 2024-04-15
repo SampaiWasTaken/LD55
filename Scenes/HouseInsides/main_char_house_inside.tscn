@@ -79,29 +79,35 @@ position_smoothing_enabled = true
 position = Vector2(31, 192)
 scale = Vector2(3.07, 1)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/PlayerHouse/Kitchen.json"])
 
 [node name="Fireplace" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(118, 193)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/PlayerHouse/Fireplace.json"])
 
 [node name="Diary" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(129, 108)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/PlayerHouse/Diary.json"])
 
 [node name="Table" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(228, 192)
 scale = Vector2(3.02, 0.915)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/PlayerHouse/Table.json"])
 
 [node name="SingleBed" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(243, 68)
 scale = Vector2(1.74, 2.28)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/PlayerHouse/SingleBed.json"])
 
 [node name="DoubleBed" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(43, 53)
 scale = Vector2(3.51, 2.235)
 interact_type = "Only_Dialog"
+dialog_file = Array[String](["res://DialogText/PlayerHouse/DoubleBed.json"])
 
 [node name="Door" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(130, 283)

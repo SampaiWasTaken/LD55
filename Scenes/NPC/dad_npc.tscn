@@ -13,9 +13,9 @@ height = 14.0
 texture = ExtResource("2_hyv7a")
 
 [node name="InteractableSquare" parent="." index="1"]
-global_dialog_counter = "DadCounter1"
+interact_label = "DadCounter1"
 interact_type = "Only_Dialog"
-dialog_file = Array[String](["res://DialogText/PlayerHouse/Dad.json", "res://DialogText/PlayerHouse/Door.json"])
+dialog_file = Array[String](["res://DialogText/PlayerHouse/Dad.json", "res://DialogText/PlayerHouse/Dad2.json"])
 
 [node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
 shape = SubResource("CapsuleShape2D_wmadb")

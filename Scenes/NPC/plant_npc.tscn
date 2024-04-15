@@ -14,7 +14,7 @@ texture = ExtResource("2_mvolm")
 [node name="InteractableSquare" parent="." index="1"]
 interact_type = "Dialog_With_Szene_Change_from_Overworld"
 interaction_value = "plant"
-dialog_file = "F:/LD55/Ld 55/LD55/DialogText/Overworld/plantEncounter.json"
+dialog_file = Array[String](["res://DialogText/Overworld/plantEncounter.json"])
 ChangeToScene = "res://Scenes/CombatScenes/combat_scene_plant.tscn"
 
 [node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
