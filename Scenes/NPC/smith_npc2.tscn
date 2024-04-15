@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c7281mtqkqhav"]
 
-[ext_resource type="PackedScene" uid="uid://bw2oi6qirgiem" path="res://Scenes/NPC/smith_npc1.tscn" id="1_6cdca"]
+[ext_resource type="PackedScene" uid="uid://dfwd7s0wgt8p1" path="res://Scenes/NPC/smith_npc1.tscn" id="1_6cdca"]
 
 [node name="TemplateNPC" instance=ExtResource("1_6cdca")]
 
