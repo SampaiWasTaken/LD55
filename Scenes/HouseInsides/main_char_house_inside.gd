@@ -8,13 +8,13 @@ func _ready():
 	#3 nur pflanze 
 	#4 alles
 	
-	if "cat" in Globals.player_items and "cave" in Globals.player_items:
+	if "plant" in Globals.player_items and "smith" in Globals.player_items:
 		#beides fertig
-		$DadNPC.position = $DadNpcPos.position
-	elif "cat" in Globals.player_items:
-		$DadNPC.position = $DadNpcPos.position
-	elif "cave" in Globals.player_items:
-		$DadNPC.position = $DadNpcPos.position
+		$DadNPC4.position = $DadNpcPos.position
+	elif "plant" in Globals.player_items:
+		$DadNPC3.position = $DadNpcPos.position
+	elif "smith" in Globals.player_items:
+		$DadNPC2.position = $DadNpcPos.position
 	else:
 		$DadNPC.position = $DadNpcPos.position
 		
