@@ -14,4 +14,3 @@ monitoring = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 
 [node name="DialogBox" parent="." instance=ExtResource("2_g3sfy")]
-dialog_file = Array[String]([])
