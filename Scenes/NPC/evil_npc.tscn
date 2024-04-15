@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgue0aj7bm8wb"]
+
+[ext_resource type="PackedScene" uid="uid://cjcqtqfjol83k" path="res://Scenes/NPC/npc1.tscn" id="1_hhxwa"]
+
+[node name="TemplateNPC" instance=ExtResource("1_hhxwa")]
+
+[node name="InteractableSquare" parent="." index="1"]
+dialog_file = Array[String](["res://DialogText/worship.json"])
