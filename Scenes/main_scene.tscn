@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://ckf7m8yh7nmvh"]
+[gd_scene load_steps=55 format=3 uid="uid://ckf7m8yh7nmvh"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
 [ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_obbhs"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://b7naa81357jrb" path="res://Assets/Background/Base for Tiles.jpg" id="6_v7153"]
 [ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
 [ext_resource type="Texture2D" uid="uid://dwnjmsn113vid" path="res://Assets/Background/NEW_Base for Tiles II.png" id="7_lquwq"]
+[ext_resource type="PackedScene" uid="uid://c7281mtqkqhav" path="res://Scenes/NPC/smith_npc2.tscn" id="8_away5"]
+[ext_resource type="Texture2D" uid="uid://ca2qi48mo2ece" path="res://Assets/Buildings/Smith Booth.png" id="9_ua4en"]
 [ext_resource type="Texture2D" uid="uid://2e65sd6wjtea" path="res://Assets/Background/Tree 1 1x 96x96.png" id="12_006vl"]
 [ext_resource type="AudioStream" uid="uid://ba7iuep1v0x0o" path="res://Assets/Audio/3 - Phat Phrog Studios - Wind in the meadows.mp3" id="12_jg8cf"]
 [ext_resource type="Texture2D" uid="uid://c71nrw5ndgy21" path="res://Assets/Background/Tree 2 1x 96x96.png" id="13_14gkp"]
@@ -24,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://cotcfjvqnsw2j" path="res://Scenes/NPC/plant_npc.tscn" id="19_7c4gc"]
 [ext_resource type="Texture2D" uid="uid://uemheo6em2by" path="res://Assets/Background/Bush I.png" id="22_deuel"]
 [ext_resource type="Texture2D" uid="uid://4pwb07s31236" path="res://Assets/Background/Bush II.png" id="23_ugeje"]
+[ext_resource type="PackedScene" uid="uid://dfwd7s0wgt8p1" path="res://Scenes/NPC/smith_npc1.tscn" id="25_iaq40"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("3_lopaf")
@@ -184,8 +187,30 @@ layer_0/tile_data = PackedInt32Array(131072, 65536, 1, 196608, 65536, 1, 262144,
 
 [node name="Ground" type="Node2D" parent="."]
 
+[node name="NPC" type="Node2D" parent="."]
+
+[node name="Smith" type="Node2D" parent="NPC"]
+
+[node name="TemplateNPC" parent="NPC/Smith" instance=ExtResource("25_iaq40")]
+position = Vector2(2324, 216)
+
+[node name="TemplateNPC2" parent="NPC/Smith" instance=ExtResource("8_away5")]
+position = Vector2(2384, 216)
+
+[node name="SmithBooth" type="Sprite2D" parent="NPC/Smith"]
+position = Vector2(252, 388)
+texture = ExtResource("9_ua4en")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="NPC/Smith/SmithBooth"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NPC/Smith/SmithBooth/StaticBody2D"]
+polygon = PackedVector2Array(-32, -12, 13, -12, 13, -27, 6, -28, 6, -43, 27, -43, 27, -28, 19, -28, 19, -12, 31, -12, 31, -10, -32, -10)
+
+[node name="SmithMarker" type="Marker2D" parent="NPC/Smith"]
+position = Vector2(250, 368)
+
 [node name="MainChar" parent="." instance=ExtResource("1_4beut")]
-position = Vector2(573, 339)
+position = Vector2(611, 345)
 
 [node name="Camera2D" type="Camera2D" parent="MainChar"]
 zoom = Vector2(3, 3)
@@ -3680,6 +3705,7 @@ dialog_file = Array[String](["res://DialogText/Overworld/caveEnemy.json"])
 ChangeToScene = "res://Scenes/CombatScenes/combat_scene_bat.tscn"
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(-160, 211)
 energy = 0.0
 blend_mode = 1
 

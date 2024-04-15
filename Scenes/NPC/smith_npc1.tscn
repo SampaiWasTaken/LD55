@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bw2oi6qirgiem"]
+[gd_scene load_steps=4 format=3 uid="uid://dfwd7s0wgt8p1"]
 
 [ext_resource type="PackedScene" uid="uid://bosj8v3yx184q" path="res://Scenes/NPC/template_npc.tscn" id="1_ffqly"]
 [ext_resource type="Texture2D" uid="uid://bo1sm8cvb0tyo" path="res://Assets/Characters/npx1pixl.png" id="2_uo4ag"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n3hvw"]
+radius = 8.0
+height = 16.0
 
 [node name="TemplateNPC" instance=ExtResource("1_ffqly")]
 
@@ -15,4 +17,5 @@ interact_type = "Dialog_Only"
 dialog_file = Array[String](["res://DialogText/Overworld/smith1.json"])
 
 [node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
+position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_n3hvw")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://08dx1a8m3dtc"]
+[gd_scene load_steps=2 format=3 uid="uid://c7281mtqkqhav"]
 
-[ext_resource type="PackedScene" uid="uid://bw2oi6qirgiem" path="res://Scenes/NPC/smith_npc1.tscn" id="1_6cdca"]
+[ext_resource type="PackedScene" uid="uid://dfwd7s0wgt8p1" path="res://Scenes/NPC/smith_npc1.tscn" id="1_6cdca"]
 
 [node name="TemplateNPC" instance=ExtResource("1_6cdca")]
 
 [node name="InteractableSquare" parent="." index="1"]
-interact_label = "SmithCounter1"
+interact_type = "Item_With_Dialog"
+interaction_value = "jewelry"
 dialog_file = Array[String](["res://DialogText/Overworld/smith2.json", "res://DialogText/Overworld/smith3.json"])
