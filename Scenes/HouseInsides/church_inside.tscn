@@ -7,6 +7,20 @@
 
 [node name="ChurchInside" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -207.0
+offset_top = -68.0
+offset_right = 526.0
+offset_bottom = 467.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 25.0
+offset_top = 38.0
+offset_right = 273.0
+offset_bottom = 122.0
+color = Color(0.188235, 0.666667, 0.803922, 1)
+
 [node name="InsideChurchBeforeCeremony" type="Sprite2D" parent="."]
 position = Vector2(149, 149)
 texture = ExtResource("1_2tp15")
