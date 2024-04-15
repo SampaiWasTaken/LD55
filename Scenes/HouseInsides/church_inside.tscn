@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2oufd2ch0o3g"]
+
+[ext_resource type="Texture2D" uid="uid://dvv1m4sitvmf1" path="res://Assets/Buildings/Inside Church_Before ceremony.png" id="1_2tp15"]
+[ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="2_rtxvi"]
+[ext_resource type="PackedScene" uid="uid://bjyctn05fm4s2" path="res://Scenes/NPC/priest_npc.tscn" id="3_mrtdx"]
+[ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="4_xf0qx"]
+
+[node name="ChurchInside" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -207.0
+offset_top = -68.0
+offset_right = 526.0
+offset_bottom = 467.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 25.0
+offset_top = 38.0
+offset_right = 273.0
+offset_bottom = 122.0
+color = Color(0.188235, 0.666667, 0.803922, 1)
+
+[node name="InsideChurchBeforeCeremony" type="Sprite2D" parent="."]
+position = Vector2(149, 149)
+texture = ExtResource("1_2tp15")
+
+[node name="Walls" type="StaticBody2D" parent="InsideChurchBeforeCeremony"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InsideChurchBeforeCeremony/Walls"]
+polygon = PackedVector2Array(-26, 87, -25, 131, 15, 131, 14, 87, 131, 87, 131, -1, 131, -22, 110, -22, 110, -58, 28, -58, 28, -34, -37, -34, -37, -57, -131, -57, -131, 87, -203, 131, -196, -32, -163, -148, 182, -142, 208, 228, 143, 224, -198, 219, -197, 127, -131, 87)
+
+[node name="Bench" type="StaticBody2D" parent="InsideChurchBeforeCeremony"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InsideChurchBeforeCeremony/Bench"]
+position = Vector2(-2.99999, 0)
+scale = Vector2(0.966188, 1)
+polygon = PackedVector2Array(-105.569, 35, -46.6754, 35, -46.5748, 38, -105.569, 38)
+
+[node name="Bench2" type="StaticBody2D" parent="InsideChurchBeforeCeremony"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InsideChurchBeforeCeremony/Bench2"]
+position = Vector2(-2.99999, -30)
+scale = Vector2(0.966188, 1)
+polygon = PackedVector2Array(-105.569, 35, -46.6754, 35, -46.5748, 38, -105.569, 38)
+
+[node name="Bench3" type="StaticBody2D" parent="InsideChurchBeforeCeremony"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InsideChurchBeforeCeremony/Bench3"]
+position = Vector2(140, -30)
+scale = Vector2(0.966188, 1)
+polygon = PackedVector2Array(-105.569, 35, -46.6754, 35, -46.5748, 38, -105.569, 38)
+
+[node name="Bench4" type="StaticBody2D" parent="InsideChurchBeforeCeremony"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InsideChurchBeforeCeremony/Bench4"]
+position = Vector2(142, 0)
+scale = Vector2(0.966188, 1)
+polygon = PackedVector2Array(-105.569, 35, -46.6754, 35, -46.5748, 38, -105.569, 38)
+
+[node name="TemplateNPC" parent="." instance=ExtResource("3_mrtdx")]
+position = Vector2(52, 104)
+
+[node name="MainChar" parent="." instance=ExtResource("2_rtxvi")]
+position = Vector2(143, 245)
+
+[node name="Camera2D" type="Camera2D" parent="MainChar"]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Altar" parent="Node2D" instance=ExtResource("4_xf0qx")]
+position = Vector2(144, 112)
+
+[node name="Door" parent="Node2D" instance=ExtResource("4_xf0qx")]
+position = Vector2(142, 266)
+interact_type = "Dialog_With_Szene_Change"
+dialog_file = "res://DialogText/ChurchInside/ChurchDoor.json"
+ChangeToScene = "res://Scenes/main_scene.tscn"
+
+[node name="Book" parent="Node2D" instance=ExtResource("4_xf0qx")]
+position = Vector2(267, 113)
+
+[node name="BenchLeft" parent="Node2D" instance=ExtResource("4_xf0qx")]
+position = Vector2(212, 170)
+scale = Vector2(2.075, 1.465)
+
+[node name="BenchRight" parent="Node2D" instance=ExtResource("4_xf0qx")]
+position = Vector2(73, 176)
+scale = Vector2(2.64, 1.59)
