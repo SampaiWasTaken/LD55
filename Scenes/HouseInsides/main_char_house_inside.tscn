@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b5gpgenjfrqb6" path="res://Assets/Buildings/Inside Home.png" id="1_egnks"]
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="2_6c4e3"]
-[ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="3_bdiyt"]
+[ext_resource type="PackedScene" path="res://Scenes/Interactables/interactable_square.tscn" id="3_bdiyt"]
 [ext_resource type="PackedScene" uid="uid://q23l73ddhwqe" path="res://Scenes/NPC/dad_npc.tscn" id="4_2sr24"]
 
 [node name="MainCharHouseInside" type="Node2D"]
@@ -83,6 +83,11 @@ interact_type = "Only_Dialog"
 [node name="Fireplace" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(118, 193)
 interact_type = "Only_Dialog"
+
+[node name="Diary" parent="Interactables" instance=ExtResource("3_bdiyt")]
+position = Vector2(129, 108)
+interact_type = "Only_Dialog"
+dialog_file = "res://DialogText/PlayerHouse/Fireplace.json"
 
 [node name="Table" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(228, 192)
