@@ -31,16 +31,12 @@
 [ext_resource type="Texture2D" uid="uid://4pwb07s31236" path="res://Assets/Background/Bush II.png" id="23_ugeje"]
 [ext_resource type="PackedScene" uid="uid://bw2oi6qirgiem" path="res://Scenes/NPC/smith_npc1.tscn" id="25_iaq40"]
 [ext_resource type="Texture2D" uid="uid://bepoamfmj04no" path="res://Assets/Background/magical_stick.png" id="31_j6bbb"]
-[ext_resource type="PackedScene" path="res://Scenes/NPC/lantern1_npc.tscn" id="31_jmopl"]
+[ext_resource type="PackedScene" uid="uid://ckrhtu3ovvcpt" path="res://Scenes/NPC/lantern1_npc.tscn" id="31_jmopl"]
 [ext_resource type="PackedScene" uid="uid://dovypgwnf2fi1" path="res://Scenes/NPC/lantern2_npc.tscn" id="32_bfqr3"]
-[ext_resource type="Texture2D" uid="uid://6nqilf0eelvu" path="res://Assets/Background/Decoration_Garland.png" id="33_mcw0d"]
 [ext_resource type="PackedScene" uid="uid://cjcqtqfjol83k" path="res://Scenes/NPC/npc1.tscn" id="34_vjbao"]
 [ext_resource type="PackedScene" path="res://Scenes/NPC/npc2.tscn" id="35_3qcxk"]
 [ext_resource type="PackedScene" path="res://Scenes/NPC/npc3.tscn" id="36_vcm76"]
-[ext_resource type="PackedScene" uid="uid://cjcqtqfjol83k" path="res://Scenes/NPC/npc1.tscn" id="34_vjbao"]
-[ext_resource type="PackedScene" uid="uid://bidtuc3l6hg52" path="res://Scenes/NPC/npc2.tscn" id="35_3qcxk"]
-[ext_resource type="PackedScene" uid="uid://8jnj0ai4e5nx" path="res://Scenes/NPC/npc3.tscn" id="36_vcm76"]
-[ext_resource type="PackedScene" uid="uid://bus8euhpsmjx1" path="res://Scenes/NPC/garland_npc.tscn" id="37_53nhl"]
+[ext_resource type="PackedScene" path="res://Scenes/NPC/garland_npc.tscn" id="37_53nhl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("3_lopaf")
@@ -271,10 +267,10 @@ layer_1/tile_data = PackedInt32Array(-393211, 5, 0, -327675, 5, 1, -262139, 5, 2
 [node name="Smith" type="Node2D" parent="NPC"]
 
 [node name="TemplateNPC" parent="NPC/Smith" instance=ExtResource("25_iaq40")]
-position = Vector2(2324, 216)
+position = Vector2(2510, 360)
 
 [node name="TemplateNPC2" parent="NPC/Smith" instance=ExtResource("8_away5")]
-position = Vector2(2384, 216)
+position = Vector2(2450, 359)
 
 [node name="SmithBooth" type="Sprite2D" parent="NPC/Smith"]
 position = Vector2(252, 388)
@@ -3732,7 +3728,7 @@ collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D4"]
 position = Vector2(-64, -18)
-polygon = PackedVector2Array(57, 77, 395, 43, 544, -366, 544, -550, 367, -687, 398, -1084, 405, -1279, 530, -1582, 1653, -1623, 1646, -1147, 1130, -1032, 832, -558, 832, -334, 881, -159, 903, -10, 1192, -4, 1182, 717, 1217, 1114, 2351, 946, 2122, -2223, -577, -2035, -930, -905)
+polygon = PackedVector2Array(57, 77, 395, 43, 544, -366, 544, -550, 367, -687, 398, -1084, 405, -1279, 688, -1425, 1653, -1623, 1622, -1177, 1130, -1032, 832, -558, 832, -334, 881, -159, 903, -10, 1192, -4, 1182, 717, 1217, 1114, 2351, 946, 2122, -2223, -577, -2035, -930, -905)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Walls"]
 collision_layer = 128

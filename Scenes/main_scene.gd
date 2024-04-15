@@ -14,9 +14,9 @@ func _ready():
 		$PlantNPC.queue_free()
 	if "cave" in Globals.player_items:
 		$Areas/CaveEncounterTrigger.queue_free()
-		$NPC/Smith/TemplateNPC.position = $NPC/Smith/SmithMarker.position
-	else:
 		$NPC/Smith/TemplateNPC2.position = $NPC/Smith/SmithMarker.position
+	else:
+		$NPC/Smith/TemplateNPC.position = $NPC/Smith/SmithMarker.position
 	for tree in trees:
 		if tree.scale.y < 0:
 			tree.material = mat1
