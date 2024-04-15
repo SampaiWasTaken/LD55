@@ -5,5 +5,5 @@ func _init():
 	
 func _ready():
 	Globals.currently_interacting = true
-	$AnimationPlayer.play("wowthatsepic"w)
+	$AnimationPlayer.play("wowthatsepic")
 	#$nice/TemplateNPC.queue_free()

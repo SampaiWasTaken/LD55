@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://btophqfukb6vk"]
+
+[ext_resource type="PackedScene" uid="uid://b3s7p1c63vynj" path="res://Scenes/GameOver.tscn" id="1_o4ogw"]
+
+[node name="Control" instance=ExtResource("1_o4ogw")]
+
+[node name="NinePatchRect" parent="." index="1"]
+offset_left = 424.0
+offset_right = 737.0
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="RichTextLabel" parent="." index="2"]
+offset_left = -139.0
+offset_right = 144.0
+text = "At long last I could fulfill my destiny"

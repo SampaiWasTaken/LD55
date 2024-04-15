@@ -3,7 +3,7 @@ extends miniEnemy
 signal whipping
 signal whippingStopped
 func _init():
-	maxhp = 1000
+	maxhp = 400
 
 func _ready():
 	obj_bullet = preload("res://Scenes/CombatScenes/secret_boss_bullet.tscn")
