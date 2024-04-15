@@ -54,4 +54,5 @@ func shoot(direction: float, speed: float):
 	$".."/MoveCooldown.start()
 
 func gameOver():
+	TransitionLayer.change_scene_with_dialog_after_change("res://Scenes/main_scene.tscn", "")
 	pass

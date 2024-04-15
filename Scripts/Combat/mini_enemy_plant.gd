@@ -1,7 +1,9 @@
 extends miniEnemy
 
+signal whipping
+signal whippingStopped
 func _init():
-	maxhp = 10
+	maxhp = 100
 
 func _ready():
 	obj_bullet = preload("res://Scenes/CombatScenes/plant_bullet.tscn")
@@ -20,6 +22,8 @@ func _on_spread_timer_timeout():
 func _on_whip_timer_timeout():
 	print("whip")
 	$AnimationPlayer.play("whipAttack")
+	whipping.emit()
+	$WhippingTimer.start()
 	pass # Replace with function body.
 
 
@@ -28,9 +32,19 @@ func _on_whip_hitbox_body_entered(body):
 		print("hit by vine")
 		body.hurt(20)
 		$AnimationPlayer.stop()
+		$WhipAttack.visible = false
 		
 func hurt(damage):
 	hp -= damage
 	if hp <= 0:
 		TransitionLayer.change_scene_with_dialog_after_change("res://Scenes/main_scene.tscn", "res://DialogText/Overworld/ChurchDialog.json")
 	print("Ouch")
+
+
+func _on_animation_player_animation_finished(anim_name):
+	return true
+
+
+func _on_whipping_timer_timeout():
+	whippingStopped.emit()
+	pass # Replace with function body.

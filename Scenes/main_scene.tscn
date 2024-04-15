@@ -289,4 +289,3 @@ shape = SubResource("RectangleShape2D_ognwo")
 stream = ExtResource("11_h4nkb")
 volume_db = -3.0
 autoplay = true
-panning_strength = 3.0

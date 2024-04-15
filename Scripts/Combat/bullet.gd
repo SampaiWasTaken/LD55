@@ -4,7 +4,7 @@ extends Area2D
 
 var velocity: Vector2 = Vector2()
 @export var oppositionString = ""
-@export var duration = 5
+@export var duration = 10
 var direction = Vector2.ZERO
 
 func _ready():

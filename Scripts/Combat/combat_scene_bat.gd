@@ -6,6 +6,7 @@ var obj_gas = preload("res://Scenes/CombatScenes/bad_gas.tscn")
 func _ready():
 	$BoulderTimer.start()
 	$GasTimer.start()
+	$UI/ObjectiveLabel.text = "Survive"
 	
 func _on_boulder_timer_timeout():
 	var boulder = obj_boulder.instantiate()
