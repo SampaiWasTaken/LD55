@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dgiq2a821h71q" path="res://Assets/Background/Grass 1x 96x96.jpg" id="2_aode6"]
 [ext_resource type="Shader" path="res://Scenes/shader test/test.gdshader" id="2_nsnny"]
 [ext_resource type="Shader" path="res://Scenes/shader test/pixelArt.gdshader" id="2_wwwvo"]
-[ext_resource type="Texture2D" uid="uid://bahs5eu7hxd7m" path="res://Assets/Background/Path Ways_9x9.jpg" id="3_bl7sm"]
+[ext_resource type="Texture2D" uid="uid://cfivuxo2qvam8" path="res://Assets/Background/NEW_Path_Ways_9x9.png" id="3_xxfjv"]
 [ext_resource type="Texture2D" uid="uid://bycu1mhqics5f" path="res://Assets/Background/Cave Floor 1x 96x96.png" id="4_io2wf"]
 [ext_resource type="Texture2D" uid="uid://baavxdvggqbjy" path="res://Assets/Buildings/House I 1x 96x96.png" id="4_tyj0k"]
 [ext_resource type="Texture2D" uid="uid://cine24ypaw4k8" path="res://Assets/Buildings/House III 1x 96x96.png" id="5_1arlt"]
@@ -31,7 +31,7 @@ shader = ExtResource("2_wwwvo")
 shader_parameter/amount = 96
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
-texture = ExtResource("3_bl7sm")
+texture = ExtResource("3_xxfjv")
 texture_region_size = Vector2i(96, 96)
 0:0/0 = 0
 1:0/0 = 0
@@ -324,6 +324,7 @@ shape = SubResource("RectangleShape2D_nuwa4")
 position = Vector2(10.0001, 37)
 scale = Vector2(0.56001, 0.76)
 interact_type = "Dialog_With_Szene_Change_from_Overworld"
+dialog_file = Array[String](["res://DialogText/Overworld/MainCharHouseDialog.json"])
 ChangeToScene = "res://Scenes/HouseInsides/main_char_house_inside.tscn"
 
 [node name="HouseIi1x96x97" type="Sprite2D" parent="Buildings"]
