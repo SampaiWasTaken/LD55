@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfwd7s0wgt8p1"]
+[gd_scene load_steps=4 format=3 uid="uid://bw2oi6qirgiem"]
 
 [ext_resource type="PackedScene" uid="uid://bosj8v3yx184q" path="res://Scenes/NPC/template_npc.tscn" id="1_ffqly"]
-[ext_resource type="Texture2D" uid="uid://bo1sm8cvb0tyo" path="res://Assets/Characters/npx1pixl.png" id="2_uo4ag"]
+[ext_resource type="Texture2D" uid="uid://qhwb1fg7qkgq" path="res://Assets/Characters/smith.png" id="2_i7jn7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n3hvw"]
 radius = 8.0
@@ -10,7 +10,7 @@ height = 16.0
 [node name="TemplateNPC" instance=ExtResource("1_ffqly")]
 
 [node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_uo4ag")
+texture = ExtResource("2_i7jn7")
 
 [node name="InteractableSquare" parent="." index="1"]
 interact_type = "Dialog_Only"

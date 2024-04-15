@@ -1,4 +1,9 @@
 extends Node2D
 
 func _init():
-	$nice/TemplateNPC.queue_free()
+	pass
+	
+func _ready():
+	Globals.currently_interacting = true
+	$AnimationPlayer.play("wowthatsepic")
+	#$nice/TemplateNPC.queue_free()
