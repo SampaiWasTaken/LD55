@@ -73,6 +73,12 @@ position_smoothing_enabled = true
 [node name="Altar" parent="Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(144, 112)
 
+[node name="Dresser" parent="Node2D" instance=ExtResource("4_xf0qx")]
+position = Vector2(198, 108)
+
+[node name="Dresser2" parent="Node2D" instance=ExtResource("4_xf0qx")]
+position = Vector2(89, 108)
+
 [node name="Door" parent="Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(142, 266)
 interact_type = "Dialog_With_Szene_Change"

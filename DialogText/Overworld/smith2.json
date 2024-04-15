@@ -1,0 +1,14 @@
+[
+	{"name": "Smith", "text": "You've got it? Give it here.", "portrait": ""},
+	{"name": "You", "text": "The gemstone? Yes I have it with me.", "portrait": "Player"},
+	{"name": "", "text": "The smith looks at you expectantly.", "portrait": ""},
+	{"name": "", "text": "You hand him the Gemstone you found in the caverns.", "portrait": ""},
+	{"name": "Smith", "text": "Good, good...", "portrait": ""},
+	{"name": "", "text": "He turns around to his workbench.", "portrait": ""},
+	{"name": "", "text": "...", "portrait": ""},
+	{"name": "", "text": "After some time he turns back to you and hands you an ornate necklace, the familiar stone as its centerpiece.", "portrait": ""},
+	{"name": "Smith", "text": "There you go... Wear it proudly.", "portrait": ""},
+	{"name": "", "text": "You don the necklace. The smith pats you on the shoulder.", "portrait": ""},
+	{"name": "", "text": "You look at him inquisitively. He simply looks at you.", "portrait": ""},
+	{"name": "You", "text": "Uh, thanks I guess.", "portrait": "Player"},
+]
