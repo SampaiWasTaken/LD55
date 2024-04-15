@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://xkrphttqgrdh"]
+
+[ext_resource type="PackedScene" uid="uid://btophqfukb6vk" path="res://Scenes/bad_end.tscn" id="1_curue"]
+
+[node name="Control" instance=ExtResource("1_curue")]
+
+[node name="NinePatchRect" parent="." index="1"]
+offset_left = 388.0
+offset_right = 773.0
+offset_bottom = 436.0
+
+[node name="RichTextLabel" parent="." index="2"]
+offset_right = 155.0
+offset_bottom = 44.0
+text = "You gave it your all and manged to end the cycle of  sacrifice. Tired from the days ordeals you had to bed..."
+
+[node name="Button" parent="." index="3"]
+offset_left = -28.0
+offset_top = 52.0
+offset_right = 37.0
+offset_bottom = 83.0

@@ -17,7 +17,7 @@ region_rect = Rect2(54, 0, 48, 96)
 position = Vector2(0, 16)
 scale = Vector2(1.18544, 2.82919)
 interact_type = "Only_Dialog"
-dialog_file = Array[String](["res://DialogText/Overworld/Lantern.json"])
+dialog_file = Array[String](["res://DialogText/Overworld/Lamp.json"])
 
 [node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
 position = Vector2(0, 17)

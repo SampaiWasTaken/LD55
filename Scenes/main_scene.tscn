@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://ckf7m8yh7nmvh"]
+[gd_scene load_steps=68 format=3 uid="uid://ckf7m8yh7nmvh"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
 [ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_obbhs"]
@@ -33,10 +33,10 @@
 [ext_resource type="Texture2D" uid="uid://bepoamfmj04no" path="res://Assets/Background/magical_stick.png" id="31_j6bbb"]
 [ext_resource type="PackedScene" uid="uid://ckrhtu3ovvcpt" path="res://Scenes/NPC/lantern1_npc.tscn" id="31_jmopl"]
 [ext_resource type="PackedScene" uid="uid://dovypgwnf2fi1" path="res://Scenes/NPC/lantern2_npc.tscn" id="32_bfqr3"]
-[ext_resource type="Texture2D" uid="uid://ddaq27qaff0kl" path="res://Assets/Background/Decoration_Garland.png" id="33_mcw0d"]
 [ext_resource type="PackedScene" uid="uid://cjcqtqfjol83k" path="res://Scenes/NPC/npc1.tscn" id="34_vjbao"]
 [ext_resource type="PackedScene" uid="uid://bidtuc3l6hg52" path="res://Scenes/NPC/npc2.tscn" id="35_3qcxk"]
 [ext_resource type="PackedScene" uid="uid://8jnj0ai4e5nx" path="res://Scenes/NPC/npc3.tscn" id="36_vcm76"]
+[ext_resource type="PackedScene" uid="uid://bus8euhpsmjx1" path="res://Scenes/NPC/garland_npc.tscn" id="37_53nhl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("3_lopaf")
@@ -3855,6 +3855,7 @@ dialog_file = Array[String](["res://DialogText/Overworld/MagicStick.json"])
 
 [node name="Sprite2D" type="Sprite2D" parent="InteractableSquare2"]
 texture = ExtResource("31_j6bbb")
+
 [node name="TemplateNPC" parent="." instance=ExtResource("31_jmopl")]
 position = Vector2(66, 395)
 
@@ -3869,26 +3870,6 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(846, 290)
 scale = Vector2(0.5, 0.5)
 
-[node name="DecorationGarland" type="Sprite2D" parent="."]
-position = Vector2(763, 439)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("33_mcw0d")
-
-[node name="DecorationGarland2" type="Sprite2D" parent="."]
-position = Vector2(869, 438)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("33_mcw0d")
-
-[node name="DecorationGarland3" type="Sprite2D" parent="."]
-position = Vector2(868, 247)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("33_mcw0d")
-
-[node name="DecorationGarland4" type="Sprite2D" parent="."]
-position = Vector2(752, 247)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("33_mcw0d")
-
 [node name="TemplateNPC5" parent="." instance=ExtResource("34_vjbao")]
 position = Vector2(974, 306)
 
@@ -3897,6 +3878,22 @@ position = Vector2(473, 452)
 
 [node name="TemplateNPC7" parent="." instance=ExtResource("36_vcm76")]
 position = Vector2(872, 462)
+
+[node name="TemplateNPC8" parent="." instance=ExtResource("37_53nhl")]
+position = Vector2(870, 439)
+scale = Vector2(0.6, 0.6)
+
+[node name="TemplateNPC9" parent="." instance=ExtResource("37_53nhl")]
+position = Vector2(764, 439)
+scale = Vector2(0.6, 0.6)
+
+[node name="TemplateNPC10" parent="." instance=ExtResource("37_53nhl")]
+position = Vector2(753, 243)
+scale = Vector2(0.4, 0.4)
+
+[node name="TemplateNPC11" parent="." instance=ExtResource("37_53nhl")]
+position = Vector2(869, 248)
+scale = Vector2(0.4, 0.4)
 
 [connection signal="body_entered" from="Areas/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Areas/Area2D" to="." method="_on_area_2d_body_exited"]
