@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cuh6ghsnkkk7x"]
 
-[ext_resource type="PackedScene" path="res://Scenes/NPC/priest_npc3.tscn" id="1_vlw3y"]
+[ext_resource type="PackedScene" uid="uid://yaomlkn2v11l" path="res://Scenes/NPC/priest_npc3.tscn" id="1_vlw3y"]
 
 [node name="TemplateNPC" instance=ExtResource("1_vlw3y")]
 

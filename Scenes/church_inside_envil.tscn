@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bxm1wc3bhleo3"]
 
-[ext_resource type="PackedScene" uid="uid://b3qetojgh157u" path="res://Scenes/HouseInsides/church_inside.tscn" id="1_b6kfc"]
+[ext_resource type="PackedScene" uid="uid://b2oufd2ch0o3g" path="res://Scenes/HouseInsides/church_inside.tscn" id="1_b6kfc"]
 [ext_resource type="Script" path="res://Scenes/church_inside_envil.gd" id="2_dcf6c"]
 [ext_resource type="Texture2D" uid="uid://bv4kghfiym3c7" path="res://Assets/Buildings/Inside Church_During ceremony.png" id="2_mvhce"]
 [ext_resource type="Texture2D" uid="uid://t4fkvgmcrb6i" path="res://Assets/Effects/circle.png" id="4_oj3bd"]
@@ -26,9 +26,6 @@ texture = ExtResource("2_mvhce")
 
 [node name="TemplateNPC" parent="." index="4" instance=ExtResource("5_cqsuu")]
 position = Vector2(145, 140)
-
-[node name="TemplateNPC" parent="nice" index="5"]
-z_index = 1
 
 [node name="MainChar" parent="nice" index="6"]
 position = Vector2(145, 230)
