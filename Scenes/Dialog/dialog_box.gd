@@ -1,9 +1,10 @@
 extends CanvasLayer
 
-@export var dialog_file:String
+@export var dialog_file:Array[String]
 
-var dialog = []#stores the dialog after reading the file
+var dialog = [[]]#stores the dialog after reading the file
 var dialog_counter: int = -1 #stores current dialog index
+var Current_Dialog_Array_Counter = 0
 var dialog_active: bool = false
 
 var placeholderPort = preload("res://Assets/Portraits/PlaceholderPortrait.png")
@@ -29,13 +30,20 @@ func startDialog():
 	dialog_active = true
 	$DialogBoxBackground.visible = true
 	dialog_counter = -1
-	dialog = load_dialogue()
+	dialog = load_all_dialog(dialog_file)
 	next_dialog_text()
 	
-func load_dialogue():
+func load_all_dialog(paths:Array[String]):
+	var allDialogs = []
+	for path in paths:
+		allDialogs.append(load_dialogue(path))
+	return allDialogs
 	
-	if FileAccess.file_exists(dialog_file):
-		var file = FileAccess.open(dialog_file, FileAccess.READ)
+	
+	
+func load_dialogue(path:String):
+	if FileAccess.file_exists(path):
+		var file = FileAccess.open(path, FileAccess.READ)
 		return JSON.parse_string(file.get_as_text())
 	else:
 		print("ahahah you stupid f***, your dialog file doesnt exist")
@@ -45,24 +53,27 @@ func _input(event):
 			next_dialog_text()
 
 func next_dialog_text():
+	var local_dialog = dialog[Current_Dialog_Array_Counter]
 	dialog_counter += 1
-	if dialog_counter >= len(dialog):
+	if dialog_counter >= len(local_dialog):
 		$DialogBoxBackground.visible = false
 		$DialogBoxBackground/PlayerItems.visible = false
 		$DialogBoxBackground/NpcItems.visible = false
 		$DialogBoxBackground/OtherItems.visible = false
+		if len(dialog) > Current_Dialog_Array_Counter:
+			Current_Dialog_Array_Counter +=1
 		$Timer.start()
 		return
 	
 	#load portrait if possible, else "?" portrait will be displayed
-	var fileName = dialog[dialog_counter]["portrait"]
+	var fileName = local_dialog[dialog_counter]["portrait"]
 	var potrait = null
 	
-	var name = dialog[dialog_counter]["name"]
+	var name = local_dialog[dialog_counter]["name"]
 	
 	if not (name == "" or name == "none"):
 		if not (fileName == "" or fileName == "none"):
-			potrait = load("res://Assets/Portraits/"+dialog[dialog_counter]["portrait"]+".png")
+			potrait = load("res://Assets/Portraits/"+local_dialog[dialog_counter]["portrait"]+".png")
 			if potrait == null:
 				potrait = placeholderPort
 		else: potrait = placeholderPort
@@ -73,19 +84,19 @@ func next_dialog_text():
 		$DialogBoxBackground/PlayerItems.visible = true
 		$DialogBoxBackground/PlayerItems/Portrait.texture = potrait
 		$DialogBoxBackground/PlayerItems/Name.text = name
-		$DialogBoxBackground/PlayerItems/Text.text = dialog[dialog_counter]["text"]
+		$DialogBoxBackground/PlayerItems/Text.text = local_dialog[dialog_counter]["text"]
 	elif not (name == "" or name == "none"):
 		$DialogBoxBackground/PlayerItems.visible = false
 		$DialogBoxBackground/OtherItems.visible = false
 		$DialogBoxBackground/NpcItems.visible = true
 		$DialogBoxBackground/NpcItems/Portrait.texture = potrait
 		$DialogBoxBackground/NpcItems/Name.text = name
-		$DialogBoxBackground/NpcItems/Text.text = dialog[dialog_counter]["text"]
+		$DialogBoxBackground/NpcItems/Text.text = local_dialog[dialog_counter]["text"]
 	else:
 		$DialogBoxBackground/PlayerItems.visible = false
 		$DialogBoxBackground/NpcItems.visible = false
 		$DialogBoxBackground/OtherItems.visible = true
-		$DialogBoxBackground/OtherItems/Text.text = dialog[dialog_counter]["text"]
+		$DialogBoxBackground/OtherItems/Text.text = local_dialog[dialog_counter]["text"]
 	
 		
 

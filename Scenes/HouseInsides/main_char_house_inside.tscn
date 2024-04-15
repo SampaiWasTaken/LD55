@@ -79,12 +79,10 @@ position_smoothing_enabled = true
 position = Vector2(31, 192)
 scale = Vector2(3.07, 1)
 interact_type = "Only_Dialog"
-dialog_file = "res://DialogText/PlayerHouse/Kitchen.json"
 
 [node name="Fireplace" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(118, 193)
 interact_type = "Only_Dialog"
-dialog_file = "res://DialogText/PlayerHouse/Fireplace.json"
 
 [node name="Diary" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(129, 108)
@@ -95,23 +93,20 @@ dialog_file = "res://DialogText/PlayerHouse/Fireplace.json"
 position = Vector2(228, 192)
 scale = Vector2(3.02, 0.915)
 interact_type = "Only_Dialog"
-dialog_file = "res://DialogText/PlayerHouse/Table.json"
 
 [node name="SingleBed" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(243, 68)
 scale = Vector2(1.74, 2.28)
 interact_type = "Only_Dialog"
-dialog_file = "res://DialogText/PlayerHouse/SingleBed.json"
 
 [node name="DoubleBed" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(43, 53)
 scale = Vector2(3.51, 2.235)
 interact_type = "Only_Dialog"
-dialog_file = "res://DialogText/PlayerHouse/DoubleBed.json"
 
 [node name="Door" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(130, 283)
 scale = Vector2(1.43, 2.48)
 interact_type = "Dialog_With_Szene_Change"
-dialog_file = "res://DialogText/PlayerHouse/Door.json"
+dialog_file = Array[String](["res://DialogText/PlayerHouse/Door.json"])
 ChangeToScene = "res://Scenes/main_scene.tscn"

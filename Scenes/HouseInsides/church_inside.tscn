@@ -82,7 +82,6 @@ position = Vector2(89, 108)
 [node name="Door" parent="Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(142, 266)
 interact_type = "Dialog_With_Szene_Change"
-dialog_file = "res://DialogText/ChurchInside/ChurchDoor.json"
 ChangeToScene = "res://Scenes/main_scene.tscn"
 
 [node name="Book" parent="Node2D" instance=ExtResource("4_xf0qx")]
@@ -91,7 +90,9 @@ position = Vector2(267, 113)
 [node name="BenchLeft" parent="Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(212, 170)
 scale = Vector2(2.075, 1.465)
+interact_type = "Only_Dialog"
 
 [node name="BenchRight" parent="Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(73, 176)
 scale = Vector2(2.64, 1.59)
+interact_type = "Only_Dialog"

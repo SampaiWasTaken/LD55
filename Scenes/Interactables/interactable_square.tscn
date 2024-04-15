@@ -8,3 +8,6 @@
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 shape = SubResource("RectangleShape2D_1eden")
+
+[node name="DialogBox" parent="." index="1"]
+dialog_file = Array[String]([])
