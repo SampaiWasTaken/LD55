@@ -5,6 +5,7 @@ extends CanvasLayer
 var dialog = [[]]#stores the dialog after reading the file
 var dialog_counter: int = -1 #stores current dialog index
 var Current_Dialog_Array_Counter = 0
+var global_dialog_counter = "none"
 var dialog_active: bool = false
 
 var placeholderPort = preload("res://Assets/Portraits/PlaceholderPortrait.png")
@@ -26,6 +27,11 @@ func _process(_delta):
 func startDialog():
 	if dialog_active:
 		return
+	#checking for globally stored dialog counter
+	if global_dialog_counter != "none":
+		print(Globals.get(global_dialog_counter))
+		Current_Dialog_Array_Counter = Globals.get(global_dialog_counter)
+	
 	Globals.currently_interacting = true
 	dialog_active = true
 	$DialogBoxBackground.visible = true
@@ -60,8 +66,10 @@ func next_dialog_text():
 		$DialogBoxBackground/PlayerItems.visible = false
 		$DialogBoxBackground/NpcItems.visible = false
 		$DialogBoxBackground/OtherItems.visible = false
-		if len(dialog) > Current_Dialog_Array_Counter:
+		if len(dialog)-1 > Current_Dialog_Array_Counter:
 			Current_Dialog_Array_Counter +=1
+		if global_dialog_counter != "none":
+			Globals.set(global_dialog_counter, Current_Dialog_Array_Counter)
 		$Timer.start()
 		return
 	
