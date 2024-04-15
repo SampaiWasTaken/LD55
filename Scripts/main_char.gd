@@ -8,29 +8,34 @@ var stored_interactions_areas = []
 func getInput():
 	
 	#movement
-	var input_direction = Input.get_vector("walkLeft", "walkRight", "walkUp", "walkDown")
-	if Input.is_action_pressed("walkRight"):
-		animeSprite.play("walkRight")
-	elif Input.is_action_pressed("walkLeft"):
-		animeSprite.play("walkLeft")
-	elif Input.is_action_pressed("walkUp"):
-		animeSprite.play("walkUp")
-	elif Input.is_action_pressed("walkDown"):
-		animeSprite.play("walkDown")
+	if not Globals.currently_interacting:
+		var input_direction = Input.get_vector("walkLeft", "walkRight", "walkUp", "walkDown")
+		if Input.is_action_pressed("walkRight"):
+			animeSprite.play("walkRight")
+		elif Input.is_action_pressed("walkLeft"):
+			animeSprite.play("walkLeft")
+		elif Input.is_action_pressed("walkUp"):
+			animeSprite.play("walkUp")
+		elif Input.is_action_pressed("walkDown"):
+			animeSprite.play("walkDown")
+		else:
+			input_direction = Vector2.ZERO
+			animeSprite.stop()
+			animeSprite.frame = 0
+		velocity = input_direction * speed
 	else:
-		input_direction = Vector2.ZERO
+		var input_direction = Vector2.ZERO
 		animeSprite.stop()
 		animeSprite.frame = 0
-	velocity = input_direction * speed
+		velocity = input_direction * speed
 	
 	#interaction
 	if Input.is_action_just_pressed("interact"):
 		interact()
 
 func _process(_delta):
-	if not Globals.currently_interacting:
-		getInput()
-		move_and_slide()
+	getInput()
+	move_and_slide()
 	
 	
 

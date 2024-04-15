@@ -3,7 +3,7 @@ class_name Interactable extends Node2D
 @export var interact_label = "none"
 @export var interact_type = "none"
 @export var interaction_value = "none"
-@export_global_file("*.json") var dialog_file
+@export var dialog_file: String
 @export var ChangeToScene: String
 
 var NumberOfInteractions:int = 0

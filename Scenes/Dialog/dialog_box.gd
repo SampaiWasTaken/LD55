@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export_global_file("*.json") var dialog_file
+@export var dialog_file:String
 
 var dialog = []#stores the dialog after reading the file
 var dialog_counter: int = -1 #stores current dialog index
