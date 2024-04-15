@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,6 +12,7 @@ func _process(delta):
 
 
 func _on_button_pressed():
+	print("why dont u button")
 	Globals.currently_interacting = false
 	Globals.player_items = []
 	Globals.overworld_player_pos = Vector2(419,480)
@@ -21,6 +22,6 @@ func _on_button_pressed():
 	Globals.MomCounter1 = 0
 	Globals.SmithCounter1 = 0
 	
-	$TransitionLayer.change_scene_with_dialog_after_change("res://Scenes/HouseInsides/main_char_house_inside.gd", "res://DialogText/PlayerHouse/RespawnAfterDeath.json")
+	TransitionLayer.change_scene_with_dialog_after_change("res://Scenes/HouseInsides/main_char_house_inside.tscn", "res://DialogText/PlayerHouse/RespawnAfterDeath.json")
 	
 	pass # Replace with function body.

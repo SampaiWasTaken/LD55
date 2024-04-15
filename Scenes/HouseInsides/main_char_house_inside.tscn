@@ -105,7 +105,8 @@ dialog_file = Array[String](["res://DialogText/PlayerHouse/Fireplace.json"])
 
 [node name="Diary" parent="Interactables" instance=ExtResource("3_bdiyt")]
 position = Vector2(129, 108)
-interact_type = "Only_Dialog"
+interact_type = "Item_With_Dialog"
+interaction_value = "Book1"
 dialog_file = Array[String](["res://DialogText/PlayerHouse/Diary.json"])
 
 [node name="Table" parent="Interactables" instance=ExtResource("3_bdiyt")]

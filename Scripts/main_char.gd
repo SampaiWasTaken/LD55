@@ -77,6 +77,11 @@ func interact():
 				Globals.player_items.append(newest_interaction.interaction_value)
 				newest_interaction.showDialog()
 				print(Globals.player_items)
-				stored_interactions_areas[0].queue_free()
+				if newest_interaction.interaction_value == "lantern":
+					stored_interactions_areas[0].queue_free()
+				if newest_interaction.interaction_value == "Sword":
+					print(newest_interaction.get_children())
+					newest_interaction.get_child(2).visible = false
+					
 				
 				

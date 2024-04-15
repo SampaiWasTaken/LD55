@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://ckf7m8yh7nmvh"]
+[gd_scene load_steps=62 format=3 uid="uid://ckf7m8yh7nmvh"]
 
 [ext_resource type="PackedScene" uid="uid://ccm0r3ogx36u0" path="res://Scenes/main_char.tscn" id="1_4beut"]
 [ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_obbhs"]
@@ -29,7 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://cotcfjvqnsw2j" path="res://Scenes/NPC/plant_npc.tscn" id="19_7c4gc"]
 [ext_resource type="Texture2D" uid="uid://uemheo6em2by" path="res://Assets/Background/Bush I.png" id="22_deuel"]
 [ext_resource type="Texture2D" uid="uid://4pwb07s31236" path="res://Assets/Background/Bush II.png" id="23_ugeje"]
-[ext_resource type="PackedScene" uid="uid://dfwd7s0wgt8p1" path="res://Scenes/NPC/smith_npc1.tscn" id="25_iaq40"]
+[ext_resource type="PackedScene" uid="uid://bw2oi6qirgiem" path="res://Scenes/NPC/smith_npc1.tscn" id="25_iaq40"]
+[ext_resource type="Texture2D" uid="uid://bepoamfmj04no" path="res://Assets/Background/magical_stick.png" id="31_j6bbb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("3_lopaf")
@@ -3707,7 +3708,6 @@ position = Vector2(357, -301)
 texture = ExtResource("12_006vl")
 
 [node name="Walls" type="Node2D" parent="."]
-visible = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
 collision_layer = 128
@@ -3821,6 +3821,7 @@ blend_mode = 1
 position = Vector2(818, 434)
 interact_type = "Item_With_Dialog"
 interaction_value = "lantern"
+dialog_file = Array[String](["res://DialogText/Overworld/Lantern.json"])
 
 [node name="CatNPC" parent="." instance=ExtResource("18_j4c3b")]
 position = Vector2(810, 291)
@@ -3839,6 +3840,15 @@ position = Vector2(-495, 333)
 [node name="BushIi" type="Sprite2D" parent="."]
 position = Vector2(29, 197)
 texture = ExtResource("23_ugeje")
+
+[node name="InteractableSquare2" parent="." instance=ExtResource("7_j12tx")]
+position = Vector2(1543, -1594)
+interact_type = "Item_With_Dialog"
+interaction_value = "Sword"
+dialog_file = Array[String](["res://DialogText/Overworld/MagicStick.json"])
+
+[node name="Sprite2D" type="Sprite2D" parent="InteractableSquare2"]
+texture = ExtResource("31_j6bbb")
 
 [connection signal="body_entered" from="Areas/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Areas/Area2D" to="." method="_on_area_2d_body_exited"]

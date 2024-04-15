@@ -13,7 +13,7 @@ func _ready():
 	if "plant" in Globals.player_items:
 		$PlantNPC.queue_free()
 	if "cave" in Globals.player_items:
-		$PlantNPC.queue_free()
+		$Areas/CaveEncounterTrigger.queue_free()
 		$NPC/Smith/TemplateNPC.position = $NPC/Smith/SmithMarker.position
 	else:
 		$NPC/Smith/TemplateNPC2.position = $NPC/Smith/SmithMarker.position
