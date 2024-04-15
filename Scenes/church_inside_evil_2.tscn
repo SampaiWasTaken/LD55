@@ -234,6 +234,10 @@ zoom = Vector2(2, 2)
 [node name="LightOccluder2D" parent="nice/MainChar" index="4"]
 visible = false
 
+[node name="Book" parent="nice/Node2D" index="4"]
+interact_type = "Only_Dialog"
+interaction_value = "none"
+
 [node name="LightOccluder2D" parent="." index="6"]
 visible = false
 

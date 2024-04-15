@@ -120,7 +120,8 @@ ChangeToScene = "res://Scenes/main_scene.tscn"
 
 [node name="Book" parent="nice/Node2D" instance=ExtResource("4_xf0qx")]
 position = Vector2(267, 113)
-interact_type = "Only_Dialog"
+interact_type = "Item_With_Dialog"
+interaction_value = "Book2"
 dialog_file = Array[String](["res://DialogText/ChurchInside/ChurchBook.json"])
 
 [node name="BenchLeft" parent="nice/Node2D" instance=ExtResource("4_xf0qx")]

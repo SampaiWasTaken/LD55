@@ -33,7 +33,7 @@ texture = ExtResource("2_mvhce")
 position = Vector2(145, 140)
 
 [node name="MainChar" parent="nice" index="6"]
-position = Vector2(145, 230)
+position = Vector2(143, 168)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="nice/MainChar" index="4"]
 position = Vector2(-143, -245)
@@ -47,20 +47,20 @@ position = Vector2(143, 1)
 occluder = SubResource("OccluderPolygon2D_0av42")
 
 [node name="TemplateNPC2" parent="." index="8" instance=ExtResource("6_nbgqg")]
-position = Vector2(86, 197)
+position = Vector2(82, 192)
 scale = Vector2(0.5, 0.5)
 
 [node name="DadNPC" parent="." index="9" instance=ExtResource("7_ry667")]
-position = Vector2(111, 184)
+position = Vector2(109, 194)
 
 [node name="TemplateNPC3" parent="." index="10" instance=ExtResource("8_dp4vs")]
-position = Vector2(264, 199)
+position = Vector2(265, 202)
 
 [node name="TemplateNPC4" parent="." index="11" instance=ExtResource("9_k6dbs")]
 position = Vector2(36, 138)
 
 [node name="TemplateNPC5" parent="." index="12" instance=ExtResource("10_dro2s")]
-position = Vector2(172, 187)
+position = Vector2(245, 138)
 
 [node name="TemplateNPC6" parent="." index="13" instance=ExtResource("9_k6dbs")]
 position = Vector2(38, 221)

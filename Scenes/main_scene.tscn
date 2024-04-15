@@ -34,9 +34,9 @@
 [ext_resource type="PackedScene" uid="uid://ckrhtu3ovvcpt" path="res://Scenes/NPC/lantern1_npc.tscn" id="31_jmopl"]
 [ext_resource type="PackedScene" uid="uid://dovypgwnf2fi1" path="res://Scenes/NPC/lantern2_npc.tscn" id="32_bfqr3"]
 [ext_resource type="PackedScene" uid="uid://cjcqtqfjol83k" path="res://Scenes/NPC/npc1.tscn" id="34_vjbao"]
-[ext_resource type="PackedScene" path="res://Scenes/NPC/npc2.tscn" id="35_3qcxk"]
-[ext_resource type="PackedScene" path="res://Scenes/NPC/npc3.tscn" id="36_vcm76"]
-[ext_resource type="PackedScene" path="res://Scenes/NPC/garland_npc.tscn" id="37_53nhl"]
+[ext_resource type="PackedScene" uid="uid://bidtuc3l6hg52" path="res://Scenes/NPC/npc2.tscn" id="35_3qcxk"]
+[ext_resource type="PackedScene" uid="uid://8jnj0ai4e5nx" path="res://Scenes/NPC/npc3.tscn" id="36_vcm76"]
+[ext_resource type="PackedScene" uid="uid://bus8euhpsmjx1" path="res://Scenes/NPC/garland_npc.tscn" id="37_53nhl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts157"]
 texture = ExtResource("3_lopaf")
@@ -285,7 +285,7 @@ polygon = PackedVector2Array(-32, -12, 13, -12, 13, -27, 6, -28, 6, -43, 27, -43
 position = Vector2(250, 368)
 
 [node name="MainChar" parent="." instance=ExtResource("1_4beut")]
-position = Vector2(611, 345)
+position = Vector2(821, 314)
 
 [node name="Camera2D" type="Camera2D" parent="MainChar"]
 zoom = Vector2(3, 3)
@@ -3863,11 +3863,11 @@ position = Vector2(66, 395)
 position = Vector2(65, 212)
 
 [node name="TemplateNPC2" parent="." instance=ExtResource("32_bfqr3")]
-position = Vector2(773, 289)
+position = Vector2(775, 263)
 scale = Vector2(0.5, 0.5)
 
 [node name="TemplateNPC3" parent="." instance=ExtResource("32_bfqr3")]
-position = Vector2(846, 290)
+position = Vector2(846, 263)
 scale = Vector2(0.5, 0.5)
 
 [node name="TemplateNPC5" parent="." instance=ExtResource("34_vjbao")]

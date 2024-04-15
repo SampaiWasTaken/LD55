@@ -12,6 +12,7 @@ height = 20.0
 texture = ExtResource("2_xk0jp")
 
 [node name="InteractableSquare" parent="." index="1"]
+global_dialog_counter = "PriestCounter1"
 interact_type = "Only_Dialog"
 dialog_file = Array[String](["res://DialogText/Overworld/PriestDialog1.json", "res://DialogText/Overworld/PriestDialog2.json"])
 

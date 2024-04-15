@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://q23l73ddhwqe" path="res://Scenes/NPC/dad_npc.tscn" id="4_2sr24"]
 [ext_resource type="PackedScene" uid="uid://cn7lfuem6ie00" path="res://Scenes/NPC/mom_npc2.tscn" id="4_2ytii"]
 [ext_resource type="PackedScene" uid="uid://c5csd2xfcctyt" path="res://Scenes/NPC/mom_npc3.tscn" id="5_e6djq"]
-[ext_resource type="PackedScene" path="res://Scenes/NPC/mom_npc4.tscn" id="6_g8gpc"]
+[ext_resource type="PackedScene" uid="uid://dojfpc214o434" path="res://Scenes/NPC/mom_npc4.tscn" id="6_g8gpc"]
 [ext_resource type="PackedScene" uid="uid://ceg78vobimfst" path="res://Scenes/NPC/dad_npc2.tscn" id="6_irxh6"]
 [ext_resource type="PackedScene" uid="uid://cx02tdxp3pkdv" path="res://Scenes/NPC/dad_npc3.tscn" id="7_7ddbr"]
 [ext_resource type="PackedScene" uid="uid://bygj1l1x1ysg1" path="res://Scenes/NPC/dad_npc4.tscn" id="8_hxeeg"]

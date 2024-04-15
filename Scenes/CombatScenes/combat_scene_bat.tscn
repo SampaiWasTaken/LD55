@@ -39,7 +39,7 @@ position = Vector2(127.142, 153)
 rotation = -0.0022275
 
 [node name="BoulderTimer" type="Timer" parent="." index="8"]
-wait_time = 0.8
+wait_time = 0.3
 
 [node name="GasTimer" type="Timer" parent="." index="9"]
 wait_time = 3.0
@@ -56,11 +56,11 @@ position = Vector2(-2, -1)
 rotation = -1.57428
 
 [node name="LevelTimer" type="Timer" parent="." index="12"]
-wait_time = 30.0
+wait_time = 25.0
 
 [node name="BoulderEffect" type="AudioStreamPlayer2D" parent="." index="15"]
 stream = ExtResource("3_xbvn7")
-volume_db = -15.0
+volume_db = -26.243
 
 [node name="GasEffect" type="AudioStreamPlayer2D" parent="." index="16"]
 stream = ExtResource("4_wsxq3")

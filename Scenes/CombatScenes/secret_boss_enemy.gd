@@ -66,7 +66,7 @@ func hurt(damage):
 	hp -= damage
 	print(hp)
 	if hp <= 0:
-		TransitionLayer.change_scene_with_dialog_after_change("res://Scenes/main_scene.tscn", "res://DialogText/Overworld/plantEnemy.json")
+		TransitionLayer.change_scene("res://Scenes/good_end.tscn")
 	print("Ouch")
 
 
