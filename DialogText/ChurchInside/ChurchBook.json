@@ -2,4 +2,8 @@
 	{"name": "", "text": "A book lays on the table on the outer corner of the room.", "portrait": ""},
 	{"name": "", "text": "You flip through the pages.", "portrait": ""},
 	{"name": "", "text": "It's filled with sermons you recognize from when you were little.", "portrait": ""},
+	{"name": "", "text": "You continue flipping through the pages.", "portrait": ""},
+	{"name": "", "text": "Further in the back there is a list of names, many of which sound familiar to you.", "portrait": ""},
+	{"name": "", "text": "Fond memories of your past play before your minds eye.", "portrait": ""},
+	{"name": "You", "text": "They've all already went on their journeys... and now I can finally join them.", "portrait": "Player"},
 ]
