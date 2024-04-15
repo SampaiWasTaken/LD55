@@ -1,0 +1,8 @@
+[
+	{"name": "Mom", "text": "Oh honey you're all scratched up! What happened to you?", "portrait": "Mom"},
+	{"name": "You", "text": "I was in the cave! Gathering the stone I need for the necklace.", "portrait": "Player"},
+	{"name": "Mom", "text": "Oh you know how these things go...", "portrait": "Mom"},
+	{"name": "Mom", "text": "You thoughts might be elsewhere.", "portrait": "Mom"},
+	{"name": "", "text": "Your Mother looks at you with a worried smile.", "portrait": ""},
+	{"name": "You", "text": "I promise, Mom", "portrait": "You"},
+]

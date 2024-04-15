@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq03nmbgy0mke"]
+
+[ext_resource type="PackedScene" uid="uid://7xsyvnjg478c" path="res://Scenes/NPC/dad_npc2.tscn" id="1_ojg1p"]
+
+[node name="DadNPC" instance=ExtResource("1_ojg1p")]
+
+[node name="InteractableSquare" parent="." index="1"]
+dialog_file = Array[String](["res://DialogText/PlayerHouse/Dad_4_1.json"])
