@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://bvnh656bbcyon" path="res://Scenes/CombatScenes/mini_enemy.tscn" id="1_t27a4"]
 [ext_resource type="Script" path="res://Scripts/Combat/tutorial_enemy.gd" id="2_73xos"]
 [ext_resource type="Texture2D" uid="uid://cjgkuwst0o8ld" path="res://icon.svg" id="2_po7w7"]
-[ext_resource type="Texture2D" uid="uid://wukc247atix6" path="res://Assets/Untitled_Artwork.png" id="3_87bcg"]
 [ext_resource type="Shader" path="res://Scenes/CombatScenes/tutorial_enemy.gdshader" id="3_bhpow"]
+[ext_resource type="Texture2D" uid="uid://wukc247atix6" path="res://Assets/Characters/catSprites.png" id="4_xiy81"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xykrp"]
 shader = ExtResource("3_bhpow")
@@ -15,19 +15,19 @@ shader_parameter/inside = false
 shader_parameter/add_margins = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rcok6"]
-atlas = ExtResource("3_87bcg")
+atlas = ExtResource("4_xiy81")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ki8k4"]
-atlas = ExtResource("3_87bcg")
+atlas = ExtResource("4_xiy81")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oxbsn"]
-atlas = ExtResource("3_87bcg")
+atlas = ExtResource("4_xiy81")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6sajf"]
-atlas = ExtResource("3_87bcg")
+atlas = ExtResource("4_xiy81")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3rmem"]
