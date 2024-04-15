@@ -27,6 +27,7 @@ func _process(_delta):
 func startDialog():
 	if dialog_active:
 		return
+	Globals.currently_interacting = true
 	#checking for globally stored dialog counter
 	if global_dialog_counter != "none":
 		print(Globals.get(global_dialog_counter))

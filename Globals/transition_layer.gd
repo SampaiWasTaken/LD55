@@ -13,5 +13,8 @@ func change_scene_with_dialog_after_change(target: String, dialog_file: String) 
 	var test:Array[String] = [dialog_file]
 	#test.append(dialog_file)
 	$DialogBox.dialog_file = test
+	$AnimationPlayer.play("reveal no unlock")
 	$DialogBox.startDialog()
-	$AnimationPlayer.play("reveal")
+	
+func unlock_movement():
+	Globals.currently_interacting = false

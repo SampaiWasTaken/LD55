@@ -3676,6 +3676,7 @@ position = Vector2(799, -1049)
 scale = Vector2(76.79, 7.475)
 interact_type = "Dialog_With_Szene_Change_from_Overworld"
 interaction_value = "cave"
+dialog_file = Array[String](["res://DialogText/Overworld/caveEnemy.json"])
 ChangeToScene = "res://Scenes/CombatScenes/combat_scene_bat.tscn"
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
