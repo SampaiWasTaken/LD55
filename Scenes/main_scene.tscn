@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://b03dmyobloa2j" path="res://Scenes/Interactables/interactable_square.tscn" id="7_j12tx"]
 [ext_resource type="Texture2D" uid="uid://dwnjmsn113vid" path="res://Assets/Background/NEW_Base for Tiles II.png" id="7_lquwq"]
 [ext_resource type="Texture2D" uid="uid://prt3l2e54t6f" path="res://Assets/Background/Cave Entrance FIN.png" id="7_qaxrs"]
-[ext_resource type="PackedScene" uid="uid://08dx1a8m3dtc" path="res://Scenes/NPC/smith_npc2.tscn" id="8_away5"]
+[ext_resource type="PackedScene" uid="uid://c7281mtqkqhav" path="res://Scenes/NPC/smith_npc2.tscn" id="8_away5"]
 [ext_resource type="Texture2D" uid="uid://bjqp3okc6jxlw" path="res://Left_Caven Entrance AddTil.png" id="8_hvbjr"]
 [ext_resource type="Texture2D" uid="uid://b5wqhigv3upm0" path="res://NEW_Right_Caven Entrance AddTil.png" id="9_rwb5k"]
 [ext_resource type="Texture2D" uid="uid://bhf536o1c4j8y" path="res://Assets/Buildings/Smith Booth.png" id="9_ua4en"]

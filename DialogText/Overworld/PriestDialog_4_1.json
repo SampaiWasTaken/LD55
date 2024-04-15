@@ -1,3 +1,4 @@
 [
-	{"name": "Priest", "text": "Let the festivities begin.", "portrait": "Priest"},
+	{"name": "Priest", "text": "We have all gathered here today in worship!", "portrait": "Priest"},
+	{"name": "Priest", "text": "Our guest of honor has prepared throughout the day in order to be consumed for all our ", "portrait": "Priest"},
 ]
