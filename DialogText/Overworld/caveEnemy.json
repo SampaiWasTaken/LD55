@@ -2,4 +2,7 @@
 	{"name": "You", "text": "What the hell was up with that cave?!", "portrait": "Player"},
 	{"name": "", "text": "You now understand your parents warnings about not entering the cave when playing outside.", "portrait": ""},
 	{"name": "", "text": "Exhausted from this ordeal you march onward into the darkness...", "portrait": ""},
+	{"name": "", "text": "After a while a red shimmer catches your eye, this must be the gemstone you were asked to get.", "portrait": ""},
+	{"name": "", "text": "You pick it up. It feels cold to the touch.", "portrait": ""},
+	{"name": "", "text": "You got what you came here for, it's time to head back... Or you could take the opportunity to explore the cave further.", "portrait": ""},
 ]

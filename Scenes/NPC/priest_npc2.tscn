@@ -5,4 +5,5 @@
 [node name="TemplateNPC" instance=ExtResource("1_6tgoc")]
 
 [node name="InteractableSquare" parent="." index="1"]
+global_dialog_counter = "none"
 dialog_file = Array[String](["res://DialogText/Overworld/PriestDialog_2_1.json"])

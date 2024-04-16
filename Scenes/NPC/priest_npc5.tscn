@@ -5,7 +5,6 @@
 [node name="TemplateNPC" instance=ExtResource("1_vlw3y")]
 
 [node name="InteractableSquare" parent="." index="1"]
-global_dialog_counter = "none"
 interact_type = "Dialog_With_Szene_Change"
 dialog_file = Array[String](["res://DialogText/Overworld/PriestDialog_5_1.json"])
 ChangeToScene = "res://Scenes/church_inside_envil.tscn"
