@@ -112,6 +112,54 @@ tracks/7/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("nice/Priest/TemplateNPC:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("nice/Priest/TemplateNPC2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("nice/Priest/TemplateNPC3:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("nice/Priest/TemplateNPC4:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_e12qt"]
 resource_name = "wowthatsepic"
@@ -212,6 +260,54 @@ tracks/7/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("nice/Priest/TemplateNPC:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("nice/Priest/TemplateNPC2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("nice/Priest/TemplateNPC3:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("nice/Priest/TemplateNPC4:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dthsv"]
 _data = {
@@ -222,17 +318,45 @@ _data = {
 [node name="ChurchInside2" instance=ExtResource("1_msnq5")]
 script = ExtResource("2_l7ck5")
 
+[node name="ColorRect" parent="." index="1"]
+offset_left = -350.0
+offset_top = -430.0
+offset_right = 383.0
+offset_bottom = 105.0
+scale = Vector2(1.40943, 2.26768)
+
 [node name="TemplateNPC" parent="." index="4"]
 visible = false
 
 [node name="CollisionPolygon2D" parent="nice/Walls" index="0"]
 polygon = PackedVector2Array(-26, 87, -25, 131, 15, 131, 14, 87, 131, 87, 131, -1, 131, -22, 110, -22, 110, -58, 28, -58, 28, -34, -37, -34, -37, -57, -131, -57, -131, 87, -203, 131, -196, -32, -163, -148, 182, -142, 189.715, -32.212, 208, 228, 143, 224, -198, 219, -197, 127, -131, 87)
 
+[node name="PriestNpsPos" parent="nice/Priest" index="0"]
+position = Vector2(52, 104)
+
+[node name="TemplateNPC" parent="nice/Priest" index="1"]
+visible = false
+
+[node name="TemplateNPC2" parent="nice/Priest" index="2"]
+visible = false
+
+[node name="TemplateNPC3" parent="nice/Priest" index="3"]
+visible = false
+
+[node name="TemplateNPC4" parent="nice/Priest" index="4"]
+visible = false
+
+[node name="MainChar" parent="nice" index="6"]
+position = Vector2(145, 188)
+
 [node name="Camera2D" parent="nice/MainChar" index="3"]
 zoom = Vector2(2, 2)
 
 [node name="LightOccluder2D" parent="nice/MainChar" index="4"]
 visible = false
+
+[node name="Door" parent="nice/Node2D" index="3"]
+position = Vector2(514, 169)
 
 [node name="Book" parent="nice/Node2D" index="4"]
 interact_type = "Only_Dialog"

@@ -23,6 +23,7 @@ TransitionLayer="*res://Globals/transition_layer.tscn"
 [display]
 
 window/size/resizable=false
+window/stretch/mode="canvas_items"
 
 [input]
 

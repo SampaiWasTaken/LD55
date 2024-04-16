@@ -39,6 +39,9 @@ position = Vector2(143, 168)
 position = Vector2(-143, -245)
 occluder = SubResource("OccluderPolygon2D_8h130")
 
+[node name="Door" parent="nice/Node2D" index="3"]
+position = Vector2(583, 225)
+
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." index="6"]
 occluder = SubResource("OccluderPolygon2D_0av42")
 

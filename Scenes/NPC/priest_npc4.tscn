@@ -8,6 +8,7 @@ polygon = PackedVector2Array(-8, -7, -7, -11, -2, -12, 2, -12, 6, -11, 7, -7, 7,
 [node name="TemplateNPC" instance=ExtResource("1_6yu4f")]
 
 [node name="InteractableSquare" parent="." index="1"]
+global_dialog_counter = "none"
 interact_type = "Dialog_With_Szene_Change"
 dialog_file = Array[String](["res://DialogText/Overworld/PriestDialog_4_1.json"])
 ChangeToScene = "res://Scenes/church_inside_evil_2.tscn"
